@@ -1,24 +1,9 @@
-# README
+# Love Fern (Front End)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[IMAGE / GIF]
 
-Things you may want to cover:
+Love Fern is an application that allows the user to cultivate their relationships with others in their lives, by taking care of a fern. This is the front end of the application, which will focus on OAuth, Service Oriented Architecture, and quality CSS styling for a thematic user experience.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a Ruby on Rails application. 
