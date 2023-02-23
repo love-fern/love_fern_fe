@@ -48,25 +48,25 @@ To fully use Love Fern locally, run `rails s` on both the `love_fern_be` and the
   - Ferns or entire shelves can be "composted" (destroyed).
 
 - Planting a New Fern:
-  - Populate the form to create a fern. It will need the person's name, the prefered method of contact with them, and the shelf that the fern is intended to be placed on. 
+  - Populate the form to create a fern. It will need the person's name, the preferred method of contact with them, and the shelf that the fern is intended to be placed on. 
   - Existing shelves are displayed as options, or a new shelf category can be supplied and that shelf will be created upon fern creation.
 
 - Watering a Fern:
-  - Click on the desired fern, which will go to it's show page `'/ferns/:fern_id'`. Then click "Water Fern"
+  - Click on the desired fern, which will go to its show page `'/ferns/:fern_id'`. Then click "Water Fern"
   - Supply a correspondence message in the 'Add Message to Fern' form. This calls Google's Natural Language API. Read more about this API [here](https://cloud.google.com/natural-language). 
   - Once the message is analyzed by the Natural Language API, a score will be returned which decides if the message was positive, neutral, or negative.
-    - If the message is positive, the fern will impove it's health.
-    - If the message is neutral, the fern will not change it's health.
-    - If the message is negative, the fern will deteriorate it's health.
+    - If the message is positive, the fern will improve its health.
+    - If the message is neutral, the fern will not change its health.
+    - If the message is negative, the fern will deteriorate its health.
   - The image of the fern will be updated to reflect this new health.
 
 - Fertilizing a Fern:
-  - When a fern is unhealthy, there is an option to apply "fertilizer". This means Love Fern will suggest an activity to do with your fern's individual, in order to help strenghten your bond with that person.
-  - The fertilizer feature calls the BoredAPI to suggest a random activity. Read more about this API [here](https://www.boredapi.com/documentation)
+  - When a fern is unhealthy, there is an option to apply "fertilizer". This means Love Fern will suggest an activity to do with your fern's individual, in order to help strengthen your bond with that person.
+  - The fertilizer feature calls the BoredAPI to suggest a random activity. Read more about this API [here](https://www.boredapi.com/documentation).
   - If the activity is confirmed the fern springs back to full health!
 ## Goals
 
-Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 group project, Consultancy. 
+Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 group project, Consultancy. Official project requirements can be read [here](https://backend.turing.edu/module3/projects/consultancy/).
 #### Learning Goals
 
 - Implement OAuth2 with OmniAuth to allow users to sign in with Google.
@@ -84,6 +84,7 @@ Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 
 #### Known Issues
 
 - In its current state, Love Fern's backend API is not private. Future goals are to require a private token that only the Love Fern frontend will have. Until then, please do not provide any information you deem sensitive.
+- The fertilize feature currently suggests a random activity to do with your fern's person. Please consider real life consequences are not our responsibility if you do ask your fern's person to do this activity.
 
 ## Deployment
 
