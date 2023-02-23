@@ -60,11 +60,28 @@ To fully use Love Fern locally, run `rails s` on both the `love_fern_be` and the
 
 ### Learning Goals
 
+- Implement OAuth2 with OmniAuth to allow users to sign in with Google.
+- Use of HTML, CSS, and JavaScript via Bootstrap to design a pleasing front-end aesthetic.
+- Building a full-scale application from scratch using service-oriented architecture.
+
 ### Future Goals
 
+- Implement "watering frequency," which indicates how often a user wishes to interact with their fern before it starts to decay.
+- Add more detailed stats to the fern show page, including time since last contact and information about the nature of that contact.
+- Add the ability to search for a fern by name and order ferns by health.
+- Suggest multiple activities and gifts corresponding to varying levels of care to the fern.
+- Build out the fern health algorithm to incorporate activities and gifts, as well as a more nuanced interpretation of Google's sentiment analysis.
+
 ### Known Issues
-  - In it's current state, Love Fern's backend API is not private. Future goals are to require a private token that only the Love Fern frontend will have. Until then, please do not provide any information you deem sensitive.
+  - In its current state, Love Fern's backend API is not private. Future goals are to require a private token that only the Love Fern frontend will have. Until then, please do not provide any information you deem sensitive.
 
 ## Deployment
 
 ## Authors & Acknowledgments
+
+- Samuel Cox - samc1253@gmail.com
+- Drew Layton - dlayton66@gmail.com
+- Anthony Ongaro - aongaro@gmail.com
+- Brady Rohrig - brady.rohrig@gmail.com
+- J Seymour - JustJakeSeymour@gmail.com
+- Anthony Blackwell Tallent - anthonytallent567@gmail.com
