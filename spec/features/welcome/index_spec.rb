@@ -12,7 +12,7 @@ RSpec.describe 'Welcome Index', type: :feature do
     it 'has a button for Google OAuth' do
       visit root_path
 
-      expect(page).to have_button('Google OAuth')
+      expect(page).to have_button('Continue with Google')
     end
   end
 end
