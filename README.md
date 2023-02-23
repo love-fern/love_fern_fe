@@ -63,6 +63,7 @@ To fully use Love Fern locally, run `rails s` on both the `love_fern_be` and the
 ### Future Goals
 
 ### Known Issues
+  - In it's current state, Love Fern's backend API is not private. Future goals are to require a private token that only the Love Fern frontend will have. Until then, please do not provide any information you deem sensitive.
 
 ## Deployment
 
