@@ -1,0 +1,14 @@
+<h2>Plant New Fern</h2>
+
+<%= form_with url: '/ferns', method: :post, local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :shelf %>
+  <%= f.select :shelf, ['Friend', 'Family', 'Romantic', 'Business'] %>
+
+  <%= f.label :preferred_contact_method %>
+  <%= f.text_field :preferred_contact_method %>
+  
+  <%= f.submit 'Plant!' %>
+<% end %>

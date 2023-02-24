@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   
   # dashboard
   get '/greenhouse', to: 'users#show'
+
+  resources :ferns, only: [:new, :create]
 end
