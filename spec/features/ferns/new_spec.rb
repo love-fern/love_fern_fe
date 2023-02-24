@@ -24,7 +24,7 @@ RSpec.describe 'new fern page', type: :feature do
       end
 
       it 'has a field to select shelf' do
-        expect(page).to have_select(:shelf, with_options: ['Friend', 'Family', 'Romantic', 'Business'])
+        expect(page).to have_select(:shelf, with_options: ['Friends', 'Family', 'Romantic', 'Business'])
       end
 
       it 'has a field to input preferred contact method' do
@@ -37,9 +37,9 @@ RSpec.describe 'new fern page', type: :feature do
     end
 
     describe 'fern creation', :vcr do
-      xit 'should create a fern' do
+      it 'should create a fern' do
         fill_in :name, with: 'Drew'
-        select 'Friend', from: :shelf
+        select 'Friends', from: :shelf
         fill_in :preferred_contact_method, with: 'Carrier Pigeon'
         click_button 'Plant!'
       end
