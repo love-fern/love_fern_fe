@@ -3,6 +3,10 @@ class FernService
     Faraday.new(url: "http://localhost:3000")
   end
 
+  def self.find_shelves(google_id)
+    conn.get("/api/v1/users/#{google_id}/shelves")
+  end
+
   def self.create_fern(google_id, fern_params)
     conn.post("/api/v1/users/#{google_id}/ferns", fern_params)
   end
