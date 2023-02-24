@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class="container">
     <% if flash.any? %>
       <% flash.each do |key, value| -%>
         <% if key == 'error' %>
