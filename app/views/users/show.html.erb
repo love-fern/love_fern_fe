@@ -1,3 +1,13 @@
 <h3>
   <%= current_user['name'] %>'s Greenhouse
 </h3>
+
+<% @shelves.each do |shelf| %>
+  <div id="<%= shelf.name.downcase %>">
+    <h4><%= shelf.name %> Shelf</h4>
+    <% shelf.ferns.each do |fern| %>
+      <%= fern.health %>
+      <%= link_to fern.name, fern_path(fern.id) %>
+    <% end %>
+  </div>
+<% end %>
