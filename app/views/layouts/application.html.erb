@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <% if flash.any? %>
+      <% flash.each do |key, value| -%>
+        <% if key == 'error' %>
+          <section class="alert alert-danger"><%= value.html_safe %></section>
+        <% elsif key == 'notice' %>
+          <section class="alert alert-warning"><%= value.html_safe %></section>
+        <% elsif key == 'success' %>
+          <section class="alert alert-success"><%= value.html_safe %></section>
+        <% end %>
+      <% end -%>
+    <% end %>
+    <header>
+      <h1>
+        Love Fern
+      </h1>
+    </header>
     <%= yield %>
   </body>
 </html>
