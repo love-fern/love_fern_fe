@@ -11,6 +11,11 @@ class FernService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  # users
+  def self.create_user(user_info)
+    conn.post("/users", user_info)
+  end
+  
   # ferns
   def self.create_fern(google_id, fern_params)
     conn.post("/users/#{google_id}/ferns", fern_params)
