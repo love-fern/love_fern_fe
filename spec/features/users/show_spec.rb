@@ -15,6 +15,14 @@ RSpec.describe 'User Show', type: :feature do
       expect(page).to have_content("Samuel Cox's Greenhouse")
     end
 
+    it 'has a button to plant a fern' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit greenhouse_path
+
+      click_button('Plant a Fern')
+      expect(current_path).to eq(new_fern_path)
+    end
+
     it 'will not navigate to the page if the user is not logged in' do
       visit greenhouse_path
 
@@ -26,7 +34,7 @@ RSpec.describe 'User Show', type: :feature do
       visit greenhouse_path
 
       expect(page).to have_content('Business Shelf')
-      expect(page).to have_content('Friend Shelf')
+      expect(page).to have_content('Friends Shelf')
       expect(page).to have_content('Family Shelf')
       within('#business') do
         expect(page).to have_content('Anthony')
@@ -35,10 +43,10 @@ RSpec.describe 'User Show', type: :feature do
       end
       within('#family') do
         expect(page).to have_content('Erin')
-        expect(page).to have_content('Austin')
         expect(page).to have_content('Brian')
       end
-      within('#friend') do
+      within('#friends') do
+        expect(page).to have_content('Austin')
         expect(page).to have_content('Kieffer')
         expect(page).to have_content('Roshan')
         expect(page).to have_content('Nate')

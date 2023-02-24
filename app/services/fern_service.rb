@@ -1,6 +1,6 @@
 class FernService
   def self.conn
-    Faraday.new(url: "http://localhost:3000")
+    Faraday.new(url: "http://localhost:5000")
   end
 
   def self.find_shelves(google_id)
