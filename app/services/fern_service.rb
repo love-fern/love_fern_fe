@@ -1,6 +1,10 @@
 class FernService
   def self.conn
-    Faraday.new(url: "http://localhost:3000/api/v1")
+    Faraday.new(url: "http://localhost:5000")
+  end
+
+  def self.find_shelves(google_id)
+    conn.get("/api/v1/users/#{google_id}/shelves")
   end
 
   def self.parse_json(response)
