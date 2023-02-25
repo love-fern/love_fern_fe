@@ -9,9 +9,7 @@ class Shelf
   def parse_ferns(ferns)
     ferns.filter_map do |fern|
       if fern[:relationships][:shelf][:data][:id] == @id
-        fern[:attributes][:shelf] = fern[:relationships][:shelf][:data][:id]
-        fern[:attributes][:id] = fern[:id]
-        Fern.new(fern[:attributes])
+        Fern.new(fern)
       end
     end
   end

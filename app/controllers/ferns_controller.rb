@@ -9,8 +9,13 @@ class FernsController < ApplicationController
     redirect_to greenhouse_path
   end
 
+  def show
+    @fern = FernFacade.find_fern(current_user['uid'], params[:id])
+  end
+
   private
-    def fern_params
-      params.permit(:name, :shelf, :preferred_contact_method)
-    end
+
+  def fern_params
+    params.permit(:name, :shelf, :preferred_contact_method)
+  end
 end
