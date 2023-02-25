@@ -9,11 +9,12 @@ RSpec.describe "Add Interaction To Fern", type: :feature do
       'image' => "https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c"
     } }
 
+    it 'has the name of the fern at the top of the page' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit water_fern_path(1)
 
-  it 'has the name of the fern at the top of the page' do
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-    visit water_fern_path(fern)
-
-    expect(page).to have_content("Samuel Cox's Greenhouse")
+      expect(page).to have_content("Erin's Fern")
+      expect(page).to have_field('Interaction')
+    end
   end
 end

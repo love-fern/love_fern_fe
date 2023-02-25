@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ad217aae11eecb1ed1e1b8acd0942cf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 52ece29f-3206-4230-bcdc-94c73d34a7c5
+      X-Runtime:
+      - '0.025665'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":5,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}}}'
+  recorded_at: Sat, 25 Feb 2023 18:38:47 GMT
+recorded_with: VCR 6.1.0

@@ -2,7 +2,12 @@
   <%= @fern.name %>'s Fern
 </h3>
 
-<%= form_with url: "", method: :post, local: true do |f| %>
+<div id="disclaimer-warning">
+  <b>Disclaimer:</b> Interaction analysis is done by a machine learning model. It is not perfect.
+  Have fun, water your fern, and don't take it too seriously.<br>
+</div>
+
+<%= form_with url: fern_path(@fern.id), method: :patch, local: true do |f| %>
   <%= f.label :interaction %>
   <%= f.text_area :interaction, rows: 8 %>
   <%= f.submit 'Water Fern' %>

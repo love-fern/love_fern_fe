@@ -19,7 +19,7 @@ class FernsController < ApplicationController
 
   def update
     FernService.update_fern(current_user["uid"], params[:id], fern_params)
-    redirect_to greenhouse_path
+    redirect_to fern_path(params[:id])
   end
 
   private
