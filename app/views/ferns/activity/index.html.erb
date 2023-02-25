@@ -1,0 +1,7 @@
+<h2>Fertilize Your Fern!</h2>
+<h3>Wow, your relationship with <%= @fern.name %> isn't looking too healthy...</h3>
+
+<%= link_to image_tag(@fern.image, size: 200, alt: 'fern health image', id: "fern-#{@fern.id}"), fern_path(@fern.id) %><br>
+
+<h3>Maybe you could <%= @activity.activity %> together!</h3>
+

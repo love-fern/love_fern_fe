@@ -52,4 +52,9 @@ class FernService
   def self.remove_fern_from_shelf(google_id, shelf_id, fern_id)
     conn.delete("users/#{google_id}/shelves/#{shelf_id}/ferns/#{fern_id}")
   end
+
+  # external APIs
+  def self.get_an_activity
+    conn.get('activity')
+  end
 end

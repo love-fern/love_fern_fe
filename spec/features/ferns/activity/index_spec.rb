@@ -13,7 +13,7 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
       # fern is at full health
       VCR.insert_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
       visit fern_path(1)
-      
+
       expect(page).to_not have_button('Fertilize Fern')
       VCR.eject_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
 
@@ -25,6 +25,13 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
       click_button('Fertilize Fern')
 
       expect(current_path).to eq(fertilize_fern_path(2))
+    end
+
+    it 'fertilize / activity index has content' do
+      visit fertilize_fern_path(2)
+
+      expect(page).to have_content('Fertilize Your Fern!')
+      expect(page).to have_content('Fertilize Your Fern!')
     end
   end
 end
