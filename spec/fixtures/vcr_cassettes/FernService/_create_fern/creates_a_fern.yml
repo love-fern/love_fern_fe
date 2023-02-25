@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns
+    body:
+      encoding: UTF-8
+      string: name=The+Big+Pepperoni&preferred_contact_method=text&shelf=Family
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"efab46047a4bf7c627c9c3f9789cd349"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0b4d9cde-9cd2-49ff-a689-afd371aac009
+      X-Runtime:
+      - '0.006001'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"13","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}}}'
+  recorded_at: Sat, 25 Feb 2023 01:52:26 GMT
+recorded_with: VCR 6.1.0

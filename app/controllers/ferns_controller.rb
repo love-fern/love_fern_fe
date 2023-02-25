@@ -6,6 +6,7 @@ class FernsController < ApplicationController
 
   def create
     FernService.create_fern(current_user["uid"], fern_params)
+    redirect_to greenhouse_path
   end
 
   private

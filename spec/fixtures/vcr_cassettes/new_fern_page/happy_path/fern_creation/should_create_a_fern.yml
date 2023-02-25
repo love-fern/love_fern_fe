@@ -1,6 +1,45 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns
+    body:
+      encoding: UTF-8
+      string: name=Drew&preferred_contact_method=Carrier+Pigeon&shelf=Friends
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6d0e775dd6a29a5a4284fe58146fae96"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 56993354-8146-4b7a-a928-fa6ff3b4d633
+      X-Runtime:
+      - '0.006594'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}}}'
+  recorded_at: Sat, 25 Feb 2023 01:51:11 GMT
+- request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/shelves
     body:
@@ -27,14 +66,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6116064b-dcac-4ede-af3c-a51101153ff2
+      - f31069d2-039d-4d5b-85b6-ad7ec73d84e3
       X-Runtime:
-      - '0.007381'
+      - '0.018755'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"12","type":"fern"}]}}},{"id":"2","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}},{"id":"3","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}},{"id":"4","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}}],"included":[{"id":"12","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
         Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}}]}'
-  recorded_at: Sat, 25 Feb 2023 01:52:26 GMT
+  recorded_at: Sat, 25 Feb 2023 01:51:11 GMT
 recorded_with: VCR 6.1.0
