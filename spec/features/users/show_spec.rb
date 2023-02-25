@@ -32,7 +32,7 @@ RSpec.describe 'User Show', type: :feature do
     it 'shows each shelf for the user with their ferns' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit greenhouse_path
-
+      
       expect(page).to have_content('Business Shelf')
       expect(page).to have_content('Friends Shelf')
       expect(page).to have_content('Family Shelf')
@@ -51,6 +51,17 @@ RSpec.describe 'User Show', type: :feature do
         expect(page).to have_content('Roshan')
         expect(page).to have_content('Nate')
       end
+    end
+    
+    it 'links to a fern show page' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit greenhouse_path
+      
+      expect(page).to have_link(href: '/ferns/1')
+      VCR.insert_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
+      click_link(href: '/ferns/1')
+      expect(current_path).to eq(fern_path(1))
+      VCR.eject_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
     end
   end
 end
