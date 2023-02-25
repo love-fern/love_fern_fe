@@ -13,8 +13,8 @@ RSpec.describe 'Fern Show', type: :feature do
       visit fern_path(1)
 
       expect(page).to have_content('Erin')
-      expect(page.find('img')[:src]).to eq("/assets/love-fern-2_720-e1a14184dd1f51072e8efabb4620f8fd86e43fef0e5205e2e54d5018df467890.png")
-      expect(page).to have_content('Phone')
+      expect(page.find('img')[:src]).to eq("/assets/love-fern-1_720-96c5de8a50f1f07e41baf35f3757bb5f1f6ba47a627a79ffc310a60b7851664e.png")
+      expect(page).to have_content('Text')
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
     end
