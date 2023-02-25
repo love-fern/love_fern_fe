@@ -18,8 +18,14 @@ class FernsController < ApplicationController
   end
 
   def update
-    FernService.update_fern(current_user["uid"], params[:id], fern_params)
-    redirect_to fern_path(params[:id])
+    if params[:interaction] != '' && params[:interaction] != ' ' 
+      FernService.update_fern(current_user['uid'], params[:id], fern_params)
+      flash[:success] = 'Fern watered!'
+      redirect_to fern_path(params[:id]) if params[:commit] == 'Water Fern'
+    else
+      flash[:error] = "Interaction can't be blank"
+      redirect_to water_fern_path(params[:id])
+    end
   end
 
   private

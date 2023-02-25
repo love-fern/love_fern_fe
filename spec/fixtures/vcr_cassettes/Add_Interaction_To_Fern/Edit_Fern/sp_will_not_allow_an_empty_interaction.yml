@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ad217aae11eecb1ed1e1b8acd0942cf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6500049b-a8db-48d6-b028-79579af9001e
+      X-Runtime:
+      - '0.003140'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":5,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}}}'
+  recorded_at: Sat, 25 Feb 2023 19:31:33 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"79b3e109b477b3ba621781beccea8e1e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 137e67a1-e139-486c-840f-3831557ed830
+      X-Runtime:
+      - '0.016210'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"fern","attributes":{"name":"Erin","health":5,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}},{"id":"2","type":"fern","attributes":{"name":"Brian","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}},{"id":"3","type":"fern","attributes":{"name":"Austin","health":7,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}},{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":10,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}},{"id":"5","type":"fern","attributes":{"name":"Roshan","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}},{"id":"6","type":"fern","attributes":{"name":"Nate","health":5,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}}}},{"id":"7","type":"fern","attributes":{"name":"Anthony","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}}}},{"id":"8","type":"fern","attributes":{"name":"Drew","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}}}},{"id":"9","type":"fern","attributes":{"name":"Brady","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}}}}]}'
+  recorded_at: Sat, 25 Feb 2023 19:31:33 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ad217aae11eecb1ed1e1b8acd0942cf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dddf902c-fee7-4637-a0ff-97d474978d20
+      X-Runtime:
+      - '0.001717'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":5,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}}}}}'
+  recorded_at: Sat, 25 Feb 2023 19:31:33 GMT
+recorded_with: VCR 6.1.0
