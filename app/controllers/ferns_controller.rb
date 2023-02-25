@@ -13,6 +13,15 @@ class FernsController < ApplicationController
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
   end
 
+  def edit
+    @fern = FernFacade.find_fern(current_user['uid'], params[:id])
+  end
+
+  def update
+    FernService.update_fern(current_user["uid"], params[:id], fern_params)
+    redirect_to greenhouse_path
+  end
+
   private
 
   def fern_params
