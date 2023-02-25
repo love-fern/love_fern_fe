@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/auth/google_oauth2/callback', to: 'sessions#create'
-  
+  delete '/session', to: 'sessions#delete'  
   # dashboard
   get '/greenhouse', to: 'users#show'
-
-  resources :ferns, only: [:new, :create, :show]
+  get '/about', to: 'about#index'
+  get '/ferns/:id/water', to: 'ferns#update', as: :water_fern
+  resources :ferns, only: [:new, :create, :show, :delete]
 end
