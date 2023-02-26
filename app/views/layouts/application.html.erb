@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class="container" data-spy="scroll" data-target=".navbar" data-offset="50">
     <% if flash.any? %>
       <% flash.each do |key, value| -%>
         <% if key == 'error' %>
@@ -21,11 +21,29 @@
         <% end %>
       <% end -%>
     <% end %>
-    <header>
+    <div class='container'>
+      <nav class='navbar navbar-default navbar-fixed-top'>
+        <div class='container-fluid'>
+          <div class='navbar-header'>
+            <%= link_to image_tag('love-fern-logo_720.png', size: 30), root_path, class: 'navbar-brand' %>
+          </div>
+          <ul class='nav navbar-nav'>
+            <% if current_user %>
+              <li><%= link_to 'Greenhouse', greenhouse_path, class: 'nav-link' %></li>
+            <% end %>
+            <li><%= link_to 'About', about_path, class: 'nav-link' %></li>
+            <% if current_user %>
+              <li><%= link_to 'Log Out', session_path, method: :delete, class: 'nav-link' %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class='container text-center'>
       <h1>
         Love Fern
       </h1>
-    </header>
+    </div>
     <%= yield %>
   </body>
 </html>

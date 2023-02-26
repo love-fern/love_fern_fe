@@ -1,0 +1,9 @@
+<h2>Fertilize Your Fern!</h2>
+<h3>Yikes! Your relationship with <%= @fern.name %> isn't looking too healthy.</h3>
+
+<%= link_to image_tag(@fern.image, size: 200, alt: 'fern health image', id: "fern-#{@fern.id}"), fern_path(@fern.id) %><br>
+
+<h3>Maybe you could... <%= @activity.activity %> together!</h3>
+
+<%= button_to "Sure!", fern_path(@fern.id), params: { health: 8 }, method: :patch %>
+<%= button_to "Maybe Not...", fern_path(@fern.id), method: :get %>
