@@ -21,7 +21,6 @@
   font-family: 'VT323', monospace;
   font-size: 200%;
   padding-top: 4rem;
-  padding-bottom: 4rem;
   background-color: #106d2075;
   color: #413528;
  }
@@ -74,7 +73,7 @@
  .has-bg-img {
   background-image: url('fern-shelf-perspective.png');
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 80%;
   margin: 1em 0em;
  }
@@ -85,20 +84,8 @@
   bottom: 0;
   width: 100%;
   background-position: bottom;
-  background-repeat: repeat;
-  background-size: 50%;
+  background-repeat: repeat-x;
+  background-size: 30%;
   background-image: url('plants-footer.png');
   text-align: center;
-}
-
-footer {
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  background-image: 'images/plants-footer.png';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0; 
 }
