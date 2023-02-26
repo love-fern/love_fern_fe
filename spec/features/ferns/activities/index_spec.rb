@@ -11,11 +11,9 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
     it 'link to fertilize path from fern path appears at low health' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       # fern is at full health
-      VCR.insert_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
       visit fern_path(6)
       
       expect(page).to_not have_button('Fertilize Fern')
-      VCR.eject_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
       
       # fern health is set to 2
       visit fern_path(2)
