@@ -1,14 +1,16 @@
-<h3>
-  <%= current_user['name'] %>'s Greenhouse
-</h3>
-<%= button_to 'Plant a Fern', new_fern_path, method: :get %>
+<div class='text-center'>
+  <h3>
+    <%= current_user['name'] %>'s Greenhouse
+  </h3>
+  <%= button_to 'Plant a Fern', new_fern_path, method: :get %>
+</div>
 <% if @shelves %>
   <% @shelves.each do |shelf| %>
     <div id="<%= shelf.name.downcase %>" class="row">
       <h4><%= shelf.name %> Shelf</h4>
       <% shelf.ferns.each do |fern| %>
         <div class="col-sm-4 text-center">
-          <%= link_to image_tag(fern.image, size: 200), fern_path(fern.id) %><br>
+          <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
           <%= fern.name %>
         </div>
       <% end %>

@@ -15,3 +15,29 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+ body {
+  font-family: 'VT323', monospace;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #106d2075;
+  color: #413528;
+ }
+
+ .navbar {
+  background-color: #705b44;
+  border-bottom: 2px solid #413528;
+ }
+
+ .nav-link {
+  color: #f0f0f0;
+ }
+
+ .btn-primary {
+  background-color: #045a0490;
+ }
+
+ .non-block-button {
+  margin: 0 1rem;
+ }

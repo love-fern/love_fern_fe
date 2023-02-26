@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :validate_user, only: [:new, :show]
   helper_method :current_user
   def current_user
     @current_user ||= session[:user] if session[:user]
