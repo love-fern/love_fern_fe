@@ -8,6 +8,7 @@ RSpec.describe 'Fern Show', type: :feature do
       'email' => "samc1253@gmail.com",
       'image' => "https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c"
     } }
+
     it 'Shows the fern information' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(1)
@@ -17,6 +18,29 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(page).to have_content('Phone')
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
+    end
+
+    it 'Will not navigate if the user is not logged in' do
+      visit fern_path(1)
+
+      expect(page).to have_content('You must be logged in to access this page')
+    end
+  end
+
+  describe 'Fern Delete', :vcr do
+    let(:user) { {
+      'uid' => "110920554030325122207",
+      'name' => "Samuel Cox",
+      'email' => "samc1253@gmail.com",
+      'image' => "https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c"
+    } }
+    it 'Shows the fern information' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit fern_path(1)
+
+      click_button('Compost Fern')
+      expect(current_path).to eq(greenhouse_path)
+      expect(page).to_not have_content('Erin')
     end
   end
 end

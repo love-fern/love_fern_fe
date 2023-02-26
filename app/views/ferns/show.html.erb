@@ -1,10 +1,26 @@
-<h2>
-  <%= image_tag(@fern.image, size: 200) %>
-  <%= @fern.name %>
-</h2>
+<div class="text-center">
+  <div class='container'>
+    <h2>
+      <%= image_tag(@fern.image, size: 100) %>
+      <%= @fern.name %>
+    </h2>
+  </div>
 
-<%= button_to 'Water Fern', water_fern_path(@fern.id), method: :post %>
-<%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete %>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-3'>
+      </div>
+      <div class='col-sm-3'>
+        <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
+      </div>
+      <div class='col-sm-3'>
+        <%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete, class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+  </div>
 
-<h4>Contact Details:</h4>
-<%= @fern.preferred_contact_method.capitalize %>
+  <div class='container'>
+    <h4>Preferned Contact Method:</h4>
+    <%= @fern.preferred_contact_method.capitalize %>
+  </div>
+</div>

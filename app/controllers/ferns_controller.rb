@@ -1,6 +1,4 @@
 class FernsController < ApplicationController
-  before_action :validate_user, only: :new
-
   def new
   end
 
@@ -11,6 +9,11 @@ class FernsController < ApplicationController
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
+  end
+
+  def destroy
+    FernFacade.delete_fern(current_user['uid'], params[:id])
+    redirect_to greenhouse_path
   end
 
   private
