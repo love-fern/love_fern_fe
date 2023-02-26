@@ -13,6 +13,10 @@ class FernsController < ApplicationController
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
   end
 
+  def edit
+    @fern = FernFacade.find_fern(current_user['uid'], params[:id])
+  end
+
   def update
     if params[:interaction] != '' && params[:interaction] != ' ' 
       FernService.update_fern(current_user['uid'], params[:id], fern_params)
