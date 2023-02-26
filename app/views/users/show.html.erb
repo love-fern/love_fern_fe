@@ -1,19 +1,25 @@
-<div class='text-center'>
+<div class='container text-center'>
   <h3>
     <%= current_user['name'] %>'s Greenhouse
   </h3>
-  <%= button_to 'Plant a Fern', new_fern_path, method: :get %>
+  <%= button_to 'Plant a Fern', new_fern_path, method: :get, class: 'btn btn-lg btn-primary' %>
 </div>
-<% if @shelves %>
-  <% @shelves.each do |shelf| %>
-    <div id="<%= shelf.name.downcase %>" class="row">
+<div class='container'>
+  <% if @shelves %>
+    <% @shelves.each do |shelf| %>
+      <% unless shelf.ferns == [] %>
       <h4><%= shelf.name %> Shelf</h4>
-      <% shelf.ferns.each do |fern| %>
-        <div class="col-sm-4 text-center">
-          <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
-          <%= fern.name %>
+        <div class="has-bg-img">
+          <div id="<%= shelf.name.downcase %>" class="row">
+            <% shelf.ferns.each do |fern| %>
+              <div class="col-sm-4 text-center">
+                <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
+                <p><%= fern.name %></p>
+              </div>
+            <% end %>
+          </div>
         </div>
       <% end %>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
