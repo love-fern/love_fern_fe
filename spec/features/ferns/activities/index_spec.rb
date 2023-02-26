@@ -12,22 +12,23 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       # fern is at full health
       VCR.insert_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
-      visit fern_path(1)
-
+      visit fern_path(6)
+      
       expect(page).to_not have_button('Fertilize Fern')
       VCR.eject_cassette('Fern_Show/Fern_Show_Page/Shows_the_fern_information')
-
+      
       # fern health is set to 2
       visit fern_path(2)
-
+      
       expect(page).to have_button('Fertilize Fern')
-
+      
       click_button('Fertilize Fern')
-
+      
       expect(current_path).to eq(fertilize_fern_path(2))
     end
-
+    
     it 'fertilize / activity index has content' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fertilize_fern_path(2)
 
       expect(page).to have_content('Fertilize Your Fern!')
