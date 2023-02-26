@@ -43,7 +43,7 @@ RSpec.describe 'Fern Show', type: :feature do
       fill_in('preferred_contact_method', with: 'None')
       click_button('Plant!')
       visit fern_path(11)
-
+      
       click_button('Compost Fern')
       expect(current_path).to eq(greenhouse_path)
       expect(page).to_not have_content('Deletable')
