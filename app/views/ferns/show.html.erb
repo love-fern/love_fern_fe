@@ -1,10 +1,12 @@
-<h2>
+<h2 id='fern-show-header'>
   <%= image_tag(@fern.image, size: 200) %>
   <%= @fern.name %>
 </h2>
 
 <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :post %>
 <%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete %>
-
+<% if @fern.health <= 3 %>
+  <%= button_to 'Fertilize Fern', fertilize_fern_path(@fern.id), method: :get %>
+<% end %>
 <h4>Contact Details:</h4>
 <%= @fern.preferred_contact_method.capitalize %>

@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/greenhouse', to: 'users#show'
   get '/about', to: 'about#index'
   get '/ferns/:id/water', to: 'ferns#edit', as: :water_fern
-
+  get '/ferns/:id/fertilize', to: 'ferns/activities#index', as: :fertilize_fern
   resources :ferns, only: [:new, :create, :show, :delete, :update]
 end

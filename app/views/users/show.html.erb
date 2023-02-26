@@ -8,7 +8,7 @@
       <h4><%= shelf.name %> Shelf</h4>
       <% shelf.ferns.each do |fern| %>
         <div class="col-sm-4 text-center">
-          <%= link_to image_tag(fern.image, size: 200), fern_path(fern.id) %><br>
+          <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
           <%= fern.name %>
         </div>
       <% end %>
