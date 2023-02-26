@@ -55,6 +55,6 @@ class FernService
 
   # external APIs
   def self.get_an_activity
-    conn.get('activity')
+    conn.get('activities')
   end
 end
