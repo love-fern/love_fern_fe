@@ -22,10 +22,6 @@ class FernsController < ApplicationController
 
   def update
     if params[:interaction] != '' && params[:interaction] != ' '
-      FernService.update_fern(current_user['uid'], params[:id], fern_params)
-      flash[:success] = 'Fern watered!'
-      redirect_to fern_path(params[:id]) if params[:commit] == 'Water Fern'
-    if params[:interaction] != '' && params[:interaction] != ' '
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)

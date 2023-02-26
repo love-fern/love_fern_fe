@@ -42,6 +42,11 @@ RSpec.describe 'new fern page', type: :feature do
         select 'Friend', from: :shelf
         fill_in :preferred_contact_method, with: 'Carrier Pigeon'
         click_button 'Plant!'
+
+        expect(page).to have_content('Drew')
+
+        visit fern_path(10)
+        click_button('Compost Fern')
       end
     end
   end
