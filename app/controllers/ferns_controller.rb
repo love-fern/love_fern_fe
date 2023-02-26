@@ -21,7 +21,7 @@ class FernsController < ApplicationController
   end
 
   def update
-    if params[:interaction] != '' && params[:interaction] != ' '
+    if interaction?
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)
@@ -32,6 +32,10 @@ class FernsController < ApplicationController
   end
   
   private
+
+  def interaction?
+    params[:interaction] != '' && params[:interaction] != ' '
+  end
   
   def fern_params
     params.permit(:name, :shelf, :preferred_contact_method)
