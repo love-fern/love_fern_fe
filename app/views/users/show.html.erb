@@ -6,17 +6,18 @@
 </div>
 <% if @shelves %>
   <% @shelves.each do |shelf| %>
-    <div id="<%= shelf.name.downcase %>" class="row">
+    <% unless shelf.ferns == [] %>
+    <h4><%= shelf.name %> Shelf</h4>
       <div class="has-bg-img">
-        <h4><%= shelf.name %> Shelf</h4>
-        <% shelf.ferns.each do |fern| %>
-          <div class="col-sm-4 text-center">
-            <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
-            <%= fern.name %>
-          </div>
-        <% end %>
-        <%= image_tag("fern-shelf.png", height: 200, width: 600, class: "bg-img") %>
+        <div id="<%= shelf.name.downcase %>" class="row">
+          <% shelf.ferns.each do |fern| %>
+            <div class="col-sm-4 text-center">
+              <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
+              <p><%= fern.name %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 <% end %>
