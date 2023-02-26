@@ -1,6 +1,4 @@
 class FernsController < ApplicationController
-  before_action :validate_user, only: :new
-
   def new
   end
 
@@ -13,12 +11,17 @@ class FernsController < ApplicationController
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
   end
 
+  def destroy
+    FernFacade.delete_fern(current_user['uid'], params[:id])
+    redirect_to greenhouse_path
+  end
+
   def edit
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
   end
 
   def update
-    if params[:interaction] != '' && params[:interaction] != ' ' 
+    if interaction?
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)
@@ -29,6 +32,10 @@ class FernsController < ApplicationController
   end
   
   private
+
+  def interaction?
+    params[:interaction] != '' && params[:interaction] != ' '
+  end
   
   def fern_params
     params.permit(:name, :shelf, :preferred_contact_method)

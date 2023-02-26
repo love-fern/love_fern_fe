@@ -1,7 +1,9 @@
-<h3>
-  <%= current_user['name'] %>'s Greenhouse
-</h3>
-<%= button_to 'Plant a Fern', new_fern_path, method: :get %>
+<div class='text-center'>
+  <h3>
+    <%= current_user['name'] %>'s Greenhouse
+  </h3>
+  <%= button_to 'Plant a Fern', new_fern_path, method: :get %>
+</div>
 <% if @shelves %>
   <% @shelves.each do |shelf| %>
     <div id="<%= shelf.name.downcase %>" class="row">
