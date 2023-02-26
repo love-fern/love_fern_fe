@@ -1,15 +1,25 @@
-<h3>
-  <%= @fern.name %>'s Fern
-</h3>
+<div class='container text-center'>
+  <h3>
+    <%= @fern.name %>'s Fern
+  </h3>
+</div>
 
-<div id="disclaimer-warning">
+<div id="disclaimer-warning" class='container text-center'>
   <b>Disclaimer:</b> Interaction analysis is done by a machine learning model. It is not perfect.
   Have fun, water your fern, and don't take it too seriously.<br>
 </div>
 
-<h4>Add Interaction</h4>
-<%= form_with url: fern_path(@fern.id), method: :patch, local: true do |f| %>
-  <%= f.label :interaction %>
-  <%= f.text_area :interaction, rows: 8 %>
-  <%= f.submit 'Water Fern' %>
-<% end %>
+<div class='container'>
+  <div class='col-sm-4'>
+  </div>
+  <div class='col-sm-4'>
+    <h4>Add Interaction</h4>
+    <%= form_with url: fern_path(@fern.id), method: :patch, local: true do |f| %>
+      <div class='form-group'>
+        <%= f.label :interaction, 'Interaction:' %>
+        <%= f.text_area :interaction, rows: 8, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Water Fern', class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  </div>
+</div>
