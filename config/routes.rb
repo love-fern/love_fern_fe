@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get '/about', to: 'about#index'
   get '/ferns/:id/water', to: 'ferns#edit', as: :water_fern
 
-  resources :ferns, only: [:new, :create, :show, :delete, :update]
+  resources :ferns, only: [:new, :create, :show, :destroy, :update]
 end

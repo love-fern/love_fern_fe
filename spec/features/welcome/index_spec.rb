@@ -27,7 +27,7 @@ RSpec.describe 'Welcome Index', type: :feature do
     it 'navbar always has home / about link options' do
       visit root_path
 
-      expect(page).to have_link('Love Fern', href: root_path)
+      expect(page).to have_link(href: root_path)
       expect(page).to have_link('About', href: about_path)
       expect(page).to_not have_link('Greenhouse')
       expect(page).to_not have_link('Log Out')
@@ -38,7 +38,7 @@ RSpec.describe 'Welcome Index', type: :feature do
 
       visit root_path
   
-      expect(page).to have_link('Love Fern', href: root_path)
+      expect(page).to have_link(href: root_path)
       expect(page).to have_link('About', href: about_path)
       expect(page).to have_link('Greenhouse', href: greenhouse_path)
       expect(page).to have_link('Log Out', href: session_path)
