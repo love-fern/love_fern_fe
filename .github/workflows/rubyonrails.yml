@@ -22,7 +22,7 @@ jobs:
           POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/love_fern_fe_test"
+      DATABASE_URL: "postgres://postgres:password@localhost:5432/love_fern_fe_test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
