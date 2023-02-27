@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36f31b94138add4e42712d50fe208f05"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 911c0844-110b-4700-8e11-ddf2f195fa8e
+      X-Runtime:
+      - '0.084284'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"fern","attributes":{"name":"Nate","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"interactions":{"data":[]}}},"included":[]}'
+  recorded_at: Sun, 26 Feb 2023 06:23:09 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a9ad5dc1a1e6cccd40f33d073535bd10"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3039e7b9-bb3b-41b3-88f4-4f35bad50b71
+      X-Runtime:
+      - '0.010232'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"interactions":{"data":[]}}},"included":[]}'
+  recorded_at: Sun, 26 Feb 2023 06:23:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a9ad5dc1a1e6cccd40f33d073535bd10"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 36a775d2-ec32-4e12-90a4-fe3743d925f5
+      X-Runtime:
+      - '0.012915'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"interactions":{"data":[]}}},"included":[]}'
+  recorded_at: Sun, 26 Feb 2023 06:23:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/activities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - FErnCultForLyfe
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"09fb98410ea6241a1de3f6ae9aa8d453"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 940b52ad-55f4-46ec-8a47-5ad06867aa17
+      X-Runtime:
+      - '0.330874'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"activity":"Cook something together with someone"}'
+  recorded_at: Sun, 26 Feb 2023 06:23:10 GMT
+recorded_with: VCR 6.1.0
