@@ -4,7 +4,8 @@ class FernFacade
 
   def self.find_fern(user_id, fern_id)
     unparsed = FernService.get_fern(user_id, fern_id)
-    Fern.new(FernService.parse_json(unparsed)[:data])
+    parsed = FernService.parse_json(unparsed)
+    Fern.new(parsed[:data], parsed[:included])
   end
 
   def self.delete_fern(user_id, fern_id)

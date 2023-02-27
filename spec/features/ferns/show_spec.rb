@@ -9,6 +9,15 @@ RSpec.describe 'Fern Show', type: :feature do
       'image' => "https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c"
     } }
 
+    let(:user_2) { {
+        "uid"=>"113234860329276513988",
+        "name"=>"Anthony Ongaro",
+        "email"=>"aongaro@gmail.com",
+        "image"=>
+         "https://lh3.googleusercontent.com/a/AGNmyxZaV6gpWLtMVqa4RCcgDsiigEijEnmEviTX2mhQ1Q=s96-c",
+        "google_id"=>"113234860329276513988"
+      } }
+
     it 'Shows the fern information' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(1)
@@ -26,6 +35,13 @@ RSpec.describe 'Fern Show', type: :feature do
       visit fern_path(1)
 
       expect(page).to have_content('You must be logged in to access this page')
+    end
+
+    it 'will not navigate if the user is not the correct user for the fern' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_2)
+      visit fern_path(1)
+
+      expect(page).to have_content('Focus on your own Ferns for now!')
     end
   end
 
