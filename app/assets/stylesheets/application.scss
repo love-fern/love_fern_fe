@@ -19,10 +19,38 @@
 
  body {
   font-family: 'VT323', monospace;
+  font-size: 200%;
   padding-top: 4rem;
-  padding-bottom: 4rem;
   background-color: #106d2075;
   color: #413528;
+ }
+
+ p {
+  font-size: 140%;
+ }
+
+ h1 {
+  font-size: 350%;
+ }
+
+ h2 {
+  font-size: 250%;
+ }
+
+ h3 {
+  font-size: 180%;
+ }
+
+ h4 {
+  font-size: 160%;
+ }
+
+ h5 {
+  font-size: 180%;
+ }
+
+ h6 {
+  font-size: 180%;
  }
 
  .navbar {
@@ -41,3 +69,23 @@
  .non-block-button {
   margin: 0 1rem;
  }
+
+ .has-bg-img {
+  background-image: url('fern-shelf-perspective.png');
+  background-position: bottom;
+  background-repeat: repeat-y;
+  background-size: 80%;
+  margin: 1em 0em;
+ }
+
+ .footer {
+  position: bottom;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 30%;
+  background-image: url('plants-footer.png');
+  text-align: center;
+}
