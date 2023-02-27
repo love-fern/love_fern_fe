@@ -37,7 +37,7 @@ class FernService
   end 
 
   # shelves
-  def self.find_shelves(google_id)
+  def self.get_all_shelves(google_id)
     conn.get("users/#{google_id}/shelves")
   end
   
