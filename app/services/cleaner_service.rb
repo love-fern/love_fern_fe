@@ -1,7 +1,7 @@
 class CleanerService
   def self.conn
     Faraday.new(
-      url: "#{ENV['url']}/api/v1/",
+      url: "#{ENV['URL']}/api/v1/",
       headers: { FErn_key: ENV['FErn_key'] }
     )
   end
