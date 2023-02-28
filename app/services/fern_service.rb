@@ -1,7 +1,7 @@
 class FernService
   def self.conn
     Faraday.new(
-      url: "http://localhost:5000/api/v1/",
+      url: "#{ENV['url']}/api/v1/",
       headers: { FErn_key: ENV['FErn_key'] }
     )
   end

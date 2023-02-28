@@ -25,7 +25,7 @@ class FernsController < ApplicationController
   end
 
   def update
-    if interaction?
+    if message?
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)
@@ -37,8 +37,8 @@ class FernsController < ApplicationController
   
   private
 
-  def interaction?
-    params[:interaction] != '' && params[:interaction] != ' '
+  def message?
+    params[:message] != '' && params[:message] != ' '
   end
   
   def fern_params
