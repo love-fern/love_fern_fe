@@ -9,6 +9,11 @@ class FernsController < ApplicationController
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
+    require 'pry'; binding.pry
+    unless @fern.user_id == current_user['uid']
+      flash[:error] = 'Focus on your own Ferns for now!'
+      redirect_to greenhouse_path
+    end
   end
 
   def destroy
@@ -21,7 +26,7 @@ class FernsController < ApplicationController
   end
 
   def update
-    if interaction?
+    if message?
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)
@@ -33,7 +38,7 @@ class FernsController < ApplicationController
   
   private
 
-  def interaction?
+  def message?
     params[:interaction] != '' && params[:interaction] != ' '
   end
   

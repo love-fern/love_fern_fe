@@ -1,13 +1,9 @@
 class FernService
   def self.conn
     Faraday.new(
-      url: "http://localhost:5000/api/v1/",
+      url: "#{ENV['url']}/api/v1/",
       headers: { FErn_key: ENV['FErn_key'] }
     )
-  end
-
-  def self.find_shelves(google_id)
-    conn.get("users/#{google_id}/shelves")
   end
 
   def self.parse_json(response)
@@ -41,6 +37,10 @@ class FernService
   end 
 
   # shelves
+  def self.get_all_shelves(google_id)
+    conn.get("users/#{google_id}/shelves")
+  end
+  
   def self.get_ferns_on_shelf(google_id, shelf_id)
     conn.get("users/#{google_id}/shelves/#{shelf_id}/ferns")
   end
