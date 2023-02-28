@@ -6,5 +6,4 @@ class Interaction
     @positivity = interaction_data[:attributes][:evaluation].downcase
     @created_at = Date.parse(interaction_data[:attributes][:created_at]).strftime('%d %B %Y')
   end
-
 end

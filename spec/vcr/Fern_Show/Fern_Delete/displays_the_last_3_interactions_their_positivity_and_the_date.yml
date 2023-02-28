@@ -1,0 +1,386 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9348f53e99ec9c966a03c87895cce809"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cd87f42c-c20f-4874-b198-d856e2f9f5fc
+      X-Runtime:
+      - '0.021572'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:54 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9348f53e99ec9c966a03c87895cce809"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9c2d17f4-a3dd-4f0a-994a-1506c4846abb
+      X-Runtime:
+      - '0.012683'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:54 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: UTF-8
+      string: interaction=I+watered+this+fern+today.+I+love+pizza.+I+love+you.
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fc77d1ec35396366c8f26c950f1bbc61"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 523fdb81-0fae-4904-8241-895d831b5ecf
+      X-Runtime:
+      - '0.191052'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}}}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9d962687d1e681c27ed0a596e5cd300f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 88b98e3d-9ee7-4b39-a13a-f4ed08aa3a16
+      X-Runtime:
+      - '0.021636'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.059Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9d962687d1e681c27ed0a596e5cd300f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 39f014d7-b0ac-4f57-8e05-505690e560bb
+      X-Runtime:
+      - '0.012297'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.059Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: UTF-8
+      string: interaction=You+Suck%2C+I+hate+you
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0202eca65ac31eb940db1e0f9c6ddb65"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0fcafd42-ce53-4b6f-a9f6-92815e8c310c
+      X-Runtime:
+      - '0.178981'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}}}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"175f01b53efaad3cf713f7ff0224ce98"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a11110a-65db-4187-91cf-dda5d748f722
+      X-Runtime:
+      - '0.010695'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Negative","created_at":"2023-02-28T22:39:55.340Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.059Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"175f01b53efaad3cf713f7ff0224ce98"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ac568f71-c0d2-48db-ad97-2dc97eb55b99
+      X-Runtime:
+      - '0.006368'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Negative","created_at":"2023-02-28T22:39:55.340Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.059Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: UTF-8
+      string: interaction=You%27re+the+best
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8ca3577a0636fac90a1cb1766ebb406a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8ed4d671-0883-4338-bc07-adf2fa052dbd
+      X-Runtime:
+      - '0.156351'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}}}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b131b7b15972444e2908fd10e6667a97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 76d5c054-0b8b-4efd-80ba-df765f8281fb
+      X-Runtime:
+      - '0.006699'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.611Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":"Negative","created_at":"2023-02-28T22:39:55.340Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-02-28T22:39:55.059Z"},"relationships":{"fern":{"data":{"id":"10","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Tue, 28 Feb 2023 22:39:55 GMT
+recorded_with: VCR 6.1.0

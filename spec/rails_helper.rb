@@ -3,7 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -15,7 +15,8 @@ Shoulda::Matchers.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/vcr"
+  config.cassette_library_dir = 'spec/vcr'
+  config.filter_sensitive_data('<FERN_KEY>') { ENV['FERN_KEY'] }
   config.hook_into :webmock
   config.configure_rspec_metadata!
 end
