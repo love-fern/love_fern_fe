@@ -1,28 +1,28 @@
 class FernsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
-    created_fern = FernService.create_fern(current_user["uid"], fern_params)
-    if created_fern.body["error"] == "error"
+    created_fern = FernService.create_fern(current_user['uid'], fern_params)
+    if created_fern.body['error'] == 'error'
       flash[:error] = "Please fill all of your fern's information out"
       render :new
     else
       redirect_to greenhouse_path
-      flash[:success] = "Congratulations on your new fern!"
+      flash[:success] = 'Congratulations on your new fern!'
     end
   end
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
-    unless @fern.user_id == current_user['uid']
-      flash[:error] = 'Focus on your own Ferns for now!'
-      redirect_to greenhouse_path
-    end
-  #   return if @fern.user_id == current_user['uid']
+    return if @fern.user_id == current_user['uid']
 
-  #   flash[:error] = 'Focus on your own Ferns for now!'
-  #   redirect_to greenhouse_path
+    flash[:error] = 'Focus on your own Ferns for now!'
+    redirect_to greenhouse_path
+
+    #   return if @fern.user_id == current_user['uid']
+
+    #   flash[:error] = 'Focus on your own Ferns for now!'
+    #   redirect_to greenhouse_path
   end
 
   def destroy
@@ -46,19 +46,19 @@ class FernsController < ApplicationController
       redirect_to water_fern_path(params[:id])
     end
   end
-  
+
   private
 
   def valid_interaction?
-    if params[:interaction]
-      params[:interaction].delete(' ') != '' && params[:interaction].length >= 2
-    end
+    return unless params[:interaction]
+
+    params[:interaction].delete(' ') != '' && params[:interaction].length >= 2
   end
-  
+
   def fern_params
     params.permit(:name, :shelf, :interaction, :preferred_contact_method)
   end
-  
+
   def fertilize_params
     params.permit(:health)
   end
@@ -68,7 +68,7 @@ class FernsController < ApplicationController
     flash[:success] = 'Fern watered!'
     redirect_to fern_path(params[:id])
   end
-  
+
   def update_for_fertilize
     FernService.update_fern(current_user['uid'], params[:id], fertilize_params)
     flash[:success] = 'Fertilized!'

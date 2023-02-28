@@ -1,13 +1,13 @@
 class ShelfFacade
   def self.user_shelves(google_id)
     full = FernService.parse_json(FernService.get_all_shelves(google_id))
-    if full[:data]
-      ferns = full[:included]
-      shelves = full[:data]
+    return unless full[:data]
 
-      shelves.map do |shelf|
-        Shelf.new(shelf, ferns)
-      end
+    ferns = full[:included]
+    shelves = full[:data]
+
+    shelves.map do |shelf|
+      Shelf.new(shelf, ferns)
     end
   end
 end

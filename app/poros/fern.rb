@@ -1,5 +1,6 @@
 class Fern
   attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id, :interactions
+
   def initialize(fern_info, included = false)
     @id = fern_info[:id]
     @name = fern_info[:attributes][:name]
@@ -16,7 +17,7 @@ class Fern
   end
 
   def set_image(health)
-    image_number = (health+1)/2
+    image_number = (health + 1) / 2
     "love-fern-#{image_number}_720.png"
   end
 
