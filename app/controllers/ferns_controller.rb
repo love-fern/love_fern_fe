@@ -3,8 +3,14 @@ class FernsController < ApplicationController
   end
 
   def create
-    FernService.create_fern(current_user["uid"], fern_params)
-    redirect_to greenhouse_path
+    created_fern = FernService.create_fern(current_user["uid"], fern_params)
+    if created_fern.body["error"] == "error"
+      flash[:error] = "Please fill all of your fern's information out"
+      render :new
+    else
+      redirect_to greenhouse_path
+      flash[:success] = "Congratulations on your new fern!"
+    end
   end
 
   def show
@@ -20,8 +26,10 @@ class FernsController < ApplicationController
   end
 
   def destroy
+    fern = FernFacade.find_fern(current_user['uid'], params[:id])
     FernFacade.delete_fern(current_user['uid'], params[:id])
     redirect_to greenhouse_path
+    flash[:success] = "#{fern.name} has been composted! Boundaries are healthy, good for you!"
   end
 
   def edit
