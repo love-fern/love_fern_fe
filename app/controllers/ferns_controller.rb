@@ -9,7 +9,6 @@ class FernsController < ApplicationController
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
-    require 'pry'; binding.pry
     unless @fern.user_id == current_user['uid']
       flash[:error] = 'Focus on your own Ferns for now!'
       redirect_to greenhouse_path
