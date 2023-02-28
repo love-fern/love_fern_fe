@@ -38,7 +38,7 @@ class FernsController < ApplicationController
   private
 
   def message?
-    params[:interaction] != '' && params[:interaction] != ' '
+    !params[:interaction].blank?
   end
   
   def fern_params
