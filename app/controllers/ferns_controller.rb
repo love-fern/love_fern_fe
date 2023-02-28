@@ -38,7 +38,7 @@ class FernsController < ApplicationController
   end
   
   def fern_params
-    params.permit(:name, :shelf, :preferred_contact_method)
+    params.permit(:name, :shelf, :interaction, :preferred_contact_method)
   end
   
   def update_for_water(params)
