@@ -16,6 +16,7 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr"
+  config.filter_sensitive_data('<FERN_KEY>') { ENV['FERN_KEY'] }
   config.hook_into :webmock
   config.configure_rspec_metadata!
 end
