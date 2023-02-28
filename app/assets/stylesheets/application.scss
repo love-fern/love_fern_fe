@@ -17,6 +17,11 @@
  @import "bootstrap";
  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+ * {
+  box-sizing: border-box;
+  // border: 1px solid red;
+ }
+
  body {
   font-family: 'VT323', monospace;
   font-size: 200%;
