@@ -6,10 +6,6 @@ class FernService
     )
   end
 
-  def self.find_shelves(google_id)
-    conn.get("users/#{google_id}/shelves")
-  end
-
   def self.parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
   end
@@ -41,6 +37,10 @@ class FernService
   end 
 
   # shelves
+  def self.get_all_shelves(google_id)
+    conn.get("users/#{google_id}/shelves")
+  end
+  
   def self.get_ferns_on_shelf(google_id, shelf_id)
     conn.get("users/#{google_id}/shelves/#{shelf_id}/ferns")
   end
