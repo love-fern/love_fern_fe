@@ -9,7 +9,7 @@ RSpec.describe FernService do
   } }
 
   describe '.create_fern' do
-    it 'creates a new fern', :vcr do
+    it 'creates a new fern for a user', :vcr do
       fern_params = {
         name: 'The Big Pepperoni',
         preferred_contact_method: "text",
@@ -17,9 +17,21 @@ RSpec.describe FernService do
       }
       
       response = FernService.create_fern(user['uid'], fern_params)
-      
+      expected = File.read('spec/fixtures/fern_service/create_fern.json')
+
       expect(response.status).to eq(201)
-      expect(response).to match_json_schema("fern_service/create_fern")
+      expect(JSON.parse(response.body)).to eq(JSON.parse(expected))
+    end
+  end
+
+  describe '.get_all_ferns' do
+    it 'gets all ferns for a user', :vcr do
+      WebMock.disable!
+      response = FernService.get_all_ferns(user['uid'])
+      binding.pry
+
+      expect(response.status).to eq(200)
+      expect(response).to match_json_schema("fern_service/get_all_ferns")
     end
   end
 end

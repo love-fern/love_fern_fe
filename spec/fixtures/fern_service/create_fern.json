@@ -1,0 +1,28 @@
+{
+  "data": {
+      "id": "10",
+      "type": "fern",
+      "attributes": {
+          "name": "The Big Pepperoni",
+          "health": 7,
+          "preferred_contact_method": "text"
+      },
+      "relationships": {
+          "shelf": {
+              "data": {
+                  "id": "2",
+                  "type": "shelf"
+              }
+          },
+          "user": {
+              "data": {
+                  "id": "1",
+                  "type": "user"
+              }
+          },
+          "interactions": {
+              "data": []
+          }
+      }
+  }
+}
