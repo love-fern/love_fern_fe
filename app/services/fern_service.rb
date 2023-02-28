@@ -12,9 +12,9 @@ class FernService
 
   # users
   def self.create_user(user_info)
-    conn.post("users", user_info)
+    conn.post('users', user_info)
   end
-  
+
   # ferns
   def self.create_fern(google_id, fern_params)
     conn.post("users/#{google_id}/ferns", fern_params)
@@ -34,13 +34,13 @@ class FernService
 
   def self.delete_fern(google_id, fern_id)
     conn.delete("users/#{google_id}/ferns/#{fern_id}")
-  end 
+  end
 
   # shelves
   def self.get_all_shelves(google_id)
     conn.get("users/#{google_id}/shelves")
   end
-  
+
   def self.get_ferns_on_shelf(google_id, shelf_id)
     conn.get("users/#{google_id}/shelves/#{shelf_id}/ferns")
   end
