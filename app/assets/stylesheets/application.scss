@@ -14,7 +14,7 @@ body {
   font-size: 200%;
   padding-top: 4rem;
   background-color: #106d2075;
-  color: #413528;
+  color: #2f2d2b;
 }
 
  // Font Defaults
@@ -74,6 +74,7 @@ h6 {
  // Buttons
 .btn-primary {
   background-color: #045a0490;
+  border-bottom: 3px solid #705b44;
 }
 
 .non-block-button {
@@ -111,6 +112,10 @@ h6 {
   width: 80%;
 }
 
+.container .pots {
+  margin-left: 5rem;
+}
+
 // Sometimes You Need Some Space
 .spacer-1 {
   margin-top: 1rem;
@@ -119,3 +124,24 @@ h6 {
 .spacer-2 {
   margin-top: 5rem;
 }
+
+// Vine HR Styling
+.hr-vine {
+  margin-top: 4rem;
+  margin-bottom: -3rem;
+  width: 100%;
+}
+
+// Shelves
+.shelf-sign {
+  background-color: rgb(221, 220, 220);
+  border: 4px dashed #403d39;
+  width: 20%;
+  border-radius: 1em;
+  box-shadow: 1pt 1pt 3pt #1d1f2380; 
+}
+
+h4.shelf {
+  flex: 1;
+}
+
