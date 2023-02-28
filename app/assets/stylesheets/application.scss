@@ -13,13 +13,13 @@ body {
   font-family: 'VT323', monospace;
   font-size: 200%;
   padding-top: 4rem;
-  background-color: #106d2075;
+  background-color: #99cf87;
   color: #2f2d2b;
 }
 
  // Font Defaults
 p {
-  font-size: 140%;
+  font-size: 1.25em;
 }
 
  // Sizing and Spacing for Names & Bio Links
@@ -31,6 +31,10 @@ p.about-names {
   margin-top: 1rem;
   margin-bottom: -.5rem;
   font-size: 1.75em;
+}
+
+li {
+  font-size: 1em;
 }
 
 // Headers
@@ -134,14 +138,15 @@ h6 {
 
 // Shelves
 .shelf-sign {
-  background-color: rgb(221, 220, 220);
-  border: 4px dashed #403d39;
-  width: 20%;
+  // background-image: url('shelf-sign-thin.png');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // padding: 2.25em 1em;
+  padding: .25em;
+  border: 5px dashed #4d3b29;
+  background-image: linear-gradient(to bottom right, #ffffff, #d4d4d4);
+  width: 25%;
+  box-shadow: 1pt 1pt 3pt #292d3580; 
   border-radius: 1em;
-  box-shadow: 1pt 1pt 3pt #1d1f2380; 
 }
-
-h4.shelf {
-  flex: 1;
-}
-
