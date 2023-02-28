@@ -15,7 +15,7 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
 
       expect(page).to have_content("Erin's Fern")
       expect(page).to have_content('Add Interaction')
-      expect(page).to have_field(:message)
+      expect(page).to have_field(:interaction)
 
       within('#disclaimer-warning') do
         expect(page).to have_content('Interaction analysis is done by a machine learning model.')
@@ -26,7 +26,7 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit water_fern_path(1)
 
-      fill_in :message, with: 'I watered this fern today. I love pizza. I love you.'
+      fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
       click_button 'Water Fern'
 
       expect(current_path).to eq(fern_path(1))
@@ -36,7 +36,7 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit water_fern_path(1)
 
-      fill_in :message, with: ''
+      fill_in :interaction, with: ''
       click_button 'Water Fern'
 
       expect(page).to have_content("Interaction can't be blank")
@@ -47,7 +47,7 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit water_fern_path(1)
 
-      fill_in :message, with: ' '
+      fill_in :interaction, with: ' '
       click_button 'Water Fern'
 
       expect(page).to have_content("Interaction can't be blank")

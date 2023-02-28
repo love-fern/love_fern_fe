@@ -15,10 +15,14 @@ class FernsController < ApplicationController
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
-    return if @fern.user_id == current_user['uid']
+    unless @fern.user_id == current_user['uid']
+      flash[:error] = 'Focus on your own Ferns for now!'
+      redirect_to greenhouse_path
+    end
+  #   return if @fern.user_id == current_user['uid']
 
-    flash[:error] = 'Focus on your own Ferns for now!'
-    redirect_to greenhouse_path
+  #   flash[:error] = 'Focus on your own Ferns for now!'
+  #   redirect_to greenhouse_path
   end
 
   def destroy
@@ -31,10 +35,10 @@ class FernsController < ApplicationController
   end
 
   def update
-    if valid_message?
-      update_for_water(params)
+    if valid_interaction?
+      update_for_water
     elsif params[:health]
-      update_for_fertilize(params)
+      update_for_fertilize
     else
       flash[:error] = "Interaction can't be blank"
       redirect_to water_fern_path(params[:id])
@@ -43,22 +47,28 @@ class FernsController < ApplicationController
   
   private
 
-  def valid_message?
-    params[:message].delete(' ') != '' && params[:message].length >= 2
+  def valid_interaction?
+    if params[:interaction]
+      params[:interaction].delete(' ') != '' && params[:interaction].length >= 2
+    end
   end
   
   def fern_params
     params.permit(:name, :shelf, :interaction, :preferred_contact_method)
   end
   
-  def update_for_water(params)
+  def fertilize_params
+    params.permit(:health)
+  end
+
+  def update_for_water
     FernService.update_fern(current_user['uid'], params[:id], fern_params)
     flash[:success] = 'Fern watered!'
     redirect_to fern_path(params[:id])
   end
   
-  def update_for_fertilize(params)
-    FernService.update_fern(current_user['uid'], params[:id], fern_params)
+  def update_for_fertilize
+    FernService.update_fern(current_user['uid'], params[:id], fertilize_params)
     flash[:success] = 'Fertilized!'
     redirect_to fern_path(params[:id])
   end

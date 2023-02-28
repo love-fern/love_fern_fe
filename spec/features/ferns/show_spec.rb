@@ -64,5 +64,41 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(current_path).to eq(greenhouse_path)
       expect(page).to_not have_content('Deletable')
     end
+
+    it 'displays the last 3 interactions, their positivity, and the date' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit fern_path(10)
+
+      within "#last_3_interactions" do
+        expect(page).to have_content("Last Three Interactions:")
+      end
+
+      click_button "Water Fern"
+      fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
+      click_button "Water Fern"
+
+      within "#last_3_interactions" do
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+      end
+
+      click_button "Water Fern"
+      fill_in :interaction, with: "You Suck, I hate you"
+      click_button "Water Fern"
+
+      within "#last_3_interactions" do
+        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+      end
+
+      click_button "Water Fern"
+      fill_in :interaction, with: "You're the best"
+      click_button "Water Fern"
+
+      within "#last_3_interactions" do
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+      end
+    end
   end
 end
