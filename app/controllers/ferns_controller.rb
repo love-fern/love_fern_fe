@@ -13,6 +13,10 @@ class FernsController < ApplicationController
       flash[:error] = 'Focus on your own Ferns for now!'
       redirect_to greenhouse_path
     end
+  #   return if @fern.user_id == current_user['uid']
+
+  #   flash[:error] = 'Focus on your own Ferns for now!'
+  #   redirect_to greenhouse_path
   end
 
   def destroy
@@ -25,7 +29,7 @@ class FernsController < ApplicationController
   end
 
   def update
-    if message?
+    if valid_message?
       update_for_water(params)
     elsif params[:health]
       update_for_fertilize(params)
@@ -37,12 +41,12 @@ class FernsController < ApplicationController
   
   private
 
-  def message?
-    params[:interaction] != '' && params[:interaction] != ' '
+  def valid_message?
+    params[:message].delete(' ') != '' && params[:message].length >= 2
   end
   
   def fern_params
-    params.permit(:name, :shelf, :preferred_contact_method, :interaction, :health)
+    params.permit(:name, :shelf, :interaction, :preferred_contact_method)
   end
   
   def update_for_water(params)

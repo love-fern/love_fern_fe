@@ -30,11 +30,12 @@
  }
 
  h1 {
-  font-size: 350%;
+  font-size: 3.50em;
+  margin-top: 2.50rem;
  }
 
  h2 {
-  font-size: 250%;
+  font-size: 2.5em;
  }
 
  h3 {
@@ -55,10 +56,12 @@
 
  .navbar {
   background-color: #705b44;
-  border-bottom: 3px solid #045a0470;
+  box-shadow: 1pt 1pt 8pt #292d3580; 
+  border-bottom: 3px solid #705b44;
  }
 
- .nav-link {
+// Navbar Text White
+ .navbar-default .navbar-nav > li > a {
   color: #f0f0f0;
  }
 
@@ -76,4 +79,20 @@
   background-repeat: repeat-y;
   background-size: 80%;
   margin: 1em 0em;
+ }
+
+ .alert {
+  margin-top: 3rem;
+  box-shadow: 1pt 1pt 3pt #292d3580; 
+ }
+
+ .form-control {
+  font-size: 2rem;
+ }
+
+ #disclaimer-warning {
+  width: 50%;
+  border: 2px dashed rgb(98, 52, 0);
+  margin-top: 1rem;
+  padding: 0rem 1rem 2rem;
  }
