@@ -18,8 +18,8 @@
     <h4>Add Interaction</h4>
     <%= form_with url: fern_path(@fern.id), method: :patch, local: true do |f| %>
       <div class='form-group'>
-        <% f.label :message, 'Interaction:' %>
-        <%= f.text_area :message, rows: 8, class: 'form-control' %>
+        <% f.label :interaction, 'Interaction:' %>
+        <%= f.text_area :interaction, rows: 8, class: 'form-control' %>
       </div>
       <%= f.submit 'Water Fern', class: 'btn btn-lg btn-primary' %>
     <% end %>
