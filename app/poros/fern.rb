@@ -1,5 +1,5 @@
 class Fern
-  attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id
+  attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id, :interactions
   def initialize(fern_info, included = false)
     @id = fern_info[:id]
     @name = fern_info[:attributes][:name]
@@ -8,6 +8,11 @@ class Fern
     @health = fern_info[:attributes][:health]
     @image = set_image(fern_info[:attributes][:health])
     @user_id = find_user_id(included) if included
+    @interactions = if included
+                      find_interactions(included).map do |interaction_data|
+                        Interaction.new(interaction_data)
+                      end
+                    end
   end
 
   def set_image(health)
@@ -18,5 +23,9 @@ class Fern
   def find_user_id(included)
     user_hash = included.select { |x| x[:type] == 'user' }
     user_hash.first[:attributes][:google_id]
+  end
+
+  def find_interactions(included)
+    included.select { |x| x[:type] == 'interaction' }
   end
 end
