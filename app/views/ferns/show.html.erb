@@ -8,7 +8,7 @@
 
   <div class='container'>
     <div class='row'>
-      <% if @fern.health <= 3 %>
+      <% if @fern.health <= 4 %>
         <div class='col-sm-4'>
           <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
         </div>
