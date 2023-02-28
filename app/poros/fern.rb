@@ -1,6 +1,7 @@
 class Fern
   attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id
   def initialize(fern_info, included = false)
+    # binding.pry
     @id = fern_info[:id]
     @name = fern_info[:attributes][:name]
     @shelf = fern_info[:relationships][:shelf][:data][:id]

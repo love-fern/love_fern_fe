@@ -9,7 +9,7 @@ class FernsController < ApplicationController
 
   def show
     @fern = FernFacade.find_fern(current_user['uid'], params[:id])
-    unless @fern.user_id == current_user['uid']
+    if @fern.user_id != current_user['uid']
       flash[:error] = 'Focus on your own Ferns for now!'
       redirect_to greenhouse_path
     end
@@ -38,7 +38,7 @@ class FernsController < ApplicationController
   private
 
   def message?
-    params[:interaction] != '' && params[:interaction] != ' '
+    params[:message] != '' && params[:message] != ' '
   end
   
   def fern_params
