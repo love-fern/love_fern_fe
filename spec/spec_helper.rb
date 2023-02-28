@@ -17,8 +17,6 @@ require 'simplecov'
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'app/channels', 'app/jobs', 'app/mailers']
 
-require "json_matchers/rspec"
-JsonMatchers.schema_root = "spec/schemas"
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
