@@ -1,98 +1,121 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+// Love Fern Styling c2023
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
- body {
+// Uncomment border for troubleshooting
+* {
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+body {
   font-family: 'VT323', monospace;
   font-size: 200%;
   padding-top: 4rem;
   background-color: #106d2075;
   color: #413528;
- }
+}
 
- p {
+ // Font Defaults
+p {
   font-size: 140%;
- }
+}
 
- h1 {
+ // Sizing and Spacing for Names & Bio Links
+p.bio-links {
+  font-size: 1.25em;
+}
+
+p.about-names {
+  margin-top: 1rem;
+  margin-bottom: -.5rem;
+  font-size: 1.75em;
+}
+
+// Headers
+h1 {
   font-size: 3.50em;
   margin-top: 2.50rem;
- }
+}
 
- h2 {
+h2 {
   font-size: 2.5em;
- }
+}
 
- h3 {
+h3 {
   font-size: 180%;
- }
+}
 
- h4 {
+h4 {
   font-size: 160%;
- }
+}
 
- h5 {
+h5 {
   font-size: 180%;
- }
+}
 
- h6 {
+h6 {
   font-size: 180%;
- }
+}
 
- .navbar {
+// Nav Bar
+.navbar {
   background-color: #705b44;
   box-shadow: 1pt 1pt 8pt #292d3580; 
   border-bottom: 3px solid #705b44;
  }
 
 // Navbar Text White
- .navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a {
   color: #f0f0f0;
- }
+}
 
- .btn-primary {
+ // Buttons
+.btn-primary {
   background-color: #045a0490;
- }
+}
 
- .non-block-button {
+.non-block-button {
   margin: 0 1rem;
- }
+}
 
- .has-bg-img {
+.has-bg-img {
   background-image: url('fern-shelf-perspective.png');
   background-position: bottom;
   background-repeat: repeat-y;
   background-size: 80%;
   margin: 1em 0em;
- }
+}
 
- .alert {
+// Bring Alert Box Down Below Nav Bar
+.alert {
   margin-top: 3rem;
   box-shadow: 1pt 1pt 3pt #292d3580; 
- }
+}
 
- .form-control {
+.form-control {
   font-size: 2rem;
- }
+}
 
- #disclaimer-warning {
+// Style Disclaimer Warning on Interaction Page
+#disclaimer-warning {
   width: 50%;
   border: 2px dashed rgb(98, 52, 0);
   margin-top: 1rem;
   padding: 0rem 1rem 2rem;
- }
+}
+
+// Make Plant Footer Smaller, Lower
+.plant-footer {
+  width: 80%;
+}
+
+// Sometimes You Need Some Space
+.spacer-1 {
+  margin-top: 1rem;
+}
+
+.spacer-2 {
+  margin-top: 5rem;
+}
