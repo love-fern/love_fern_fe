@@ -26,8 +26,10 @@ class FernsController < ApplicationController
   end
 
   def destroy
+    fern = FernFacade.find_fern(current_user['uid'], params[:id])
     FernFacade.delete_fern(current_user['uid'], params[:id])
     redirect_to greenhouse_path
+    flash[:success] = "#{fern.name} has been composted! Boundaries are healthy, good for you!"
   end
 
   def edit
