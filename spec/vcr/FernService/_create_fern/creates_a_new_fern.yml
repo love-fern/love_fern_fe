@@ -29,15 +29,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0d8f2dd2-1a7d-4f56-8770-6e1caf48d378
+      - 6cf019f6-c6a0-4062-8b2f-bc0ef6c6b621
       X-Runtime:
-      - '0.020999'
+      - '0.018629'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Tue, 28 Feb 2023 22:27:08 GMT
+  recorded_at: Tue, 28 Feb 2023 22:39:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/12
@@ -65,14 +65,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b6191e36-d478-47a5-a89d-eaedfcddf5b4
+      - dc7409ec-026f-4113-aaf0-7225c529b050
       X-Runtime:
-      - '0.014074'
+      - '0.006326'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Tue, 28 Feb 2023 22:27:08 GMT
+  recorded_at: Tue, 28 Feb 2023 22:39:56 GMT
 recorded_with: VCR 6.1.0

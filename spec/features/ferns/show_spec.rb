@@ -62,7 +62,10 @@ RSpec.describe 'Fern Show', type: :feature do
       
       click_button('Compost Fern')
       expect(current_path).to eq(greenhouse_path)
-      expect(page).to_not have_content('Deletable')
+      have_content('Deletable has been composted! Boundaries are healthy, good for you!')
+      within("#friends") do
+        expect(page).to_not have_content("Deletable")
+      end
     end
 
     it 'displays the last 3 interactions, their positivity, and the date' do
