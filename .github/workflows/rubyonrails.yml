@@ -17,6 +17,8 @@ jobs:
         ports:
           - "5432:5432"
         env:
+          HOST_URL: ${{ secrets.HOST_URL }}
+          FERN_KEY: ${{ secrets.FERN_KEY }}
           POSTGRES_DB: love_fern_fe_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
