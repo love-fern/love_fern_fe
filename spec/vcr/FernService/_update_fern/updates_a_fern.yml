@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: UTF-8
+      string: name=Fernilicious&preferred_contact_method=Don%27t&shelf=Business
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7d61a710f9146cdb98ae2b4c4b163ca8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 12c0abb2-fe0c-4353-8204-959eadf98bf3
+      X-Runtime:
+      - '0.019315'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":4,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"},{"id":"3","type":"interaction"}]}}}}'
+  recorded_at: Wed, 01 Mar 2023 19:22:43 GMT
+recorded_with: VCR 6.1.0

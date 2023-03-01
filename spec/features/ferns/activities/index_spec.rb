@@ -32,7 +32,23 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
       visit fertilize_fern_path(2)
 
       expect(page).to have_content('Fertilize Your Fern!')
-      expect(page).to have_content('Fertilize Your Fern!')
+    end
+
+    it 'can fertilize a fern' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit fern_path(1)
+      within('#fern-show-header') do
+        expect(page.find('img')[:src]).to eq('/assets/love-fern-1_720-2bb2636c5a7f6e6f5ed558e65f6a2d633eece82068e9813c479f104005f45b45.png')
+      end
+      visit fertilize_fern_path(1)
+
+      click_button('Sure!')
+
+      expect(current_path).to eq(fern_path(1))
+
+      within('#fern-show-header') do
+        expect(page.find('img')[:src]).to eq('/assets/love-fern-4_720-96c5de8a50f1f07e41baf35f3757bb5f1f6ba47a627a79ffc310a60b7851664e.png')
+      end
     end
   end
 end

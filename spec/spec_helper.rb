@@ -16,16 +16,15 @@ require 'webmock/rspec'
 require 'simplecov'
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['spec', 'config', 'app/channels', 'app/jobs', 'app/mailers']
+
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  if ENV['DATABASE_CLEAN']
-    config.before(:suite) do
-        WebMock.disable!
-        CleanerService.reset_seeds
-        WebMock.enable!
-    end
-  end
+    # config.before(:suite) do
+    #     WebMock.disable!
+    #     CleanerService.reset_seeds
+    #     WebMock.enable!
+    # end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
