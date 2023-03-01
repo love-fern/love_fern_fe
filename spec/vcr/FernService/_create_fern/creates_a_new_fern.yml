@@ -25,22 +25,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"be1bc0969306cea4437c5f3fe17510a8"
+      - W/"ac1d2f3822f880c7a63a2ad0d59162a6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6cf019f6-c6a0-4062-8b2f-bc0ef6c6b621
+      - be92f1d6-7679-49ad-baec-d00ddbd98dbf
       X-Runtime:
-      - '0.018629'
+      - '0.007543'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Tue, 28 Feb 2023 22:39:56 GMT
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
+  recorded_at: Wed, 01 Mar 2023 01:45:15 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/12
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/10
     body:
       encoding: US-ASCII
       string: ''
@@ -61,18 +61,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c9939b67a3b6bece3431845e70b20e36"
+      - W/"d71599e0bca83513c06ab0e0b1bea6d6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dc7409ec-026f-4113-aaf0-7225c529b050
+      - 12bc5846-9c46-4b55-802c-fad31952e37a
       X-Runtime:
-      - '0.006326'
+      - '0.003537'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"10","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Tue, 28 Feb 2023 22:39:56 GMT
+  recorded_at: Wed, 01 Mar 2023 01:45:15 GMT
 recorded_with: VCR 6.1.0
