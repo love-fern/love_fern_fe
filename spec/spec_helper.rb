@@ -19,7 +19,7 @@ SimpleCov.add_filter ['spec', 'config', 'app/channels', 'app/jobs', 'app/mailers
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  if ENV['HOST_URL'] == 'http://localhost:5000'
+  if ENV['DATABASE_CLEAN']
     config.before(:suite) do
         WebMock.disable!
         CleanerService.reset_seeds
