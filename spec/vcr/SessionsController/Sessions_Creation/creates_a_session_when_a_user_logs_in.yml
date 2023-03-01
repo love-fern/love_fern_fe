@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns
+    uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: name=The+Big+Pepperoni&preferred_contact_method=text&shelf=Family
+      string: email=samc1253%40gmail.com&google_id=110920554030325122207&image=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew%3Ds96-c&name=Samuel+Cox&uid=110920554030325122207
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -19,23 +19,23 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"be1bc0969306cea4437c5f3fe17510a8"
+      - W/"f5d906c9819191d9bc17685b5004940d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 35e72865-c6c5-44a2-bee2-cc39a497092e
+      - 75912426-0d84-4d2c-a8a5-c7d9f7c343cd
       X-Runtime:
-      - '0.033977'
+      - '0.010196'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Wed, 01 Mar 2023 19:22:43 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Samuel Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}}'
+  recorded_at: Wed, 01 Mar 2023 19:23:05 GMT
 recorded_with: VCR 6.1.0

@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 71744240-abfd-4c63-ae4d-c173c6cf34f2
+      - 9d428a6e-00e1-478e-9c46-68e291dd6218
       X-Runtime:
-      - '0.114996'
+      - '0.445211'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"6","type":"fern","attributes":{"name":"Nate","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 18:26:55 GMT
+  recorded_at: Wed, 01 Mar 2023 19:22:39 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -64,16 +64,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 54e4d6d4-129f-4f90-9940-4eae3be94f49
+      - 4717a6d3-b727-470b-a8bc-7ec15b86ec2b
       X-Runtime:
-      - '0.004945'
+      - '0.006141'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 18:26:55 GMT
+  recorded_at: Wed, 01 Mar 2023 19:22:39 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -101,16 +101,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 325aa324-6e3a-48e6-aab7-314e94de7c8a
+      - daea813a-7617-42b5-be40-da0d4805da8f
       X-Runtime:
-      - '0.009494'
+      - '0.005044'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 18:26:55 GMT
+  recorded_at: Wed, 01 Mar 2023 19:22:39 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -134,17 +134,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"af37c448ff6c2a5c957cedc0ed264364"
+      - W/"84555a9ddc47c7ed1662b98d87f6c516"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9fa3f85d-e50b-4596-960b-1f549854992d
+      - 6e06503f-aa56-48dc-8b0e-c2cf93f3c210
       X-Runtime:
-      - '0.352624'
+      - '0.183529'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Look at your finances and find one way to save money"}'
-  recorded_at: Wed, 01 Mar 2023 18:26:55 GMT
+      string: '{"activity":"Have a photo session with some friends"}'
+  recorded_at: Wed, 01 Mar 2023 19:22:39 GMT
 recorded_with: VCR 6.1.0

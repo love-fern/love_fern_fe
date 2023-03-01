@@ -27,14 +27,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 17babe0a-0f8e-4a0f-8961-01cdd8730352
+      - c767b089-5d87-4d7c-9f76-3cf73ae1f6b4
       X-Runtime:
-      - '0.004739'
+      - '0.005083'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 18:26:57 GMT
+  recorded_at: Wed, 01 Mar 2023 19:22:41 GMT
 recorded_with: VCR 6.1.0

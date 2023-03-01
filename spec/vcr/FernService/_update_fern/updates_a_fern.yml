@@ -29,13 +29,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a7a3e785-2725-4b89-8b9d-accb549c059e
+      - 12c0abb2-fe0c-4353-8204-959eadf98bf3
       X-Runtime:
-      - '0.027601'
+      - '0.019315'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":4,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"},{"id":"3","type":"interaction"}]}}}}'
-  recorded_at: Wed, 01 Mar 2023 18:26:59 GMT
+  recorded_at: Wed, 01 Mar 2023 19:22:43 GMT
 recorded_with: VCR 6.1.0
