@@ -8,6 +8,9 @@
 </div>
 <div class='container'>
   <% if @shelves %>
+    <% if @shelves.all? { |shelf| shelf.ferns.empty? } %>
+      <%= render partial: '/partials/instructions' %>
+    <% end %>
     <% @shelves.each do |shelf| %>
       <% unless shelf.ferns == [] %>
         <div class="shelf-sign text-center">

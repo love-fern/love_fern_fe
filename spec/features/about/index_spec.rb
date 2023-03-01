@@ -11,8 +11,8 @@ RSpec.describe 'About Index', type: :feature do
     it 'has instructions' do
       visit about_path
 
-      expect(page).to have_content("When you first sign up, you will be prompted to create a fern. You will be able to name your fern, and choose a preferred contact method.")
-      expect(page).to have_content("When you've had a new interaction with your 'fern', you can update the health of your fern by clicking the 'Water Fern' button. Love Fern will analyze the sentiment of the message and update your fern accordingly. This will help you keep track of the current status of your relationship.")
+      expect(page).to have_content("Instructions")
+      expect(page).to have_content("Click 'Plant a Fern' button. Your fern is an important person in your life. You will be able to name your fern, choose a shelf group, and a preferned contact method.")
     end
 
     it 'has team information' do
