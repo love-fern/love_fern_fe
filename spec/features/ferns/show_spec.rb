@@ -24,13 +24,13 @@ RSpec.describe 'Fern Show', type: :feature do
 
     it 'Shows the fern information' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit fern_path(1)
+      visit fern_path(2)
 
       within('#fern-show-header') do
-        expect(page).to have_content('Erin')
+        expect(page).to have_content('Brian')
         expect(page.find('img')[:src]).to eq('/assets/love-fern-1_720-2bb2636c5a7f6e6f5ed558e65f6a2d633eece82068e9813c479f104005f45b45.png')
       end
-      expect(page).to have_content('Text')
+      expect(page).to have_content('Phone')
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
     end
