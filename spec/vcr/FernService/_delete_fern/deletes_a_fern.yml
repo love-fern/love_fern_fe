@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/3
     body:
       encoding: US-ASCII
       string: ''
@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e6e19100126b3598a0ffbbdf0e1ad6d8"
+      - W/"af824b8077547ef35b57e89ebf41eac7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fb33a555-efbb-437b-b561-1871e298c5a3
+      - b24712ae-fab0-40a6-91a7-528599e173e5
       X-Runtime:
-      - '0.018943'
+      - '0.004993'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Wed, 01 Mar 2023 04:45:33 GMT
+      string: '{"data":{"id":"3","type":"fern","attributes":{"name":"Austin","health":3,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
+  recorded_at: Wed, 01 Mar 2023 15:42:56 GMT
 recorded_with: VCR 6.1.0
