@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/109670673621511408796/shelves
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"71163b49792931b641c8a5bbb16a96a1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a8650263-d3fc-4efc-96b2-ded529f9a146
+      X-Runtime:
+      - '0.005334'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"6","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"7","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"8","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}}],"included":[]}'
+  recorded_at: Wed, 01 Mar 2023 21:42:57 GMT
+recorded_with: VCR 6.1.0
