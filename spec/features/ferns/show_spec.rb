@@ -60,15 +60,19 @@ RSpec.describe 'Fern Show', type: :feature do
     end
     it 'Can Compost a fern' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
       visit new_fern_path
       fill_in('name', with: 'Deletable')
       fill_in('preferred_contact_method', with: 'None')
       click_button('Plant!')
-      visit fern_path(11)
-
+      
+      within(:xpath, '//*[contains(@id,"Deletable")]') do
+        click_link
+      end
       click_button('Compost Fern')
+
       expect(current_path).to eq(greenhouse_path)
-      have_content('Deletable has been composted! Boundaries are healthy, good for you!')
+      expect(page).to have_content('Deletable has been composted! Boundaries are healthy, good for you!')
       within('#friends') do
         expect(page).to_not have_content('Deletable')
       end

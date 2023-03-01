@@ -23,7 +23,7 @@ RSpec.configure do |config|
     if ENV['HOST_URL'] == 'http://localhost:5000'
       WebMock.disable!
       CleanerService.reset_seeds
-      WebMock.enable!
+      # WebMock.enable!
     end
   end
   # rspec-expectations config goes here. You can use an alternate
