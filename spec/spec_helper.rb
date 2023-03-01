@@ -20,9 +20,11 @@ SimpleCov.add_filter ['spec', 'config', 'app/channels', 'app/jobs', 'app/mailers
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:suite) do
-    WebMock.disable!
-    CleanerService.reset_seeds
-    WebMock.enable!
+    if ENV['HOST_URL'] == 'http://localhost:5000'
+      WebMock.disable!
+      CleanerService.reset_seeds
+      WebMock.enable!
+    end
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
