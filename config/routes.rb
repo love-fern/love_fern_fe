@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/auth/google_oauth2/callback', to: 'sessions#create'
   delete '/session', to: 'sessions#delete'
+
   # dashboard
   get '/greenhouse', to: 'users#show'
   get '/about', to: 'about#index'
