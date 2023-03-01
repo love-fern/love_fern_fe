@@ -14,9 +14,9 @@ This is the front end of the application, which utilizes OAuth 2.0 for authentic
 
 ## Getting Started
 
-This is a Ruby on Rails application which calls API endpoints set up in the `love_fern_be` repository. To run this locally, both repositories will need to be cloned and set up.
+This is a Ruby on Rails application which calls API endpoints set up in the `love_fern_be` repository. To run this locally, both repositories will need to be cloned and set up fully with required gems and environmet variables.
 
-### Installation
+### Local Installation
 
 To install gems, run:
 
@@ -76,12 +76,13 @@ To fully use Love Fern locally, run `rails s` on both the `love_fern_be` and the
     - If the message is positive, the fern will improve its health.
     - If the message is neutral, the fern will not change its health.
     - If the message is negative, the fern will deteriorate its health.
-  - The image of the fern will be updated to reflect this new health.
+    - The image of the fern will be updated to reflect this new health.
 
 - Fertilizing a Fern:
   - When a fern is unhealthy, there is an option to apply "fertilizer". This means Love Fern will suggest an activity to do with your fern's individual, in order to help strengthen your bond with that person.
   - The fertilizer feature calls the BoredAPI to suggest a random activity. Read more about this API [here](https://www.boredapi.com/documentation).
   - If the activity is confirmed the fern springs back to full health!
+
 ## Goals
 
 Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 group project, Consultancy. Official project requirements can be read [here](https://backend.turing.edu/module3/projects/consultancy/).
@@ -101,10 +102,10 @@ Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 
 
 #### Known Issues
 
-- In its current state, Love Fern's backend API is not private. Future goals are to require a private token that only the Love Fern frontend will have. Until then, please do not provide any information you deem sensitive.
 - The fertilize feature currently suggests a random activity to do with your fern's person. Please consider real life consequences are not our responsibility if you do ask your fern's person to do this activity.
 
 ## Deployment
+When deploying Love Fern, make sure to add all environment variables to the appropriate config settings at your host. `HOST_URL` will need to be the public address where you are hosting the application.
 
 ## Authors & Acknowledgments
 
