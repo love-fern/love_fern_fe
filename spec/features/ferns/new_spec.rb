@@ -52,4 +52,18 @@ RSpec.describe 'new fern page', type: :feature do
       end
     end
   end
+
+  describe 'sad path' do
+    describe 'fern creation', :vcr do
+      it 'will not create a fern if name is not inputted' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        visit new_fern_path
+        select 'Friends', from: :shelf
+        fill_in :preferred_contact_method, with: 'Carrier Pigeon'
+        click_button 'Plant!'
+
+        expect(page).to have_content("Please fill all of your fern's information out")
+      end
+    end
+  end
 end
