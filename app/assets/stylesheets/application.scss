@@ -13,13 +13,13 @@ body {
   font-family: 'VT323', monospace;
   font-size: 200%;
   padding-top: 4rem;
-  background-color: #106d2075;
-  color: #413528;
+  background-color: #99cf87;
+  color: #2f2d2b;
 }
 
  // Font Defaults
 p {
-  font-size: 140%;
+  font-size: 1.25em;
 }
 
  // Sizing and Spacing for Names & Bio Links
@@ -31,6 +31,10 @@ p.about-names {
   margin-top: 1rem;
   margin-bottom: -.5rem;
   font-size: 1.75em;
+}
+
+li {
+  font-size: 1em;
 }
 
 // Headers
@@ -74,6 +78,7 @@ h6 {
  // Buttons
 .btn-primary {
   background-color: #045a0490;
+  border-bottom: 3px solid #705b44;
 }
 
 .non-block-button {
@@ -111,6 +116,10 @@ h6 {
   width: 80%;
 }
 
+.container .pots {
+  margin-left: 5rem;
+}
+
 // Sometimes You Need Some Space
 .spacer-1 {
   margin-top: 1rem;
@@ -118,4 +127,26 @@ h6 {
 
 .spacer-2 {
   margin-top: 5rem;
+}
+
+// Vine HR Styling
+.hr-vine {
+  margin-top: 4rem;
+  margin-bottom: -3rem;
+  width: 100%;
+}
+
+// Shelves
+.shelf-sign {
+  // background-image: url('shelf-sign-thin.png');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // padding: 2.25em 1em;
+  padding: .25em;
+  border: 5px dashed #4d3b29;
+  background-image: linear-gradient(to bottom right, #ffffff, #d4d4d4);
+  width: 25%;
+  box-shadow: 1pt 1pt 3pt #292d3580; 
+  border-radius: 1em;
 }
