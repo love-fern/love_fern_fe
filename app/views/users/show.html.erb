@@ -7,11 +7,13 @@
   <div class="spacer-1"></div>
 </div>
 <div class='container'>
-<% ferns = @shelves.map do |shelf| %>
-  <% shelf.ferns.map { |fern| fern.name } %>
-<% end %>
-<% if ferns.flatten == [] %>
-  <%= render partial: '/partials/instructions' %>
+<% if @shelves %>
+  <% ferns = @shelves.map do |shelf| %>
+    <% shelf.ferns.map { |fern| fern.name } %>
+  <% end %>
+  <% if ferns.flatten == [] %>
+    <%= render partial: '/partials/instructions' %>
+  <% end %>
 <% end %>
   <% if @shelves %>
     <% @shelves.each do |shelf| %>
