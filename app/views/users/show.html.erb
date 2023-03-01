@@ -7,6 +7,13 @@
   <div class="spacer-1"></div>
 </div>
 <div class='container'>
+<% @shelves.each do |shelf| %>
+  <% ferns = shelf.ferns.map do |fern| %>
+  <% end %>
+<% end %>
+<% if ferns = [] %>
+  <%= render partial: '/partials/instructions' %>
+<% end %>
   <% if @shelves %>
     <% @shelves.each do |shelf| %>
       <% unless shelf.ferns == [] %>
