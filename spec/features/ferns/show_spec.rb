@@ -79,8 +79,9 @@ RSpec.describe 'Fern Show', type: :feature do
     end
 
     it 'displays the last 3 interactions, their positivity, and the date' do
+      today_utc = Time.now.utc.to_date.strftime('%d %B %Y')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit fern_path(10)
+      visit fern_path(2)
 
       within '#last_3_interactions' do
         expect(page).to have_content('Last Three Interactions:')
@@ -91,7 +92,7 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{today_utc}")
       end
 
       click_button 'Water Fern'
@@ -99,8 +100,8 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a negative interaction on #{today_utc}")
+        expect(page).to have_content("You had a positive interaction on #{today_utc}")
       end
 
       click_button 'Water Fern'
@@ -108,9 +109,9 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You had a negative interaction on #{today_utc}")
+        expect(page).to have_content("You had a positive interaction on #{today_utc}")
       end
     end
   end
