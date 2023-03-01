@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e6e19100126b3598a0ffbbdf0e1ad6d8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fb33a555-efbb-437b-b561-1871e298c5a3
+      X-Runtime:
+      - '0.018943'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
+  recorded_at: Wed, 01 Mar 2023 04:45:33 GMT
+recorded_with: VCR 6.1.0

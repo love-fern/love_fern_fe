@@ -1,0 +1,28 @@
+{
+  "data": {
+      "id": "4",
+      "type": "fern",
+      "attributes": {
+          "name": "Kieffer",
+          "health": 4,
+          "preferred_contact_method": "text"
+      },
+      "relationships": {
+          "shelf": {
+              "data": {
+                  "id": "1",
+                  "type": "shelf"
+              }
+          },
+          "user": {
+              "data": {
+                  "id": "1",
+                  "type": "user"
+              }
+          },
+          "interactions": {
+              "data": []
+          }
+      }
+  }
+}

@@ -8,7 +8,7 @@ http_interactions:
       string: name=The+Big+Pepperoni&preferred_contact_method=text&shelf=Family
     headers:
       Fern-Key:
-      - FErnCultForLyfe
+      - "<FERN_KEY>"
       User-Agent:
       - Faraday v2.7.4
       Content-Type:
@@ -29,13 +29,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc7beb59-94ce-4e53-be61-ea3f3264717f
+      - 9435d6b8-0b82-49a4-8291-1abb9f1259eb
       X-Runtime:
-      - '0.128008'
+      - '0.015891'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"10","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Tue, 28 Feb 2023 23:22:20 GMT
+  recorded_at: Wed, 01 Mar 2023 03:45:33 GMT
 recorded_with: VCR 6.1.0

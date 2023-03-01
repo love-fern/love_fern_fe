@@ -1,0 +1,28 @@
+{
+  "data": {
+      "id": "3",
+      "type": "fern",
+      "attributes": {
+          "name": "Fernilicious",
+          "health": 3,
+          "preferred_contact_method": "Don't"
+      },
+      "relationships": {
+          "shelf": {
+              "data": {
+                  "id": "4",
+                  "type": "shelf"
+              }
+          },
+          "user": {
+              "data": {
+                  "id": "1",
+                  "type": "user"
+              }
+          },
+          "interactions": {
+              "data": []
+          }
+      }
+  }
+}
