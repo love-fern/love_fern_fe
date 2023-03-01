@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get '/ferns/:id/water', to: 'ferns#edit', as: :water_fern
   get '/ferns/:id/fertilize', to: 'ferns/activities#index', as: :fertilize_fern
 
-  resources :ferns, only: [:new, :create, :show, :destroy, :update]
+  resources :ferns, only: %i[new create show destroy update]
 end

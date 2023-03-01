@@ -2,17 +2,21 @@
   <h3>
     <%= current_user['name'] %>'s Greenhouse
   </h3>
+  <div class="spacer-2"></div>
   <%= button_to 'Plant a Fern', new_fern_path, method: :get, class: 'btn btn-lg btn-primary' %>
+  <div class="spacer-1"></div>
 </div>
 <div class='container'>
   <% if @shelves %>
     <% @shelves.each do |shelf| %>
       <% unless shelf.ferns == [] %>
-      <h4><%= shelf.name %> Shelf</h4>
+      <div class="shelf-sign text-center">
+        <h4 class="shelf"><%= shelf.name %> Shelf</h4>
+      </div>
         <div class="has-bg-img">
           <div id="<%= shelf.name.downcase %>" class="row">
             <% shelf.ferns.each do |fern| %>
-              <div class="col-sm-4 text-center">
+              <div class="col-sm-4 text-center" id=<%=fern.id%>-<%=fern.name%>>
                 <%= link_to image_tag(fern.image, size: 200, alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
                 <p><%= fern.name %></p>
               </div>
