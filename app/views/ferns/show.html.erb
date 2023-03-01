@@ -7,7 +7,7 @@
   </div>
 
   <div class='container'>
-    <div class='row'>
+    <div class='row fern-buttons'>
       <% if @fern.health <= 3 %>
         <div class='col-sm-4'>
           <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
@@ -30,18 +30,21 @@
       <% end %>
     </div>
   </div>
-
-  <div class='container'>
-    <h4>Preferned Contact Method:</h4>
-    <p><%= @fern.preferred_contact_method.capitalize %></p>
-  </div>
-
-  <div class='container'>
-    <div id="last_3_interactions">
-      <h4>Last Three Interactions:</h4>
-      <% @fern.interactions.each do |interaction| %>
-        <%= "You had a #{interaction.positivity} interaction on #{interaction.created_at}" %><br>
-      <% end %>
+  <div class="spacer-2"></div>
+  <div class='container show-info'>
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Preferned Contact Method:</h4>
+        <%= @fern.preferred_contact_method.capitalize %>
+      </div>
+      <div class="col-sm-6">
+        <div id="last_3_interactions">
+          <h4>Last Three Interactions:</h4>
+          <% @fern.interactions.each do |interaction| %>
+            <%= "You had a #{interaction.positivity} interaction on #{interaction.created_at}" %><br>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

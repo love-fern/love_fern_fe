@@ -81,6 +81,10 @@ h6 {
   border-bottom: 3px solid #705b44;
 }
 
+.fern-buttons {
+  margin: 3rem 0rem;
+}
+
 .non-block-button {
   margin: 0 1rem;
 }
@@ -138,14 +142,9 @@ h6 {
 
 // Shelves
 .shelf-sign {
-  // background-image: url('shelf-sign-thin.png');
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // padding: 2.25em 1em;
-  padding: .25em;
-  border: 5px dashed #4d3b29;
-  background-image: linear-gradient(to bottom right, #ffffff, #d4d4d4);
+  background-image: url('shelf-sign.png');
+  background-size: cover;
+  border: 5px solid #4d3b29;
   width: 25%;
   box-shadow: 1pt 1pt 3pt #292d3580; 
   border-radius: 1em;
