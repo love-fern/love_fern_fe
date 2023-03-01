@@ -41,18 +41,6 @@ class FernService
     conn.get("users/#{google_id}/shelves")
   end
 
-  def self.get_ferns_on_shelf(google_id, shelf_id)
-    conn.get("users/#{google_id}/shelves/#{shelf_id}/ferns")
-  end
-
-  def self.add_fern_to_shelf(google_id, shelf_id, fern_id)
-    conn.post("users/#{google_id}/shelves/#{shelf_id}/ferns/#{fern_id}")
-  end
-
-  def self.remove_fern_from_shelf(google_id, shelf_id, fern_id)
-    conn.delete("users/#{google_id}/shelves/#{shelf_id}/ferns/#{fern_id}")
-  end
-
   # external APIs
   def self.get_an_activity
     conn.get('activities')

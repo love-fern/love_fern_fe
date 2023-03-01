@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b24712ae-fab0-40a6-91a7-528599e173e5
+      - 5d76e14d-f88c-4fff-92f5-16bfc6b47d81
       X-Runtime:
-      - '0.004993'
+      - '0.054149'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"3","type":"fern","attributes":{"name":"Austin","health":3,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Wed, 01 Mar 2023 15:42:56 GMT
+  recorded_at: Wed, 01 Mar 2023 18:26:59 GMT
 recorded_with: VCR 6.1.0

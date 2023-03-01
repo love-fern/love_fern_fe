@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 548ef8ed-273a-41b4-b431-091e7309c714
+      - 1da4ba05-d25b-4597-b906-2b63137e9795
       X-Runtime:
-      - '0.009172'
+      - '0.010168'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Tue, 28 Feb 2023 22:39:53 GMT
+  recorded_at: Wed, 01 Mar 2023 18:26:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -60,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"09fb98410ea6241a1de3f6ae9aa8d453"
+      - W/"a3f3d4f53ede4696cb113efa6167df6f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 379b137a-a341-4628-9eea-5fb1c48cbc26
+      - 494bec71-4d41-4645-8d0b-f2944f1bd600
       X-Runtime:
-      - '0.131471'
+      - '0.142786'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Cook something together with someone"}'
-  recorded_at: Tue, 28 Feb 2023 22:39:53 GMT
+      string: '{"activity":"Draw and color a Mandala"}'
+  recorded_at: Wed, 01 Mar 2023 18:26:56 GMT
 recorded_with: VCR 6.1.0

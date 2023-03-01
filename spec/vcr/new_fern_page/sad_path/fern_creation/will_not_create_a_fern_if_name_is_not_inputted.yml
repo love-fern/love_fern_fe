@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns
     body:
       encoding: UTF-8
-      string: name=The+Big+Pepperoni&preferred_contact_method=text&shelf=Family
+      string: name=&preferred_contact_method=Carrier+Pigeon&shelf=Friends
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -19,23 +19,22 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 422
+      message: Unprocessable Entity
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"be1bc0969306cea4437c5f3fe17510a8"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - ca439007-fc33-4499-8fa9-0e7f0b0e503b
+      - c2e97c53-c5f6-4b50-b37b-2bef62b106a2
       X-Runtime:
-      - '0.015196'
+      - '0.227703'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Wed, 01 Mar 2023 18:26:59 GMT
+      string: '{"message":"There was an error processing your request","errors":["Name
+        can''t be blank"],"status":"422"}'
+  recorded_at: Wed, 01 Mar 2023 18:26:57 GMT
 recorded_with: VCR 6.1.0
