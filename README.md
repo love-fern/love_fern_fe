@@ -110,7 +110,7 @@ Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 
 
 ## Deployment
 
-When deploying Love Fern, make sure to add all environment variables to the appropriate config settings at your host. `HOST_URL` will need to be the public address where you are hosting the application.
+When deploying Love Fern, make sure to add all environment variables to the appropriate config settings at your host (see above).
 
 ## Authors & Acknowledgments
 
