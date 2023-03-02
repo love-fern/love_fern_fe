@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
 
 // Uncomment border for troubleshooting
 * {
@@ -19,21 +20,31 @@ body {
 
  // Font Defaults
 p {
-  font-size: 1.25em;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  padding: .5rem;
 }
 
  // Sizing and Spacing for Names & Bio Links
 p.bio-links {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 p.about-names {
+  font-family: 'VT323', monospace;
   margin-top: 1rem;
   margin-bottom: -.5rem;
   font-size: 1.75em;
 }
 
+// Sizing and stuff for Fern Name Tags
+p.fern-name-tag {
+  font-family: 'VT323', monospace;
+}
+
 li {
+  padding: .25em 0 0;
+  font-family: 'Inter', sans-serif;
   font-size: 1em;
 }
 
@@ -48,7 +59,7 @@ h2 {
 }
 
 h3 {
-  font-size: 180%;
+  font-size: 1.8em;
 }
 
 h4 {
@@ -66,12 +77,14 @@ h6 {
 // Nav Bar
 .navbar {
   background-color: #705b44;
-  box-shadow: 1pt 1pt 8pt #292d3580; 
+  box-shadow: 1pt 1pt 8pt #292d3580;
   border-bottom: 3px solid #705b44;
  }
 
 // Navbar Text White
 .navbar-default .navbar-nav > li > a {
+  font-size: 1.3em;
+  font-family: 'VT323', monospace;
   color: #f0f0f0;
 }
 
@@ -79,6 +92,7 @@ h6 {
 .btn-primary {
   background-color: #045a0490;
   border-bottom: 3px solid #705b44;
+  font-size: 1.25em
 }
 
 .fern-buttons {
@@ -92,7 +106,7 @@ h6 {
 .has-bg-img {
   background-image: url('fern-shelf-perspective.png');
   background-position: bottom;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-size: 80%;
   margin: 1em 0em;
 }
@@ -100,7 +114,7 @@ h6 {
 // Bring Alert Box Down Below Nav Bar
 .alert {
   margin-top: 3rem;
-  box-shadow: 1pt 1pt 3pt #292d3580; 
+  box-shadow: 1pt 1pt 3pt #292d3580;
 }
 
 .form-control {
@@ -146,6 +160,15 @@ h6 {
   background-size: cover;
   border: 5px solid #4d3b29;
   width: 25%;
-  box-shadow: 1pt 1pt 3pt #292d3580; 
+  box-shadow: 1pt 1pt 3pt #292d3580;
   border-radius: 1em;
+}
+
+// Fern Image
+.fern-image {
+  width: 80%;
+}
+
+.fern-show-image {
+  width: 25%
 }

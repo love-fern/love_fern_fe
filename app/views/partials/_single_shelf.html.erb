@@ -1,0 +1,8 @@
+<div class="has-bg-img row">
+  <% shelf.ferns.each do |fern| %>
+    <div class="col-sm-4 text-center greenhouse-fern" id=<%=fern.id%>-<%=fern.name%>>
+      <%= link_to image_tag(fern.image, class: 'fern-image', alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
+      <p class="fern-name-tag"><%= fern.name %></p>
+    </div>
+  <% end %>
+</div>
