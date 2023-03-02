@@ -66,7 +66,7 @@ h6 {
 // Nav Bar
 .navbar {
   background-color: #705b44;
-  box-shadow: 1pt 1pt 8pt #292d3580; 
+  box-shadow: 1pt 1pt 8pt #292d3580;
   border-bottom: 3px solid #705b44;
  }
 
@@ -79,6 +79,7 @@ h6 {
 .btn-primary {
   background-color: #045a0490;
   border-bottom: 3px solid #705b44;
+  font-size: 1.25em
 }
 
 .fern-buttons {
@@ -92,7 +93,7 @@ h6 {
 .has-bg-img {
   background-image: url('fern-shelf-perspective.png');
   background-position: bottom;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-size: 80%;
   margin: 1em 0em;
 }
@@ -100,7 +101,7 @@ h6 {
 // Bring Alert Box Down Below Nav Bar
 .alert {
   margin-top: 3rem;
-  box-shadow: 1pt 1pt 3pt #292d3580; 
+  box-shadow: 1pt 1pt 3pt #292d3580;
 }
 
 .form-control {
@@ -146,6 +147,15 @@ h6 {
   background-size: cover;
   border: 5px solid #4d3b29;
   width: 25%;
-  box-shadow: 1pt 1pt 3pt #292d3580; 
+  box-shadow: 1pt 1pt 3pt #292d3580;
   border-radius: 1em;
+}
+
+// Fern Image
+.fern-image {
+  width: 80%;
+}
+
+.fern-show-image {
+  width: 25%
 }
