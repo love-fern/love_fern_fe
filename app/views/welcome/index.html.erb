@@ -3,8 +3,8 @@
 <div class="container">
   <div class="col-sm-2"></div>
     <div class="col-sm-8 text-center">
-      At Love Fern, we believe that strong relationships are the foundation of a happy and fulfilling life. That's why we've created a tool that empowers you to build and maintain meaningful connections with the people you care about most.
-      Try Love Fern today and see how it can transform your relationships!<br>
+      <p>At Love Fern, we believe that strong relationships are the foundation of a happy and fulfilling life. That's why we've created a tool that empowers you to build and maintain meaningful connections with the people you care about most.
+      Try Love Fern today and see how it can transform your relationships!</p>
     </div>
   <div class="col-sm-2"></div>
 </div>
@@ -15,7 +15,11 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4 text-center">
-      <%= button_to "Continue with Google", "auth/google_oauth2", method: :get, class: 'btn btn-lg btn-primary' %>
+      <% if current_user %>
+        <%= button_to 'Walk to Greenhouse', greenhouse_path, method: :get, class: 'btn btn-lg btn-primary' %>
+      <% else %>
+        <%= button_to "Continue with Google", "auth/google_oauth2", method: :get, class: 'btn btn-lg btn-primary' %>
+      <% end %>
     </div>
   </div>
 </div>

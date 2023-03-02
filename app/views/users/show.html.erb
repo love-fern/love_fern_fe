@@ -13,18 +13,15 @@
     <% end %>
     <% @shelves.each do |shelf| %>
       <% unless shelf.ferns == [] %>
-      <div class="shelf-sign text-center">
-        <h4 class="shelf"><%= shelf.name %> Shelf</h4>
-      </div>
-        <div class="has-bg-img">
-          <div id="<%= shelf.name.downcase %>" class="row">
-            <% shelf.ferns.each do |fern| %>
-              <div class="col-sm-4 text-center" id=<%=fern.id%>-<%=fern.name%>>
-                <%= link_to image_tag(fern.image, class: "fern-image", alt: 'fern health image', id: "fern-#{fern.id}"), fern_path(fern.id) %><br>
-                <p><%= fern.name %></p>
-              </div>
-            <% end %>
-          </div>
+        <div class="shelf-sign text-center">
+          <h4 class="shelf"><%= shelf.name %> Shelf</h4>
+        </div>
+        <div id="<%= shelf.name.downcase %>">
+          <% if shelf.ferns.length > 3 %>
+            <%= render partial: '/partials/multiple_shelves', locals: { shelf: shelf } %>
+          <% else %>
+            <%= render partial: '/partials/single_shelf', locals: { shelf: shelf } %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
