@@ -148,9 +148,32 @@ When deploying Love Fern, make sure to add all environment variables to the appr
 
 ## Authors & Acknowledgments
 
-- Samuel Cox - samc1253@gmail.com
-- Drew Layton - dlayton66@gmail.com
-- Anthony Ongaro - aongaro@gmail.com
-- Brady Rohrig - brady.rohrig@gmail.com
-- J Seymour - JustJakeSeymour@gmail.com
-- Anthony Blackwell Tallent - anthonytallent567@gmail.com
+:bust_in_silhouette: **Samuel Cox** 
+- samc1253@gmail.com
+- [GitHub](https://github.com/sambcox)
+- [LinkedIn](https://www.linkedin.com/in/samuel-bingham-cox/)
+
+:bust_in_silhouette: **Drew Layton** 
+- dlayton66@gmail.com
+- [GitHub](https://github.com/dlayton66)
+- [LinkedIn](https://www.linkedin.com/in/drew-layton-6009a4153/)
+
+:bust_in_silhouette: **Anthony Ongaro** 
+- aongaro@gmail.com
+- [GitHub](https://github.com/ajongaro)
+- [LinkedIn](https://www.linkedin.com/in/ajongaro/)
+
+:bust_in_silhouette: **Brady Rohrig** 
+- brady.rohrig@gmail.com
+- [GitHub](https://github.com/BRohrig)
+- [LinkedIn](https://www.linkedin.com/in/brady-rohrig-5305a923/)
+
+:bust_in_silhouette: **J Seymour** 
+- JustJakeSeymour@gmail.com
+- [GitHub](https://github.com/JustJakeSeymour)
+- [LinkedIn](https://www.linkedin.com/in/j-seymour/)
+
+:bust_in_silhouette: **Anthony Blackwell Tallent** 
+- anthonytallent567@gmail.com
+- [GitHub](https://github.com/anthonytallent)
+- [LinkedIn](https://www.linkedin.com/in/anthony-blackwell-tallent-b36916255/)
