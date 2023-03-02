@@ -58,6 +58,7 @@ RSpec.describe 'Fern Show', type: :feature do
         'image' => 'https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c'
       }
     end
+
     it 'Can Compost a fern' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -78,8 +79,7 @@ RSpec.describe 'Fern Show', type: :feature do
       end
     end
 
-    it 'displays the last 3 interactions, their positivity, and the date' do
-      today_utc = Time.now.utc.to_date.strftime('%d %B %Y')
+    it 'displays the last 3 interactions' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
 
@@ -92,7 +92,7 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
+        expect(page).to have_content("You exchanged positive words today.")
       end
 
       click_button 'Water Fern'
@@ -100,18 +100,18 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a negative interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a positive interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
+        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged positive words today.")
       end
 
-      click_button 'Water Fern'
-      fill_in :interaction, with: "You're the best"
-      click_button 'Water Fern'
+      visit fertilize_fern_path(2)
+      click_button 'Sure!'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a negative interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
-        expect(page).to have_content("You had a positive interaction on #{(Time.now.utc - (7 * 60 * 60)).strftime('%d %B %Y')}")
+        expect(page).to have_content("You decided to ") # test for activity dynamically
+        expect(page).to have_content(" today.")
+        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged positive words today.")
       end
     end
   end

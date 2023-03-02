@@ -41,7 +41,7 @@
         <div id="last_3_interactions">
           <h4>Last Three Interactions:</h4>
           <% @fern.interactions.each do |interaction| %>
-            <%= "You had a #{interaction.positivity} interaction on #{interaction.created_at}" %><br>
+            <%= interaction.display_message %><br>
           <% end %>
         </div>
       </div>

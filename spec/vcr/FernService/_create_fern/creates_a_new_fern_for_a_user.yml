@@ -29,13 +29,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 35e72865-c6c5-44a2-bee2-cc39a497092e
+      - a1e24447-1140-4732-a562-9fa67ebe5eed
       X-Runtime:
-      - '0.033977'
+      - '0.007708'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Wed, 01 Mar 2023 19:22:43 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
 recorded_with: VCR 6.1.0

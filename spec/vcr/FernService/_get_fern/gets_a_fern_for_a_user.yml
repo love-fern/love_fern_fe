@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"38706a7047d122dac43bfa7c9171246a"
+      - W/"795ef06e26cc28c03819d05b6d235e42"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '0069b01a-bd52-4a23-b09a-3fb28d712496'
+      - d43c6ff3-8824-40ee-8779-2fdd142f71e0
       X-Runtime:
-      - '0.007817'
+      - '0.006917'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-03-01T19:22:20.896Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:15:55.793Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 19:22:43 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
 recorded_with: VCR 6.1.0
