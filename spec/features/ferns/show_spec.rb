@@ -92,7 +92,7 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
       end
 
       click_button 'Water Fern'
@@ -100,8 +100,8 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a negative interaction on #{today_utc}")
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
       end
 
       click_button 'Water Fern'
@@ -109,9 +109,9 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
-        expect(page).to have_content("You had a negative interaction on #{today_utc}")
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a negative interaction on #{Date.today.strftime('%d %B %Y')}")
+        expect(page).to have_content("You had a positive interaction on #{Date.today.strftime('%d %B %Y')}")
       end
     end
   end
