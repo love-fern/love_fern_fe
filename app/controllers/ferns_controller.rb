@@ -39,7 +39,7 @@ class FernsController < ApplicationController
   def update
     if valid_interaction?
       update_for_water
-    elsif params[:health]
+    elsif params[:activity]
       update_for_fertilize
     else
       flash[:error] = "Interaction can't be blank"
@@ -60,7 +60,7 @@ class FernsController < ApplicationController
   end
 
   def fertilize_params
-    params.permit(:health)
+    params.permit(:activity)
   end
 
   def update_for_water
