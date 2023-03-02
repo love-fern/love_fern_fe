@@ -1,9 +1,20 @@
-<h2>Fertilize Your Fern!</h2>
-<h3>Yikes! Your relationship with <%= @fern.name %> isn't looking too healthy.</h3>
+<div class='container text-center'>
+  <h2>Fertilize Your Fern!</h2>
+  <h3>Yikes! Your relationship with <%= @fern.name %> isn't looking too healthy.</h3>
 
-<%= link_to image_tag(@fern.image, size: 200, alt: 'fern health image', id: "fern-#{@fern.id}"), fern_path(@fern.id) %><br>
+  <%= link_to image_tag(@fern.image, class: 'fern-show-image', alt: 'fern health image', id: "fern-#{@fern.id}"), fern_path(@fern.id) %><br>
 
-<h3>Maybe you could... <%= @activity.activity %> together!</h3>
-
-<%= button_to "Sure!", fern_path(@fern.id), params: { health: 8 }, method: :patch %>
-<%= button_to "Maybe Not...", fern_path(@fern.id), method: :get %>
+  <h3>Maybe you could... <%= @activity.activity %> together!</h3>
+  <div class='spacer-2'>
+  </div>
+  <div class='row'>
+    <div class='col-sm-3'>
+    </div>
+    <div class='col-sm-3'>
+      <%= button_to "Sure!", fern_path(@fern.id), params: { health: 8 }, method: :patch, class: 'btn btn-lg btn-primary' %>
+    </div>
+    <div class='col-sm-3'>
+      <%= button_to "Maybe Not...", fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+</div>
