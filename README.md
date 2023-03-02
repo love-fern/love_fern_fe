@@ -18,23 +18,19 @@ We believe that strong relationships are the foundation of a happy and fulfillin
 
 ## Table of Contents
 
-- [Love Fern (Front End)](#love-fern-front-end)
-  - [👋 Welcome to Love Fern!](#-welcome-to-love-fern)
-  - [🔗 Links](#-links)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Technical Details](#technical-details)
-  - [Getting Started](#getting-started)
-    - [Local Installation](#local-installation)
-    - [RSpec Suite](#rspec-suite)
-    - [Local Server](#local-server)
-  - [How to Use (Walk Through)](#how-to-use-walk-through)
-  - [Goals](#goals)
-    - [Learning Goals](#learning-goals)
-    - [Future Goals](#future-goals)
-    - [Known Issues](#known-issues)
-  - [Deployment](#deployment)
-  - [Authors \& Acknowledgments](#authors--acknowledgments)
+- [Description](#description)
+- [Technical Details](#technical-details)
+- [Getting Started](#getting-started)
+  - [Local Installation](#local-installation)
+  - [RSpec Suite](#rspec-suite)
+  - [Local Server](#local-server)
+- [How to Use (Walk Through)](#how-to-use-walk-through)
+- [Goals](#goals)
+  - [Learning Goals](#learning-goals)
+  - [Future Goals](#future-goals)
+  - [Known Issues](#known-issues)
+- [Deployment](#deployment)
+- [Authors \& Acknowledgments](#authors--acknowledgments)
 
 ## Description
 
