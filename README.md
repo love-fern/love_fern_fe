@@ -1,4 +1,4 @@
-# Love Fern (Front End)
+# Love Fern [Front End]
 
 <img src="app/assets/images/love-fern-4_720.png" width="150">
 
