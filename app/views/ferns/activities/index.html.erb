@@ -5,5 +5,5 @@
 
 <h3>Maybe you could... <%= @activity.activity %> together!</h3>
 
-<%= button_to "Sure!", fern_path(@fern.id), params: { health: 8 }, method: :patch %>
+<%= button_to "Sure!", fern_path(@fern.id), params: { activity: @activity.activity }, method: :patch %>
 <%= button_to "Maybe Not...", fern_path(@fern.id), method: :get %>
