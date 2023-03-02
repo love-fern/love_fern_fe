@@ -58,6 +58,7 @@ RSpec.describe 'Fern Show', type: :feature do
         'image' => 'https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c'
       }
     end
+
     it 'Can Compost a fern' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -79,6 +80,8 @@ RSpec.describe 'Fern Show', type: :feature do
     end
 
     it 'displays the last 3 interactions, their positivity, and the date' do
+      WebMock.disable! # response changes every day
+
       today_utc = Time.now.utc.to_date.strftime('%d %B %Y')
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
@@ -113,6 +116,8 @@ RSpec.describe 'Fern Show', type: :feature do
         expect(page).to have_content("You had a negative interaction on #{today_utc}")
         expect(page).to have_content("You had a positive interaction on #{today_utc}")
       end
+      
+      WebMock.enable!
     end
   end
 end
