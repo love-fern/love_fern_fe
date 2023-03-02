@@ -23,20 +23,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6f9ec8635b960f20321a69676191d59f"
+      - W/"a23d8c18c158315878f04921f5190168"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ebad77b-450e-4418-a429-d052ed94e085
+      - 88133c95-55e9-4464-81c5-af3c61716761
       X-Runtime:
-      - '0.004354'
+      - '0.005290'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-03-01T19:22:40.560Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:11.692Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Donate
+        to your local food bank","created_at":"2023-03-02T18:16:11.422Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 19:22:40 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
@@ -60,18 +61,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6f9ec8635b960f20321a69676191d59f"
+      - W/"a23d8c18c158315878f04921f5190168"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e6bffbca-34d6-4c0e-8bdb-31fdd58916a5
+      - c49d586e-9eb2-491e-878e-3e177987c215
       X-Runtime:
-      - '0.005318'
+      - '0.003394'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-03-01T19:22:40.560Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:11.692Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Donate
+        to your local food bank","created_at":"2023-03-02T18:16:11.422Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 19:22:40 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
 recorded_with: VCR 6.1.0

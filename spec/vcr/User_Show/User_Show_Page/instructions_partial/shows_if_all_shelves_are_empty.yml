@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/109670673621511408796/shelves
+    uri: http://localhost:5000/api/v1/users/158928345209680286502/shelves
     body:
       encoding: US-ASCII
       string: ''
@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a8650263-d3fc-4efc-96b2-ded529f9a146
+      - 7b08d21f-9815-4bb7-b163-e6edd7d9b197
       X-Runtime:
-      - '0.005334'
+      - '0.006925'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"5","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"6","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"7","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"8","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}}],"included":[]}'
-  recorded_at: Wed, 01 Mar 2023 21:42:57 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
 recorded_with: VCR 6.1.0

@@ -23,20 +23,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6f9ec8635b960f20321a69676191d59f"
+      - W/"a23d8c18c158315878f04921f5190168"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5f84f388-502c-4ad3-a892-915e239edfd3
+      - 33adb19f-fce5-4019-a2e7-da3acc441099
       X-Runtime:
-      - '0.004891'
+      - '0.002949'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","created_at":"2023-03-01T19:22:40.560Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:11.692Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Donate
+        to your local food bank","created_at":"2023-03-02T18:16:11.422Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Wed, 01 Mar 2023 19:22:41 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/113234860329276513988/shelves
@@ -60,9 +61,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 92bb95e1-141a-4a50-a689-6f3a7ee8e5b8
+      - 2a2c10ba-a34c-469d-ac54-caef699f77e1
       X-Runtime:
-      - '0.018579'
+      - '0.009695'
       Content-Length:
       - '10164'
     body:
@@ -174,5 +175,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 01 Mar 2023 19:22:41 GMT
+  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
 recorded_with: VCR 6.1.0
