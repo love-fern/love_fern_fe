@@ -13,7 +13,7 @@ RSpec.describe 'User Show', type: :feature do
 
     let(:user_2) do
       {
-        'uid' => '109670673621511408796',
+        'uid' => '158928345209680286502',
         'name' => 'Drew Layton',
         'email' => 'dlayton66@gmail.com',
         'image' => 'www.image.com'
