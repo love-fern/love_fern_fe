@@ -2,9 +2,41 @@
 
 <img src="app/assets/images/love-fern-4_720.png" width="150">
 
-Love Fern is an application that allows the user to cultivate their relationships with others by taking care of a digital fern.
+## 👋 Welcome to Love Fern!
 
-## App Description
+We believe that strong relationships are the foundation of a happy and fulfilling life. That's why we've created a tool that empowers you to build and maintain meaningful connections with the people you care about most. Try Love Fern today and see how it can transform your relationships!
+
+## 🔗 Links
+
+[⚡️ Production Website](https://www.lovefern.app)
+
+[🔌 Fernando (Our Backend Service)](https://fernando.herokuapp.com)
+
+[🪡 Front End Repository](https://github.com/love-fern/love_fern_fe)
+
+[🧵 Back End Repository](https://github.com/love-fern/love_fern_be)
+
+## Table of Contents
+
+- [Love Fern (Front End)](#love-fern-front-end)
+  - [👋 Welcome to Love Fern!](#-welcome-to-love-fern)
+  - [🔗 Links](#-links)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Technical Details](#technical-details)
+  - [Getting Started](#getting-started)
+    - [Local Installation](#local-installation)
+    - [RSpec Suite](#rspec-suite)
+    - [Local Server](#local-server)
+  - [How to Use (Walk Through)](#how-to-use-walk-through)
+  - [Goals](#goals)
+    - [Learning Goals](#learning-goals)
+    - [Future Goals](#future-goals)
+    - [Known Issues](#known-issues)
+  - [Deployment](#deployment)
+  - [Authors \& Acknowledgments](#authors--acknowledgments)
+
+## Description
 
 Water your fern by copying and pasting interactions you've had with the person your fern represents into the app. Your fern will change its health status based on the sentiment (negative, neutral, positive) of the message.
 
@@ -12,7 +44,9 @@ View all your ferns and their current status in your greenhouse, and give attent
 
 ## Technical Details
 
-This is the front-end of the application, which utilizes OAuth 2.0 for authentication, a Service Oriented Architecture, and quality CSS styling for a thematic user experience.
+This application is built with Ruby, Ruby on Rails, HTML, CSS, and Bootstrap, using a service oriented architecture. It depends on multiple external APIs, including the Google Cloud Natural Language API for sentiment analysis.
+
+Authentication is performed using Google's OAuth 2.0 for user sessions, which is connected securely to [Fernando](https://fernando.herokuapp.com), the Love Fern backend service.
 
 ## Getting Started
 
@@ -22,13 +56,13 @@ This is a Ruby on Rails application which calls API endpoints set up in the `lov
 
 To install gems, run:
 
-```
+```bash
 bundle install
 ```
 
 To set up environment variables run `figaro install` and open `application.yml` in your editor. Add values for the following keys:
 
-```
+```yml
 GOOGLE_CLIENT_ID: < Your Google Client ID Here >
 GOOGLE_CLIENT_SECRET: < Your Google Cloud API Secret Here >
 FERN_KEY: < love_fern_be secret here (contact admin for access) >
@@ -37,7 +71,7 @@ HOST_URL: http://localhost:5000
 
 Then to establish a Postgres database, run:
 
-```
+```bash
 rails db:{create,migrate}
 ```
 
@@ -47,7 +81,7 @@ To run the test suite, you will need to also clone down and install the [love_fe
 
 To run the entire spec suite, run:
 
-```
+```bash
 bundle exec rspec spec/
 ```
 
@@ -98,15 +132,13 @@ Love Fern was germinated to satisfy the requirements for a Turing Backend Mod 3 
 
 ### Future Goals
 
-- Implement "watering frequency," which indicates how often a user wishes to interact with their fern before it starts to decay.
-- Add more detailed stats to the fern show page, including time since last contact and information about the nature of that contact.
-- Add the ability to search for a fern by name and order ferns by health.
-- Suggest multiple activities and gestures corresponding to varying levels of care needed for the fern.
-- Build out the fern health algorithm to incorporate activities and gifts, as well as a more nuanced interpretation of Google's sentiment analysis.
+- Rebuild frontend using React
+- Implement animations and fun interactions when caring for ferns
+- Create graph display of showing history of interactions and trends
 
 ### Known Issues
 
-- The fertilize feature currently suggests a random activity to do with your fern's person. Please consider real life consequences are not our responsibility if you do ask your fern's person to do this activity.
+- Some scaling issues on `/greenhouse` for mobile, can be improved for responsiveness.
 
 ## Deployment
 
