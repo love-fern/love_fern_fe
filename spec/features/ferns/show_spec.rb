@@ -79,10 +79,7 @@ RSpec.describe 'Fern Show', type: :feature do
       end
     end
 
-    it 'displays the last 3 interactions, their positivity, and the date' do
-      WebMock.disable! # response changes every day
-
-      today_utc = Time.now.utc.to_date.strftime('%d %B %Y')
+    it 'displays the last 3 interactions' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
 
@@ -95,7 +92,7 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You exchanged positive words today.")
       end
 
       click_button 'Water Fern'
@@ -103,21 +100,19 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a negative interaction on #{today_utc}")
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged positive words today.")
       end
 
-      click_button 'Water Fern'
-      fill_in :interaction, with: "You're the best"
-      click_button 'Water Fern'
+      visit fertilize_fern_path(2)
+      click_button 'Sure!'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
-        expect(page).to have_content("You had a negative interaction on #{today_utc}")
-        expect(page).to have_content("You had a positive interaction on #{today_utc}")
+        expect(page).to have_content("You decided to ") # test for activity dynamically
+        expect(page).to have_content(" today.")
+        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged positive words today.")
       end
-      
-      WebMock.enable!
     end
   end
 end

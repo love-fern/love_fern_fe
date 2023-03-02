@@ -35,6 +35,7 @@ RSpec.describe 'activity index aka FERN FERTILIZE' do
     end
 
     it 'can fertilize a fern' do
+      WebMock.disable!
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(1)
       within('#fern-show-header') do
