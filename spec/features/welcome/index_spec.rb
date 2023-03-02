@@ -6,7 +6,10 @@ RSpec.describe 'Welcome Index', type: :feature do
       visit root_path
 
       expect(page).to have_content('Love Fern')
-      expect(page).to have_content("At Love Fern, we believe that strong relationships are the foundation of a happy and fulfilling life. That's why we've created a tool that empowers you to build and maintain meaningful connections with the people you care about most. Try Love Fern today and see how it can transform your relationships!")
+
+      expect(page).to have_content("At Love Fern, we believe that strong relationships are the foundation of a happy and fulfilling life.")
+      expect(page).to have_content("That's why we've created a tool that empowers you to build and maintain meaningful connections with the people you care about most.")
+      expect(page).to have_content("Try Love Fern today and see how it can transform your relationships!")
     end
 
     it 'has a button for Google OAuth' do

@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
 
 // Uncomment border for troubleshooting
 * {
@@ -19,21 +20,31 @@ body {
 
  // Font Defaults
 p {
-  font-size: 1.25em;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  padding: .5rem;
 }
 
  // Sizing and Spacing for Names & Bio Links
 p.bio-links {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 p.about-names {
+  font-family: 'VT323', monospace;
   margin-top: 1rem;
   margin-bottom: -.5rem;
   font-size: 1.75em;
 }
 
+// Sizing and stuff for Fern Name Tags
+p.fern-name-tag {
+  font-family: 'VT323', monospace;
+}
+
 li {
+  padding: .25em 0 0;
+  font-family: 'Inter', sans-serif;
   font-size: 1em;
 }
 
@@ -48,7 +59,7 @@ h2 {
 }
 
 h3 {
-  font-size: 180%;
+  font-size: 1.8em;
 }
 
 h4 {
@@ -72,6 +83,8 @@ h6 {
 
 // Navbar Text White
 .navbar-default .navbar-nav > li > a {
+  font-size: 1.3em;
+  font-family: 'VT323', monospace;
   color: #f0f0f0;
 }
 

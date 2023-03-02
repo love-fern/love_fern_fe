@@ -20,7 +20,7 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
       expect(page).to have_field(:interaction)
 
       within('#disclaimer-warning') do
-        expect(page).to have_content('Interaction analysis is done by a machine learning model.')
+        expect(page).to have_content('Interaction analysis is done by an advanced machine learning model.')
       end
     end
 
