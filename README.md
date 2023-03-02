@@ -59,7 +59,7 @@ To fully use Love Fern locally, run `rails s` on both the `love_fern_be` and the
 
 ## How to Use (Walk Through)
 
-Logging in, deleting, and creating ferns.
+### Logging in, deleting, and creating ferns.
 ![Screen Recording Gif](app/assets/images/walkthrough-1.gif)
 
 - Visit `localhost:3000` in your browser, the landing page:
@@ -75,7 +75,7 @@ Logging in, deleting, and creating ferns.
   - Fill out the form to create a fern. It will need the person's name, the preferred method of contact with them, and the appropriate shelf (relationship type).
   - Existing shelves are displayed as options, or a new shelf category can be supplied and that shelf will be created upon fern creation.
 
-Watering and composting ferns.
+### Watering and composting ferns.
 ![Screen Recording Gif](app/assets/images/walkthrough-2.gif)
 
 - Watering a Fern:
