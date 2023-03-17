@@ -64,14 +64,14 @@ GOOGLE_CLIENT_SECRET: < Your Google Cloud API Secret Here >
 FERN_KEY: < love_fern_be secret here (contact admin for access) >
 HOST_URL: http://localhost:5000
 ```
-Note: If you intend to run `love_fern_be` locally, you may enter any text as the `FERN_KEY`, so long as it matches the backend key.
+_Note: If you intend to run `love_fern_be` locally, you may enter any text as the `FERN_KEY`, so long as it matches the backend key._
 
 To establish a Postgres database, run:
 
 ```bash
 rails db:{create,migrate}
 ```
-Note: This frontend is build in Rails, which is not traditionally used as a frontend language. Because of this, it requires an established database in order to function.  
+_Note: This frontend is build in Rails, which is not traditionally used as a frontend language. Because of this, it requires an established database in order to function._  
 
 ### RSpec Suite
 
