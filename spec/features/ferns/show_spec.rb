@@ -80,6 +80,21 @@ RSpec.describe 'Fern Show', type: :feature do
     end
 
     it 'displays the last 3 interactions' do
+      now = Date.today
+
+      # if a new vcr is run, paste the "created at" date as the parse argument
+      vcr_date = DateTime.parse('2023-03-02T18:16:11.422Z').to_date
+
+      days_ago = (now - vcr_date).to_i
+
+      def today_or_days_ago(days_ago)
+        if days_ago == 0
+          "today"
+        else
+          days_ago.to_s + " days ago"
+        end
+      end
+      
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
 
@@ -92,7 +107,7 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
       end
 
       click_button 'Water Fern'
@@ -100,8 +115,8 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged negative words today.")
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content("You exchanged negative words #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
       end
 
       visit fertilize_fern_path(2)
@@ -109,9 +124,9 @@ RSpec.describe 'Fern Show', type: :feature do
 
       within '#last_3_interactions' do
         expect(page).to have_content("You decided to ") # test for activity dynamically
-        expect(page).to have_content(" today.")
-        expect(page).to have_content("You exchanged negative words today.")
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content(" #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content("You exchanged negative words #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
       end
     end
   end
