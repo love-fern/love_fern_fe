@@ -9,15 +9,13 @@ class Fern
     @health = fern_info[:attributes][:health]
     @image = set_image(fern_info[:attributes][:health])
     @user_id = find_user_id(included) if included
-    @interactions = if included
-                      find_interactions(included).map do |interaction_data|
-                        Interaction.new(interaction_data)
-                      end
-                    end
+    @interactions = create_interactions(included) if included
   end
 
+  private
+
   def set_image(health)
-    image_number = (health + 1) / 2
+    image_number = (health/2).ceil
     "love-fern-#{image_number}_720.png"
   end
 
@@ -28,5 +26,11 @@ class Fern
 
   def find_interactions(included)
     included.select { |x| x[:type] == 'interaction' }
+  end
+
+  def create_interactions(included)
+    find_interactions(included).map do |interaction_data|
+      Interaction.new(interaction_data)
+    end
   end
 end
