@@ -8,26 +8,15 @@
 
   <div class='container'>
     <div class='row fern-buttons'>
-      <% if @fern.health <= 3 %>
-        <div class='col-sm-4'>
-          <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
-        </div>
-        <div class='col-sm-4'>
-          <%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete, class: 'btn btn-lg btn-primary', data: {confirm: "Are you sure you want to compost #{@fern.name}?"} %>
-        </div>
-        <div class='col-sm-4'>
-          <%= button_to 'Fertilize Fern', fertilize_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
-        </div>
-      <% else %>
-        <div class='col-sm-3'>
-        </div>
-        <div class='col-sm-3'>
-          <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
-        </div>
-        <div class='col-sm-3'>
-          <%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete, class: 'btn btn-lg btn-primary', data: {confirm: "Are you sure you want to compost #{@fern.name}?"} %>
-        </div>
-      <% end %>
+      <div class='col-sm-4'>
+        <%= button_to 'Water Fern', water_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
+      </div>
+      <div class='col-sm-4'>
+        <%= button_to 'Compost Fern', fern_path(@fern.id), method: :delete, class: 'btn btn-lg btn-primary', data: {confirm: "Are you sure you want to compost #{@fern.name}?"} %>
+      </div>
+      <div class='col-sm-4'>
+        <%= button_to 'Fertilize Fern', fertilize_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
+      </div>
     </div>
   </div>
   <div class="spacer-2"></div>

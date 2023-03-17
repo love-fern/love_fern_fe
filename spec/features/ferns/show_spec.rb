@@ -33,6 +33,7 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(page).to have_content('Phone')
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
+      expect(page).to have_button('Fertilize Fern')
     end
 
     it 'Will not navigate if the user is not logged in' do

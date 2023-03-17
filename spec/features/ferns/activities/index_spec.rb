@@ -11,22 +11,6 @@ RSpec.describe 'fern fertilize' do
       }
     end
 
-    it 'link to fertilize path from fern path appears at low health' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      
-      visit fern_path(9) # fern health is set to 9
-
-      expect(page).to_not have_button('Fertilize Fern')
-
-      visit fern_path(4) # fern health is set to 1
-
-      expect(page).to have_button('Fertilize Fern')
-
-      click_button('Fertilize Fern')
-
-      expect(current_path).to eq(fertilize_fern_path(4))
-    end
-
     it 'fertilize / activity index has content' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fertilize_fern_path(2)
