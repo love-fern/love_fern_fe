@@ -80,34 +80,33 @@ RSpec.describe 'Fern Show', type: :feature do
     end
 
     it 'displays the last 3 interactions' do
-      now = Date.today
-
-      # if a new vcr is run, paste the "created at" date as the parse argument
-      vcr_date = DateTime.parse('2023-03-02T18:16:11.422Z').to_date
-
-      days_ago = (now - vcr_date).to_i
-
-      def today_or_days_ago(days_ago)
-        if days_ago == 0
-          "today"
+      def days_ago(created_at)
+        today = Time.now.utc.to_date
+        if today == created_at
+          'today'
+        elsif (today - created_at).to_i == 1
+          'yesterday'
         else
-          days_ago.to_s + " days ago"
+          "#{(today - created_at).to_i} days ago"
         end
       end
       
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
-
+      
       within '#last_3_interactions' do
         expect(page).to have_content('Last Three Interactions:')
       end
-
+      
       click_button 'Water Fern'
       fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
       click_button 'Water Fern'
 
+      fern = FernFacade.find_fern(user['uid'], 2)
+      created_at = fern.interactions.first.created_at
+
       within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
 
       click_button 'Water Fern'
@@ -115,8 +114,8 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
 
       within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged negative words #{today_or_days_ago(days_ago)}.")
-        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content("You exchanged negative words #{days_ago(created_at)}.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
 
       visit fertilize_fern_path(2)
@@ -124,9 +123,9 @@ RSpec.describe 'Fern Show', type: :feature do
 
       within '#last_3_interactions' do
         expect(page).to have_content("You decided to ") # test for activity dynamically
-        expect(page).to have_content(" #{today_or_days_ago(days_ago)}.")
-        expect(page).to have_content("You exchanged negative words #{today_or_days_ago(days_ago)}.")
-        expect(page).to have_content("You exchanged positive words #{today_or_days_ago(days_ago)}.")
+        expect(page).to have_content(" #{days_ago(created_at)}.")
+        expect(page).to have_content("You exchanged negative words #{days_ago(created_at)}.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
     end
   end
