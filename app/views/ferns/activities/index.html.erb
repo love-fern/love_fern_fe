@@ -9,9 +9,10 @@
   </div>
   <div class='row'>
     <div class='col-sm-3'>
+      <%= button_to "Sure!", fern_path(@fern.id), params: { activity: @activity.activity }, method: :patch, class: 'btn btn-lg btn-primary' %>
     </div>
     <div class='col-sm-3'>
-      <%= button_to "Sure!", fern_path(@fern.id), params: { activity: @activity.activity }, method: :patch, class: 'btn btn-lg btn-primary' %>
+      <%= button_to "Find Something Else", fertilize_fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>
     </div>
     <div class='col-sm-3'>
       <%= button_to "Maybe Not...", fern_path(@fern.id), method: :get, class: 'btn btn-lg btn-primary' %>

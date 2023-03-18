@@ -11,11 +11,14 @@ RSpec.describe 'fern fertilize' do
       }
     end
 
-    it 'fertilize / activity index has content' do
+    it 'has content' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fertilize_fern_path(2)
 
       expect(page).to have_content('Fertilize Your Fern!')
+      expect(page).to have_button('Sure!')
+      expect(page).to have_button('Find Something Else')
+      expect(page).to have_button('Maybe Not...')
     end
 
     it 'can fertilize a fern' do
