@@ -1,27 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe 'Fern Show', type: :feature do
+  let(:user) do
+    {
+      'uid' => '110920554030325122207',
+      'name' => 'Samuel Cox',
+      'email' => 'samc1253@gmail.com',
+      'image' => 'https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c'
+    }
+  end
+
+  let(:user_2) do
+    {
+      'uid' => '113234860329276513988',
+      'name' => 'Anthony Ongaro',
+      'email' => 'aongaro@gmail.com',
+      'image' =>
+       'https://lh3.googleusercontent.com/a/AGNmyxZaV6gpWLtMVqa4RCcgDsiigEijEnmEviTX2mhQ1Q=s96-c',
+      'google_id' => '113234860329276513988'
+    }
+  end
+
   describe 'Fern Show Page', :vcr do
-    let(:user) do
-      {
-        'uid' => '110920554030325122207',
-        'name' => 'Samuel Cox',
-        'email' => 'samc1253@gmail.com',
-        'image' => 'https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c'
-      }
-    end
-
-    let(:user_2) do
-      {
-        'uid' => '113234860329276513988',
-        'name' => 'Anthony Ongaro',
-        'email' => 'aongaro@gmail.com',
-        'image' =>
-         'https://lh3.googleusercontent.com/a/AGNmyxZaV6gpWLtMVqa4RCcgDsiigEijEnmEviTX2mhQ1Q=s96-c',
-        'google_id' => '113234860329276513988'
-      }
-    end
-
     it 'Shows the fern information' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
@@ -34,6 +34,63 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
       expect(page).to have_button('Fertilize Fern')
+    end
+
+    it 'displays the last 3 interactions' do
+      # VCR.use_cassette("Fern_Show/Fern_Show_Page/displays_the_last_3_interactions.yml") do |cassette|
+      #   puts cassette.send(:raw_cassette_bytes)
+      # end
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit fern_path(2)
+  
+      binding.pry
+  
+      within '#last_3_interactions' do
+        expect(page).to have_content('Last Three Interactions:')
+      end
+      
+      click_button 'Water Fern'
+      fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
+      click_button 'Water Fern'
+  
+      within '#last_3_interactions' do
+        images = page.all('img')
+  
+        expect(images[0][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
+        expect(page).to have_content("You exchanged positive words today.")
+      end
+  
+      click_button 'Water Fern'
+      fill_in :interaction, with: 'You Suck, I hate you'
+      click_button 'Water Fern'
+  
+      within '#last_3_interactions' do
+        images = page.all('img')
+  
+        expect(images[0][:src]).to eq("/assets/emojis/1-b0fd85cc734951271f10961a1ffd8275ab4246652c59e3550c91c19a6a4e4028.png")
+        expect(page).to have_content("You exchanged negative words today.")
+  
+        expect(images[1][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
+        expect(page).to have_content("You exchanged positive words today.")
+      end
+  
+      visit fertilize_fern_path(2)
+      click_button 'Sure!'
+      
+      within '#last_3_interactions' do
+        images = page.all('img')
+  
+        expect(images[0][:src]).to eq("/assets/emojis/activity-73fdd286e8c3022d2cac58706016da71ae5588146cfbeeda3a4afb549f0840cd.png")
+        expect(page).to have_content("You decided to ") # test for activity dynamically
+        expect(page).to have_content(" today.")
+  
+        expect(images[1][:src]).to eq("/assets/emojis/1-b0fd85cc734951271f10961a1ffd8275ab4246652c59e3550c91c19a6a4e4028.png")
+        expect(page).to have_content("You exchanged negative words today.")
+  
+        expect(images[2][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
+        expect(page).to have_content("You exchanged positive words today.")
+      end
     end
 
     it 'Will not navigate if the user is not logged in' do
@@ -51,15 +108,6 @@ RSpec.describe 'Fern Show', type: :feature do
   end
 
   describe 'Fern Delete', :vcr do
-    let(:user) do
-      {
-        'uid' => '110920554030325122207',
-        'name' => 'Samuel Cox',
-        'email' => 'samc1253@gmail.com',
-        'image' => 'https://lh3.googleusercontent.com/a/AGNmyxYt32X4YBRyuQij1sMMfHp6BbnKBs2Uaic2CLnLew=s96-c'
-      }
-    end
-
     it 'Can Compost a fern' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -80,40 +128,5 @@ RSpec.describe 'Fern Show', type: :feature do
       end
     end
 
-    it 'displays the last 3 interactions' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit fern_path(2)
-
-      within '#last_3_interactions' do
-        expect(page).to have_content('Last Three Interactions:')
-      end
-
-      click_button 'Water Fern'
-      fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
-      click_button 'Water Fern'
-
-      within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged positive words today.")
-      end
-
-      click_button 'Water Fern'
-      fill_in :interaction, with: 'You Suck, I hate you'
-      click_button 'Water Fern'
-
-      within '#last_3_interactions' do
-        expect(page).to have_content("You exchanged negative words today.")
-        expect(page).to have_content("You exchanged positive words today.")
-      end
-
-      visit fertilize_fern_path(2)
-      click_button 'Sure!'
-
-      within '#last_3_interactions' do
-        expect(page).to have_content("You decided to ") # test for activity dynamically
-        expect(page).to have_content(" today.")
-        expect(page).to have_content("You exchanged negative words today.")
-        expect(page).to have_content("You exchanged positive words today.")
-      end
-    end
   end
 end
