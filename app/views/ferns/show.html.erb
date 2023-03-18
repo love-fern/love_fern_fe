@@ -22,17 +22,19 @@
   <div class="spacer-2"></div>
   <div class='container show-info'>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <h4>Preferned Contact Method:</h4>
         <%= @fern.preferred_contact_method.capitalize %>
       </div>
-      <div class="col-sm-6" style="text-align: left;">
+      <div class="col-sm-7 text-center">
         <div id="last_3_interactions">
           <h4>Last Three Interactions:</h4>
-          <% @fern.interactions.each do |interaction| %>
-            <%= image_tag(interaction.emoji, class: 'emoji') %>
-            <%= interaction.display_message %><br>
-          <% end %>
+          <div style="display: inline-block; text-align: left;">
+            <% @fern.interactions.each do |interaction| %>
+              <%= image_tag(interaction.emoji, class: 'emoji') %>
+              <%= interaction.display_message %><br>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
