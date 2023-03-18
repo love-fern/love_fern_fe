@@ -5,7 +5,7 @@ RSpec.describe Interaction do
     Interaction.new({
       :id=>"2",
       :type=>"interaction",
-      :attributes=>{:evaluation=>"Positive", :description=>"message", :created_at=>DateTime.now.new_offset(0).to_s}
+      :attributes=>{:evaluation=>0.5, :description=>"message", :created_at=>DateTime.now.new_offset(0).to_s}
     })}
 
   describe '#display_message' do
@@ -26,19 +26,19 @@ RSpec.describe Interaction do
 
   describe '#days_ago' do
     it 'returns readable format of days since last interaction' do
-      expect(interaction.days_ago).to eq('today')
+      expect(interaction.send(:days_ago)).to eq('today')
 
       interaction.instance_variable_set(:@created_at, interaction.created_at - 1.days)
       
-      expect(interaction.days_ago).to eq('yesterday')
+      expect(interaction.send(:days_ago)).to eq('yesterday')
       
       interaction.instance_variable_set(:@created_at, interaction.created_at - 1.days)
 
-      expect(interaction.days_ago).to eq('2 days ago')
+      expect(interaction.send(:days_ago)).to eq('2 days ago')
       
       interaction.instance_variable_set(:@created_at, interaction.created_at - 8.days)
 
-      expect(interaction.days_ago).to eq('10 days ago')
+      expect(interaction.send(:days_ago)).to eq('10 days ago')
     end
   
   end

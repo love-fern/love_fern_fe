@@ -23,363 +23,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"80f5b1cefe9e9dfa08f41903d578500e"
+      - W/"3e6a7a8e808708e3663ecf5289f821e8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b1fd725a-073f-4af4-86a6-ec6dc01ff443
+      - c5bb830d-1f68-47b6-a9c8-2e20aa94c98f
       X-Runtime:
-      - '0.023120'
+      - '0.007074'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"30","type":"interaction"},{"id":"29","type":"interaction"},{"id":"28","type":"interaction"}]}}},"included":[{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"29","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-17T20:17:11.668Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"28","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-17T20:17:11.477Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}},"included":[{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:05 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"80f5b1cefe9e9dfa08f41903d578500e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a5cb04c5-f241-4abb-bf93-0ec418a9d42f
-      X-Runtime:
-      - '0.004163'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"30","type":"interaction"},{"id":"29","type":"interaction"},{"id":"28","type":"interaction"}]}}},"included":[{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"29","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-17T20:17:11.668Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"28","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-17T20:17:11.477Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: UTF-8
-      string: interaction=I+watered+this+fern+today.+I+love+pizza.+I+love+you.
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"a21d05391053651bd5492e899ffa24e3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 3b144054-a85c-4cfc-957f-9c644570f4a8
-      X-Runtime:
-      - '0.196255'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"31","type":"interaction"},{"id":"30","type":"interaction"},{"id":"29","type":"interaction"}]}}},"included":[{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"29","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-17T20:17:11.668Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"a71aa4fb6c91b27f6ad62d94fd2fae86"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 42e17121-8c60-4323-a64f-b246f5e527c1
-      X-Runtime:
-      - '0.003778'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"31","type":"interaction"},{"id":"30","type":"interaction"},{"id":"29","type":"interaction"}]}}},"included":[{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"29","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-17T20:17:11.668Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"a71aa4fb6c91b27f6ad62d94fd2fae86"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6c49389b-196a-4fdf-9c7d-c21dba97e365
-      X-Runtime:
-      - '0.003746'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"31","type":"interaction"},{"id":"30","type":"interaction"},{"id":"29","type":"interaction"}]}}},"included":[{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"29","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-17T20:17:11.668Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: UTF-8
-      string: interaction=You+Suck%2C+I+hate+you
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"68b593f1dd2089f474a7e048393ec8d4"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6b70c7c9-523e-4f6c-b146-d4572cbb57a8
-      X-Runtime:
-      - '0.143707'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"32","type":"interaction"},{"id":"31","type":"interaction"},{"id":"30","type":"interaction"}]}}},"included":[{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"23cdd3940244f2c2706d26d3316ef5b0"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 680e0151-441c-4133-aa0c-617b03f492fd
-      X-Runtime:
-      - '0.002947'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"32","type":"interaction"},{"id":"31","type":"interaction"},{"id":"30","type":"interaction"}]}}},"included":[{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"23cdd3940244f2c2706d26d3316ef5b0"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 63982d4d-4bff-4249-b5b6-45577f122065
-      X-Runtime:
-      - '0.003075'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"32","type":"interaction"},{"id":"31","type":"interaction"},{"id":"30","type":"interaction"}]}}},"included":[{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"30","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to use a french press","created_at":"2023-03-17T20:17:11.872Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:08 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/activities
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"7c53960bc653f277b7f01285d57d314d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ffd42c8f-f376-4a77-b760-7dd81feb9080
-      X-Runtime:
-      - '0.221694'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"activity":"Learn how to beatbox"}'
-  recorded_at: Sat, 18 Mar 2023 17:49:09 GMT
-- request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
-    body:
-      encoding: UTF-8
-      string: activity=Learn+how+to+beatbox
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"dc704237a51e48362cedd7304598d367"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 78d83137-b786-444e-9e52-42809c7c2efb
-      X-Runtime:
-      - '0.008496'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}}}'
-  recorded_at: Sat, 18 Mar 2023 17:49:09 GMT
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -407,9 +65,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 41f8ca6c-8c0b-4a85-afd9-ef4df91f1e06
+      - f7df0c95-0c32-445f-93d4-96363276f09b
       X-Runtime:
-      - '0.003823'
+      - '0.004217'
       Transfer-Encoding:
       - chunked
     body:
@@ -417,5 +75,385 @@ http_interactions:
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}},"included":[{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
         how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 17:49:09 GMT
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: UTF-8
+      string: interaction=I+watered+this+fern+today.+I+love+pizza.+I+love+you.
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f3888bec40a9fc1b2d180df96b7af677"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 92f57513-8a99-46a9-8981-6dc29fe17657
+      X-Runtime:
+      - '0.198880'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f206f0058fcb46672402425630933f17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0df0bf1a-efcc-4b2a-97b3-e76f3665f844
+      X-Runtime:
+      - '0.003928'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f206f0058fcb46672402425630933f17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4935dd1d-e013-4a96-b998-8c67fdb131fe
+      X-Runtime:
+      - '0.003244'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f206f0058fcb46672402425630933f17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ec3c791d-76d0-4ab3-a2ec-889a166eec9c
+      X-Runtime:
+      - '0.003036'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: UTF-8
+      string: interaction=You+Suck%2C+I+hate+you
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5f3e8663438151f38d9ed03a151f6c37"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5fe1b610-8f0f-4c7c-b3b6-5ab51bd7dbb9
+      X-Runtime:
+      - '0.124786'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"35de7f16d6ed134b93f67916ae9b2df9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 34a1a112-3806-4898-8da7-fcde16d10245
+      X-Runtime:
+      - '0.003260'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"35de7f16d6ed134b93f67916ae9b2df9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6f440ad4-c13f-4271-9b8f-84c6bb64496d
+      X-Runtime:
+      - '0.002912'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/activities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2a8769a98899fc6e1feb99c03a67723"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 656890ca-4cfe-4a8f-a3e4-c06728e29a11
+      X-Runtime:
+      - '0.152544'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"activity":"Create and follow a savings plan"}'
+  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: UTF-8
+      string: activity=Create+and+follow+a+savings+plan
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"995d03009048c7ca3a33e5b3328b1c16"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 152ee72f-9e56-412c-b55f-843727109c9f
+      X-Runtime:
+      - '0.059381'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"46","type":"interaction"},{"id":"45","type":"interaction"},{"id":"44","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f05d28885ffd4d4f0fe5b7f94d984fff"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30faaa45-5f4a-46b2-a3f7-d4b3c9d225ad
+      X-Runtime:
+      - '0.003271'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"46","type":"interaction"},{"id":"45","type":"interaction"},{"id":"44","type":"interaction"}]}}},"included":[{"id":"46","type":"interaction","attributes":{"evaluation":null,"description":"Create
+        and follow a savings plan","created_at":"2023-03-18T20:41:44.095Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
 recorded_with: VCR 6.1.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: US-ASCII
       string: ''
@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b85ec318d6152cbadb1c28d5f96e278"
+      - W/"628090d56e662d3029cfb670f1504e09"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cb3a0c95-76d7-4c0e-8418-d1d4888d1ae5
+      - 1fe8ad31-cc91-4af0-b7dc-64180a65f75b
       X-Runtime:
-      - '0.004330'
+      - '0.003896'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: US-ASCII
       string: ''
@@ -60,20 +60,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b85ec318d6152cbadb1c28d5f96e278"
+      - W/"628090d56e662d3029cfb670f1504e09"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9d053d32-919e-4f92-9684-bbacedee5b64
+      - ff5ae6e8-d5e5-4786-8925-bbaeeaa1c8f4
       X-Runtime:
-      - '0.003320'
+      - '0.004123'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -97,25 +97,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"744b4f8c64b705c62492afbe9f71a470"
+      - W/"3a77cb165a222ac4278f62b0fe240d75"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b1c8e19b-42fa-4353-9ef5-8e774392c88b
+      - c39e35b5-2cbe-4fa2-a8c2-667fc9b0c7bf
       X-Runtime:
-      - '0.121461'
+      - '0.144385'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Donate to your local food bank"}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+      string: '{"activity":"Start a webinar on a topic of your choice"}'
+  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: UTF-8
-      string: activity=Donate+to+your+local+food+bank
+      string: activity=Start+a+webinar+on+a+topic+of+your+choice
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -135,22 +135,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b06c04951623d83a60f55d06d6a32d8c"
+      - W/"2dafd600028acaa959fc538c89e33c04"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8965c214-17ce-4fbf-af5a-94593b19471a
+      - 3f69e493-e50f-4c56-bcf8-9e5565005ee1
       X-Runtime:
-      - '0.091562'
+      - '0.011128'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"64","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: US-ASCII
       string: ''
@@ -171,19 +171,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9a2f5093526986f1a3d01e0a768bb4f7"
+      - W/"e116a67b157315d289a0210bc5d45b09"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 74b77010-fe81-4db9-82a2-1f0c7dffa35a
+      - d9bb233b-b0ab-4bd7-8e61-52915573eec9
       X-Runtime:
-      - '0.010351'
+      - '0.003256'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Donate
-        to your local food bank","created_at":"2023-03-02T18:16:11.422Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"64","type":"interaction"}]}}},"included":[{"id":"64","type":"interaction","attributes":{"evaluation":null,"description":"Start
+        a webinar on a topic of your choice","created_at":"2023-03-18T21:54:16.632Z"},"relationships":{"fern":{"data":{"id":"4","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
 recorded_with: VCR 6.1.0

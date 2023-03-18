@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3e6a7a8e808708e3663ecf5289f821e8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a2515729-1aa4-418e-8192-3b565d3732e5
+      X-Runtime:
+      - '0.077637'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}},"included":[{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
+        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sat, 18 Mar 2023 20:34:03 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/activities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4b3971ffbd5c459f1191d6a6af5a7db2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 05617402-3c77-47cd-ba74-9f38655deb72
+      X-Runtime:
+      - '0.136947'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"activity":"Clean out your refrigerator"}'
+  recorded_at: Sat, 18 Mar 2023 20:34:03 GMT
+recorded_with: VCR 6.1.0
