@@ -23,21 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3e6a7a8e808708e3663ecf5289f821e8"
+      - W/"f363fbfdd7b2971253b0c53ba6fb6fc9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c5bb830d-1f68-47b6-a9c8-2e20aa94c98f
+      - 7145731b-fcf9-4a0a-a6cb-e3a496aef5a8
       X-Runtime:
-      - '0.007074'
+      - '0.002782'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}},"included":[{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -61,21 +60,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3e6a7a8e808708e3663ecf5289f821e8"
+      - W/"f363fbfdd7b2971253b0c53ba6fb6fc9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f7df0c95-0c32-445f-93d4-96363276f09b
+      - f0e524eb-4a3e-4621-9490-d2b3fee1ea8c
       X-Runtime:
-      - '0.004217'
+      - '0.002804'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"33","type":"interaction"},{"id":"32","type":"interaction"},{"id":"31","type":"interaction"}]}}},"included":[{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"31","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T17:49:08.600Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -101,20 +99,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f3888bec40a9fc1b2d180df96b7af677"
+      - W/"4f6aa347128f7ae87c79d3901170eb51"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92f57513-8a99-46a9-8981-6dc29fe17657
+      - 413e3a0a-ac84-47e6-ab41-e9a5fa9362b3
       X-Runtime:
-      - '0.198880'
+      - '0.129494'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":3.8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -138,21 +135,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f206f0058fcb46672402425630933f17"
+      - W/"d23c1d445611249b9b8322229cd43dd2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0df0bf1a-efcc-4b2a-97b3-e76f3665f844
+      - 7902394b-9cc4-4343-9882-08b8897ca925
       X-Runtime:
-      - '0.003928'
+      - '0.007285'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":3.8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -176,21 +172,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f206f0058fcb46672402425630933f17"
+      - W/"d23c1d445611249b9b8322229cd43dd2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4935dd1d-e013-4a96-b998-8c67fdb131fe
+      - 74ab004b-e02d-4780-93fd-9ea77c51a4c1
       X-Runtime:
-      - '0.003244'
+      - '0.003654'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":3.8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -214,21 +209,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f206f0058fcb46672402425630933f17"
+      - W/"d23c1d445611249b9b8322229cd43dd2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec3c791d-76d0-4ab3-a2ec-889a166eec9c
+      - a0a8918f-d44d-4699-96a1-16f62158bf15
       X-Runtime:
-      - '0.003036'
+      - '0.003238'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"44","type":"interaction"},{"id":"33","type":"interaction"},{"id":"32","type":"interaction"}]}}},"included":[{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"32","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T17:49:08.801Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":3.8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -254,20 +248,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5f3e8663438151f38d9ed03a151f6c37"
+      - W/"c13faf025f992c467d986ddc111bdb8b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5fe1b610-8f0f-4c7c-b3b6-5ab51bd7dbb9
+      - 9b30c961-ae9d-45d2-afa5-ba87e6b5c999
       X-Runtime:
-      - '0.124786'
+      - '0.129042'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":1.0999999999999996,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T22:00:17.036Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}}]}'
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -291,21 +284,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"35de7f16d6ed134b93f67916ae9b2df9"
+      - W/"0cd2da043ca9dffb60e6df42875fbe3b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 34a1a112-3806-4898-8da7-fcde16d10245
+      - e768c317-625b-4d0f-9afe-febe453ba792
       X-Runtime:
-      - '0.003260'
+      - '0.003277'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":1.0999999999999996,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T22:00:17.036Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -329,21 +321,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"35de7f16d6ed134b93f67916ae9b2df9"
+      - W/"0cd2da043ca9dffb60e6df42875fbe3b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6f440ad4-c13f-4271-9b8f-84c6bb64496d
+      - 7b912ff3-73a6-4310-a6ff-9653aa8d9e91
       X-Runtime:
-      - '0.002912'
+      - '0.002971'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":7.3,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"45","type":"interaction"},{"id":"44","type":"interaction"},{"id":"33","type":"interaction"}]}}},"included":[{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"33","type":"interaction","attributes":{"evaluation":null,"description":"Learn
-        how to beatbox","created_at":"2023-03-18T17:49:09.087Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":1.0999999999999996,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T22:00:17.036Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:43 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -367,25 +358,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a2a8769a98899fc6e1feb99c03a67723"
+      - W/"4e104bf6dac3308259c88bb3b720bb11"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 656890ca-4cfe-4a8f-a3e4-c06728e29a11
+      - 671e77be-19a7-4c84-9894-40a102cfe718
       X-Runtime:
-      - '0.152544'
+      - '0.126997'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Create and follow a savings plan"}'
-  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
+      string: '{"activity":"Hold a yard sale"}'
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
     body:
       encoding: UTF-8
-      string: activity=Create+and+follow+a+savings+plan
+      string: activity=Hold+a+yard+sale
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -405,19 +396,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"995d03009048c7ca3a33e5b3328b1c16"
+      - W/"743904166bf1cdc069d7bf08b638bb65"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 152ee72f-9e56-412c-b55f-843727109c9f
+      - 463406bb-8e38-43f3-b23a-1f175f65e8aa
       X-Runtime:
-      - '0.059381'
+      - '0.009536'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"46","type":"interaction"},{"id":"45","type":"interaction"},{"id":"44","type":"interaction"}]}}}}'
-  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":5.1,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"9","type":"interaction"},{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -441,19 +432,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f05d28885ffd4d4f0fe5b7f94d984fff"
+      - W/"c7d4bf11244eeeadd659c74ae826c7e0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 30faaa45-5f4a-46b2-a3f7-d4b3c9d225ad
+      - 895a9ba1-bf9f-4223-9951-d1fb7191a154
       X-Runtime:
-      - '0.003271'
+      - '0.003601'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10.0,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"46","type":"interaction"},{"id":"45","type":"interaction"},{"id":"44","type":"interaction"}]}}},"included":[{"id":"46","type":"interaction","attributes":{"evaluation":null,"description":"Create
-        and follow a savings plan","created_at":"2023-03-18T20:41:44.095Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"45","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T20:41:43.827Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"44","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T20:41:43.630Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":5.1,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"9","type":"interaction"},{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"9","type":"interaction","attributes":{"evaluation":null,"description":"Hold
+        a yard sale","created_at":"2023-03-18T22:00:17.236Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-18T22:00:17.036Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:16.848Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 20:41:44 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 recorded_with: VCR 6.1.0

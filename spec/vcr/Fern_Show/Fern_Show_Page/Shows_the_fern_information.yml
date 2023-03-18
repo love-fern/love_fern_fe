@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"eb7be8b421afb930cf0ac48ad8811ddc"
+      - W/"f363fbfdd7b2971253b0c53ba6fb6fc9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 31f0e42a-54f0-498a-a50d-ef5886fc003f
+      - dce5a1b9-e732-4f02-ba30-d4fb5131d855
       X-Runtime:
-      - '0.002664'
+      - '0.004037'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:16 GMT
 recorded_with: VCR 6.1.0

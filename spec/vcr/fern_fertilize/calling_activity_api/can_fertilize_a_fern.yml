@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1fe8ad31-cc91-4af0-b7dc-64180a65f75b
+      - 4844bd0f-ccde-42c7-ae69-4d146ab30f91
       X-Runtime:
-      - '0.003896'
+      - '0.003872'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -64,16 +64,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ff5ae6e8-d5e5-4786-8925-bbaeeaa1c8f4
+      - 8318414e-af50-4ba1-96db-39b9f9fd8cba
       X-Runtime:
-      - '0.004123'
+      - '0.003097'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -97,25 +97,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3a77cb165a222ac4278f62b0fe240d75"
+      - W/"04eb53eb30f30f67779c64573686e912"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c39e35b5-2cbe-4fa2-a8c2-667fc9b0c7bf
+      - bd9fe910-a5f1-4842-9587-93fc4bf852af
       X-Runtime:
-      - '0.144385'
+      - '0.121538'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Start a webinar on a topic of your choice"}'
-  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
+      string: '{"activity":"Make a couch fort"}'
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: UTF-8
-      string: activity=Start+a+webinar+on+a+topic+of+your+choice
+      string: activity=Make+a+couch+fort
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -135,19 +135,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2dafd600028acaa959fc538c89e33c04"
+      - W/"252413286905a686e88bc136640a591a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3f69e493-e50f-4c56-bcf8-9e5565005ee1
+      - 482d3fe5-d206-4a55-9e04-a88d2609a42d
       X-Runtime:
-      - '0.011128'
+      - '0.023069'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"64","type":"interaction"}]}}}}'
-  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -171,19 +171,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e116a67b157315d289a0210bc5d45b09"
+      - W/"d9a697c779205031469acc8cf570f981"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d9bb233b-b0ab-4bd7-8e61-52915573eec9
+      - f1fe3ecc-6a72-4b0c-8872-1ccbe0315288
       X-Runtime:
-      - '0.003256'
+      - '0.004275'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"64","type":"interaction"}]}}},"included":[{"id":"64","type":"interaction","attributes":{"evaluation":null,"description":"Start
-        a webinar on a topic of your choice","created_at":"2023-03-18T21:54:16.632Z"},"relationships":{"fern":{"data":{"id":"4","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":null,"description":"Make
+        a couch fort","created_at":"2023-03-18T22:00:15.440Z"},"relationships":{"fern":{"data":{"id":"4","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:54:16 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 recorded_with: VCR 6.1.0
