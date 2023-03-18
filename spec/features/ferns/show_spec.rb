@@ -37,15 +37,20 @@ RSpec.describe 'Fern Show', type: :feature do
     end
 
     it 'displays the last 3 interactions' do
-      # VCR.use_cassette("Fern_Show/Fern_Show_Page/displays_the_last_3_interactions.yml") do |cassette|
-      #   puts cassette.send(:raw_cassette_bytes)
-      # end
-
+      def days_ago(created_at)
+        today = Time.now.utc.to_date
+        if today == created_at
+          'today'
+        elsif (today - created_at).to_i == 1
+          'yesterday'
+        else
+          "#{(today - created_at).to_i} days ago"
+        end
+      end
+      
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit fern_path(2)
-  
-      binding.pry
-  
+      
       within '#last_3_interactions' do
         expect(page).to have_content('Last Three Interactions:')
       end
@@ -53,12 +58,15 @@ RSpec.describe 'Fern Show', type: :feature do
       click_button 'Water Fern'
       fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.'
       click_button 'Water Fern'
-  
+
+      fern = FernFacade.find_fern(user['uid'], 2)
+      created_at = fern.interactions.first.created_at
+
       within '#last_3_interactions' do
         images = page.all('img')
   
         expect(images[0][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
   
       click_button 'Water Fern'
@@ -69,10 +77,10 @@ RSpec.describe 'Fern Show', type: :feature do
         images = page.all('img')
   
         expect(images[0][:src]).to eq("/assets/emojis/1-b0fd85cc734951271f10961a1ffd8275ab4246652c59e3550c91c19a6a4e4028.png")
-        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged negative words #{days_ago(created_at)}.")
   
         expect(images[1][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
   
       visit fertilize_fern_path(2)
@@ -83,13 +91,13 @@ RSpec.describe 'Fern Show', type: :feature do
   
         expect(images[0][:src]).to eq("/assets/emojis/activity-73fdd286e8c3022d2cac58706016da71ae5588146cfbeeda3a4afb549f0840cd.png")
         expect(page).to have_content("You decided to ") # test for activity dynamically
-        expect(page).to have_content(" today.")
+        expect(page).to have_content(" #{days_ago(created_at)}.")
   
         expect(images[1][:src]).to eq("/assets/emojis/1-b0fd85cc734951271f10961a1ffd8275ab4246652c59e3550c91c19a6a4e4028.png")
-        expect(page).to have_content("You exchanged negative words today.")
+        expect(page).to have_content("You exchanged negative words #{days_ago(created_at)}.")
   
         expect(images[2][:src]).to eq("/assets/emojis/6-0a948fb5518898d7aecf8c8ce0a071241bd278244434ada1a9036ffa9c642c53.png")
-        expect(page).to have_content("You exchanged positive words today.")
+        expect(page).to have_content("You exchanged positive words #{days_ago(created_at)}.")
       end
     end
 
