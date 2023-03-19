@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/5
+    body:
+      encoding: UTF-8
+      string: interaction=I+love+you
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c5e1380495478bcd269d6cbe68dbaddc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 689ae669-7ece-4a1f-aede-3ca12139859d
+      X-Runtime:
+      - '0.130874'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"fern","attributes":{"name":"Roshan","health":10.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":0.9,"description":"message","created_at":"2023-03-19T22:22:02.120Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}}]}'
+  recorded_at: Sun, 19 Mar 2023 22:22:02 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/5
+    body:
+      encoding: UTF-8
+      string: interaction=I+hate+you
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f137c237a47aafe1c2e933e924f4bc54"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5415f0be-c286-4c81-8bbf-e98c49409df4
+      X-Runtime:
+      - '0.141778'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"fern","attributes":{"name":"Roshan","health":7.3,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-19T22:22:02.271Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.9,"description":"message","created_at":"2023-03-19T22:22:02.120Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}}]}'
+  recorded_at: Sun, 19 Mar 2023 22:22:02 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/5
+    body:
+      encoding: UTF-8
+      string: interaction=I+sort+of+like+you
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c3b69d75e831b6b61884f2a342e982e5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc976968-17cd-4e90-bc7e-0347705ac110
+      X-Runtime:
+      - '0.143423'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"fern","attributes":{"name":"Roshan","health":8.5,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"9","type":"interaction"},{"id":"8","type":"interaction"},{"id":"7","type":"interaction"}]}}},"included":[{"id":"9","type":"interaction","attributes":{"evaluation":0.4,"description":"message","created_at":"2023-03-19T22:22:02.426Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-19T22:22:02.271Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":0.9,"description":"message","created_at":"2023-03-19T22:22:02.120Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}}]}'
+  recorded_at: Sun, 19 Mar 2023 22:22:02 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/5
+    body:
+      encoding: UTF-8
+      string: interaction=I+don%27t+care
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bdd6c113ff0b44886befbaeb83ca8b0f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3b67e56a-3e75-49d3-bf0e-76d35a74fb6e
+      X-Runtime:
+      - '0.123781'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"fern","attributes":{"name":"Roshan","health":7.3,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}},"included":[{"id":"10","type":"interaction","attributes":{"evaluation":-0.4,"description":"message","created_at":"2023-03-19T22:22:02.560Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":0.4,"description":"message","created_at":"2023-03-19T22:22:02.426Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":-0.9,"description":"message","created_at":"2023-03-19T22:22:02.271Z"},"relationships":{"fern":{"data":{"id":"5","type":"fern"}}}}]}'
+  recorded_at: Sun, 19 Mar 2023 22:22:02 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/5/stats
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e8bb679d179b94ba026dcc96330fcb0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dadde9bb-a717-4461-bd2d-2ce354497965
+      X-Runtime:
+      - '0.006996'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"5","type":"fern","attributes":{"name":"Roshan","health":7.3,"preferred_contact_method":"phone","stats":[7.0,5.0,7.7,10.0,7.3,8.5,7.3,10.0,7.3,8.5,7.3]},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}}}'
+  recorded_at: Sun, 19 Mar 2023 22:22:02 GMT
+recorded_with: VCR 6.1.0

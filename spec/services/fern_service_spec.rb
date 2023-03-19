@@ -188,4 +188,25 @@ RSpec.describe FernService do
       expect(fern_response[:relationships][:interactions][:data]).to be_an(Array)
     end
   end
+
+  describe '.get_fern_stats', :vcr do
+    it 'gets fern health history' do
+      FernService.update_fern(user['uid'], 5, interaction: 'I love you')
+      FernService.update_fern(user['uid'], 5, interaction: 'I hate you')
+      FernService.update_fern(user['uid'], 5, interaction: 'I sort of like you')
+      FernService.update_fern(user['uid'], 5, interaction: "I don't care")
+      response = FernService.get_fern_stats(user['uid'], 5)
+      parsed_response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(parsed_response[:data][:id]).to be_a(String)
+      expect(parsed_response[:data][:type]).to eq('fern')
+
+      expect(parsed_response[:data][:attributes][:name]).to be_a(String)
+      expect(parsed_response[:data][:attributes][:stats]).to be_an(Array)
+
+      parsed_response[:data][:attributes][:stats].each do |stat|
+        expect(stat).to be_a(Float)
+      end
+    end
+  end
 end
