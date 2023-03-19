@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7ace4f5fec56d30ee396677044c14759"
+      - W/"a3fe60514c7051fc897adf4b657a7a4b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 24ec1dc0-1e93-4837-bee3-01041008ea9b
+      - 1d872002-b8f3-462b-aaa8-715459852382
       X-Runtime:
-      - '0.006283'
+      - '0.044365'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:21:37.928Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
+  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -60,18 +60,91 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"63b8f462618a33c278ded5f4d37e2c03"
+      - W/"03506a62349b35521c131b65db6917e3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0ade0d85-64c8-44aa-9868-d7f8aeff8799
+      - e76817a1-47de-4d3a-a0c6-ea23408bc7f2
       X-Runtime:
-      - '0.003960'
+      - '0.004540'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
+  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"03506a62349b35521c131b65db6917e3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2145f5e6-1e80-44cd-9e27-6bbc97d30bed
+      X-Runtime:
+      - '0.003471'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
+  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/activities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c575ca049f901fa760634af80c331017"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c16c0419-6ff1-469d-b551-bb9a009b8b82
+      X-Runtime:
+      - '0.254833'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"activity":"Create a cookbook with your favorite recipes"}'
+  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
 recorded_with: VCR 6.1.0

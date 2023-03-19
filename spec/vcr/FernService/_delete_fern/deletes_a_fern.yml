@@ -17,23 +17,22 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"af824b8077547ef35b57e89ebf41eac7"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - f86e463c-c93b-4b41-b815-4f169cee80f4
+      - 033d5475-445b-4082-aa7f-502e1eec0c6d
       X-Runtime:
-      - '0.004906'
+      - '0.002056'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"fern","attributes":{"name":"Austin","health":3,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Sat, 18 Mar 2023 21:32:39 GMT
+      string: '{"message":"There was an error processing your request","errors":["Couldn''t
+        find Fern with ''id''=3"],"status":"404"}'
+  recorded_at: Sun, 19 Mar 2023 17:32:02 GMT
 recorded_with: VCR 6.1.0

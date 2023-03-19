@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2d33a5fc4e349e13809ef6938ecaccb2"
+      - W/"66263ae26a7046fb07508157b974f82e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1814e2e6-49f0-49a5-8978-3c47d8d3462b
+      - 1db2554e-a2b3-4117-a47c-67a475e0a47c
       X-Runtime:
-      - '0.004532'
+      - '0.004384'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"1","type":"interaction"}]}}},"included":[{"id":"14","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:36.488Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":null,"created_at":"2023-02-28T20:24:02.176Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"11","type":"interaction"},{"id":"7","type":"interaction"},{"id":"3","type":"interaction"}]}}},"included":[{"id":"11","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:55.970Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:56.589Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:26:32.901Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
+  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/113234860329276513988/shelves
@@ -60,9 +60,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - a070ea46-78fb-4322-aeca-08a4b9f9e871
+      - dc4379ea-246b-4ebd-b679-d83e723b2a7c
       X-Runtime:
-      - '0.014808'
+      - '0.014493'
       Content-Length:
       - '10164'
     body:
@@ -174,5 +174,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
+  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
 recorded_with: VCR 6.1.0

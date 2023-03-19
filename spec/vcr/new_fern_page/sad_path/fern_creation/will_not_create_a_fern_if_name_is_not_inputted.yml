@@ -23,22 +23,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d3641dce0edd99e3f4ee5142211b5777"
+      - W/"814f91207baedb44fa1a77ecb1ab5f5d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f45daf2f-ad7a-43dd-b507-2bceb016775d
+      - 7b10541b-709f-4508-9be6-03f2e7203016
       X-Runtime:
-      - '0.033134'
+      - '0.018858'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"3","type":"fern"},{"id":"4","type":"fern"},{"id":"5","type":"fern"},{"id":"6","type":"fern"},{"id":"10","type":"fern"},{"id":"32","type":"fern"}]}}},{"id":"2","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"2","type":"fern"},{"id":"12","type":"fern"},{"id":"1","type":"fern"}]}}},{"id":"3","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}},{"id":"4","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"7","type":"fern"},{"id":"8","type":"fern"},{"id":"9","type":"fern"}]}}}],"included":[{"id":"3","type":"fern","attributes":{"name":"Austin","health":3,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"5","type":"fern","attributes":{"name":"Roshan","health":5,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"6","type":"fern","attributes":{"name":"Nate","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"10","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"Carrier
-        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},{"id":"32","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
-        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"12","type":"fern","attributes":{"name":"The
-        Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"1","type":"fern","attributes":{"name":"Erin","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"1","type":"interaction"}]}}},{"id":"7","type":"fern","attributes":{"name":"Anthony","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"8","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:32:36 GMT
+      string: '{"data":[{"id":"1","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"4","type":"fern"},{"id":"5","type":"fern"},{"id":"6","type":"fern"},{"id":"10","type":"fern"},{"id":"13","type":"fern"},{"id":"16","type":"fern"}]}}},{"id":"2","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"1","type":"fern"},{"id":"12","type":"fern"},{"id":"15","type":"fern"}]}}},{"id":"3","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}},{"id":"4","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[{"id":"7","type":"fern"},{"id":"8","type":"fern"},{"id":"9","type":"fern"},{"id":"2","type":"fern"}]}}}],"included":[{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"5","type":"fern","attributes":{"name":"Roshan","health":5,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"6","type":"fern","attributes":{"name":"Nate","health":6,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"10","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"13","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"16","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
+        Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"11","type":"interaction"},{"id":"7","type":"interaction"},{"id":"3","type":"interaction"}]}}},{"id":"12","type":"fern","attributes":{"name":"The
+        Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"15","type":"fern","attributes":{"name":"The
+        Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"7","type":"fern","attributes":{"name":"Anthony","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"8","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}}]}'
+  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns
@@ -66,14 +68,14 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 8ff2b20a-9c6a-41bf-a2cf-0222bdc03110
+      - 8c5a8aa1-88c0-4765-a7ad-6ece1f3d3191
       X-Runtime:
-      - '0.215010'
+      - '0.006190'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"There was an error processing your request","errors":["Name
         can''t be blank"],"status":"422"}'
-  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
+  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
 recorded_with: VCR 6.1.0
