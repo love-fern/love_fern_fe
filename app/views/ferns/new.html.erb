@@ -13,7 +13,7 @@
 
     <div class='form-group'>
       <%= f.label :shelf, 'Shelf:' %>
-      <%= f.select :shelf, ['Friends', 'Family', 'Romantic', 'Business'], class: 'form-control' %>
+      <%= f.select :shelf, @shelves.map { |shelf| shelf.name } , class: 'form-control' %>
     </div>
 
     <div class='form-group'>

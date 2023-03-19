@@ -41,6 +41,10 @@ class FernService
     conn.get("users/#{google_id}/shelves")
   end
 
+  def self.create_shelf(google_id, shelf_params)
+    conn.post("users/#{google_id}/shelves", shelf_params)
+  end
+
   # external APIs
   def self.get_an_activity
     conn.get('activities')

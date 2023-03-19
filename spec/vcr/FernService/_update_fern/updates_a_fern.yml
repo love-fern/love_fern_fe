@@ -25,17 +25,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"39a9d67d702eec0eb338ea4676dc4b75"
+      - W/"fe3810157928d207930c5f33d2685e6b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9809977c-bb2a-469c-a300-55644126c64c
+      - 3593c9b8-b147-4621-bba3-0cecee161301
       X-Runtime:
-      - '0.010066'
+      - '0.009829'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"17","type":"interaction"},{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:39 GMT
 recorded_with: VCR 6.1.0

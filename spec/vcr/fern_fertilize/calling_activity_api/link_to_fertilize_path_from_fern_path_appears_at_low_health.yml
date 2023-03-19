@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"795ef06e26cc28c03819d05b6d235e42"
+      - W/"7ace4f5fec56d30ee396677044c14759"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 855b444c-f5cc-4736-bacf-aed72b2225b6
+      - 24ec1dc0-1e93-4837-bee3-01041008ea9b
       X-Runtime:
-      - '0.035551'
+      - '0.006283'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:15:55.793Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:10 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -60,91 +60,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"03506a62349b35521c131b65db6917e3"
+      - W/"63b8f462618a33c278ded5f4d37e2c03"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2437876e-eba4-4031-98ff-fddbbdd37712
+      - 0ade0d85-64c8-44aa-9868-d7f8aeff8799
       X-Runtime:
-      - '0.003225'
+      - '0.003960'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:10 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"03506a62349b35521c131b65db6917e3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 875bc3e6-b1c2-4716-b9aa-e6d0a5f2a8a6
-      X-Runtime:
-      - '0.003815'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
-        Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:10 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/activities
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Fern-Key:
-      - "<FERN_KEY>"
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"48a5afb408e7be02e9caa897d656cff4"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e4155514-b904-46d7-a28e-8284bf959350
-      X-Runtime:
-      - '0.183336'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"activity":"Memorize the fifty states and their capitals"}'
-  recorded_at: Thu, 02 Mar 2023 18:16:10 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
 recorded_with: VCR 6.1.0

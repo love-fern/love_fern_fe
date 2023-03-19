@@ -23,21 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a23d8c18c158315878f04921f5190168"
+      - W/"2d33a5fc4e349e13809ef6938ecaccb2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 33adb19f-fce5-4019-a2e7-da3acc441099
+      - 1814e2e6-49f0-49a5-8978-3c47d8d3462b
       X-Runtime:
-      - '0.002949'
+      - '0.004532'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:11.692Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Donate
-        to your local food bank","created_at":"2023-03-02T18:16:11.422Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"1","type":"interaction"}]}}},"included":[{"id":"14","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:36.488Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":null,"created_at":"2023-02-28T20:24:02.176Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/113234860329276513988/shelves
@@ -61,16 +60,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 2a2c10ba-a34c-469d-ac54-caef699f77e1
+      - a070ea46-78fb-4322-aeca-08a4b9f9e871
       X-Runtime:
-      - '0.009695'
+      - '0.014808'
       Content-Length:
       - '10164'
     body:
       encoding: UTF-8
       string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
         undefined method `shelves'' for nil:NilClass\u003e","traces":{"Application
-        Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:27:in
+        Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:28:in
         `index''"}],"Framework Trace":[{"id":1,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
@@ -122,7 +121,7 @@ http_interactions:
         lib/puma/server.rb:706:in `handle_request''"},{"id":50,"trace":"puma (3.12.6)
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:27:in
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:28:in
         `index''"},{"id":1,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
@@ -175,5 +174,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
 recorded_with: VCR 6.1.0

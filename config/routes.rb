@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/ferns/:id/fertilize', to: 'ferns/activities#index', as: :fertilize_fern
 
   resources :ferns, only: %i[new create show destroy update]
+  resources :shelves, only: %i[new create]
 end

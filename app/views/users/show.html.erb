@@ -3,7 +3,14 @@
     <%= current_user['name'] %>'s Greenhouse
   </h3>
   <div class="spacer-2"></div>
-  <%= button_to 'Plant a Fern', new_fern_path, method: :get, class: 'btn btn-lg btn-primary' %>
+  <div class='row greenhouse-buttons'>
+    <div class='col-sm-4'>
+      <%= button_to 'Plant a Fern', new_fern_path, method: :get, class: 'btn btn-lg btn-primary' %>
+    </div>
+    <div class='col-sm-4'>
+      <%= button_to 'Create a Shelf', new_shelf_path, method: :get, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
   <div class="spacer-1"></div>
 </div>
 <div class='container'>

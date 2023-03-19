@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b1f9e4a5-e42d-46a1-a87a-e1912ee79fce
+      - 974be5d5-d01d-4c12-b323-025bf5f6960a
       X-Runtime:
-      - '0.004095'
+      - '0.007690'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -60,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"415b04fa06465fd0134f869fe00d12ca"
+      - W/"a724017a9542d900d2ced9d6ea6c2192"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dca70bfd-f34c-48ec-8e3b-1888286c48a3
+      - 146de33d-c133-4b60-a80d-15f1f10704ef
       X-Runtime:
-      - '0.127514'
+      - '0.458652'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Catch up with a friend over a lunch date"}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+      string: '{"activity":"Pick up litter around your favorite park"}'
+  recorded_at: Sat, 18 Mar 2023 21:32:35 GMT
 recorded_with: VCR 6.1.0

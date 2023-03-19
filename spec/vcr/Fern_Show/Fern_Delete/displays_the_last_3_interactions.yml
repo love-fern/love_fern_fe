@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 997b6d4d-cbd5-4827-8888-c7bf43625001
+      - 17dfab78-7b07-472c-a1bd-dd8f86623930
       X-Runtime:
-      - '0.011145'
+      - '0.003815'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -64,16 +64,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6775c4a7-8538-478c-b0bc-9f4d6d9b94c9
+      - 95c5facb-0891-40fb-b893-9c4108ac4678
       X-Runtime:
-      - '0.048821'
+      - '0.003831'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:37 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -99,19 +99,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ad1bb1efa0d3a89b68bf2e1207f99ecb"
+      - W/"5380888520019c4e538b3a6bb1856dc9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d1cc9961-c230-4cdf-9fc2-de55a24e07a7
+      - fb98093d-514c-411f-bdb9-90f00a56c368
       X-Runtime:
-      - '0.143773'
+      - '0.236061'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"15","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -135,20 +135,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a2b312c20a02ad0f013d606e5df05f7d"
+      - W/"78ac771f75e4f702c43bc0a5b35724ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d267f3c6-74a8-4eff-a0b8-f427f53701fd
+      - a5a7e015-6cb2-4c3c-a8b7-86b239e3fb77
       X-Runtime:
-      - '0.003908'
+      - '0.010021'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}},"included":[{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:12.564Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"15","type":"interaction"}]}}},"included":[{"id":"15","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:38.014Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -172,20 +172,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a2b312c20a02ad0f013d606e5df05f7d"
+      - W/"78ac771f75e4f702c43bc0a5b35724ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e73c6aee-284f-4171-953f-c0d2850b18d0
+      - d916bf6e-165c-4f9b-a7d5-061df1a1fd37
       X-Runtime:
-      - '0.003859'
+      - '0.008448'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}},"included":[{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:12.564Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"15","type":"interaction"}]}}},"included":[{"id":"15","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:38.014Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -211,19 +211,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"28573c05820274da29bf110c63068620"
+      - W/"57eeb4c5186e37226a796a0669706f20"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2334e33c-c59b-474c-845d-07584d5999d4
+      - 98bc9360-ef86-4e77-8d02-2ff01d3ed72d
       X-Runtime:
-      - '0.114086'
+      - '0.307348'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -247,20 +247,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"94ebdea1386798a66650e388155f2614"
+      - W/"99ef9d9e4915e9b2d9d1b61141599ec5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 34adb9d2-2c63-43cc-a7d0-5822a06ef143
+      - 4067784c-d456-4130-b6bf-88711e87e543
       X-Runtime:
-      - '0.003680'
+      - '0.012818'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-02T18:16:12.723Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:12.564Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}},"included":[{"id":"16","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-18T21:32:38.464Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"15","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:38.014Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -284,20 +284,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"94ebdea1386798a66650e388155f2614"
+      - W/"99ef9d9e4915e9b2d9d1b61141599ec5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d2f353e-edeb-4dc8-b6ab-6ffb4d04a5f1
+      - 9623c644-ab1d-41a5-a3cf-0dd38c2394da
       X-Runtime:
-      - '0.003381'
+      - '0.003738'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-02T18:16:12.723Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:12.564Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}},"included":[{"id":"16","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-18T21:32:38.464Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"15","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:38.014Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -321,25 +321,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0092018a319a182eb6039a8f3af8be40"
+      - W/"58c33ef590e1ae117dd19846f9e6f05a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bcf2d74b-a56b-400b-b4ed-605a048ea779
+      - 1aff4ffe-356a-40e8-a657-79eca7c1e183
       X-Runtime:
-      - '0.126635'
+      - '0.190552'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Go to the gym"}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+      string: '{"activity":"Contribute code or a monetary donation to an open-source
+        software project"}'
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
     body:
       encoding: UTF-8
-      string: activity=Go+to+the+gym
+      string: activity=Contribute+code+or+a+monetary+donation+to+an+open-source+software+project
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -359,19 +360,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8568341269a7a8915670494234dc5f96"
+      - W/"dcf447bd446ade81c29187e996001fc6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - def180a8-66b4-4443-9896-1b218a71117a
+      - 2d91817b-5f66-4bae-a94d-1671afe5c339
       X-Runtime:
-      - '0.007088'
+      - '0.018517'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"17","type":"interaction"},{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -395,19 +396,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bedc40574ff9e77a59d6b0b06ab2c527"
+      - W/"b30f05efc7db540ecca4408b4396c3fe"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa9cfe19-b296-438f-a905-ce3849260c14
+      - d2f90667-d29a-4432-822d-619dfd732bfc
       X-Runtime:
-      - '0.003770'
+      - '0.005232'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"6","type":"interaction","attributes":{"evaluation":"Positive","description":"Go
-        to the gym","created_at":"2023-03-02T18:16:12.916Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-02T18:16:12.723Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-02T18:16:12.564Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"17","type":"interaction"},{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}},"included":[{"id":"17","type":"interaction","attributes":{"evaluation":"Positive","description":"Contribute
+        code or a monetary donation to an open-source software project","created_at":"2023-03-18T21:32:38.811Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"16","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-18T21:32:38.464Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"15","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-18T21:32:38.014Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:12 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 recorded_with: VCR 6.1.0

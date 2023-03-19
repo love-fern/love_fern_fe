@@ -1,6 +1,45 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: http://localhost:5000/api/v1/users/110920554030325122207/shelves
+    body:
+      encoding: UTF-8
+      string: name=All+The+Baddies+In+My+Life
+    headers:
+      Fern-Key:
+      - "<FERN_KEY>"
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c64382c1387e731c773a5a4439399e2c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 69f07f37-f21b-42e4-b43b-7d6f09d9a01d
+      X-Runtime:
+      - '0.006291'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"12","type":"shelf","attributes":{"name":"All The Baddies
+        In My Life"},"relationships":{"user":{"data":{"id":"1","type":"user"}},"ferns":{"data":[]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
+- request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/shelves
     body:
@@ -27,9 +66,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2827e575-99d2-46eb-a745-d9b5fb23c16e
+      - d81a97df-f90b-402d-93ae-ef7a37580f35
       X-Runtime:
-      - '0.047624'
+      - '0.025706'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,5 +78,5 @@ http_interactions:
         Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},{"id":"32","type":"fern","attributes":{"name":"Drew","health":7,"preferred_contact_method":"Carrier
         Pigeon"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"12","type":"fern","attributes":{"name":"The
         Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"1","type":"fern","attributes":{"name":"Erin","health":4,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"1","type":"interaction"}]}}},{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"17","type":"interaction"},{"id":"16","type":"interaction"},{"id":"15","type":"interaction"}]}}},{"id":"7","type":"fern","attributes":{"name":"Anthony","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"8","type":"fern","attributes":{"name":"Drew","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}]}'
-  recorded_at: Sat, 18 Mar 2023 21:32:39 GMT
+  recorded_at: Sat, 18 Mar 2023 21:32:38 GMT
 recorded_with: VCR 6.1.0

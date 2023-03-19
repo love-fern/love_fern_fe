@@ -25,17 +25,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"be1bc0969306cea4437c5f3fe17510a8"
+      - W/"37122edca46a30ae1ae2bb35bc855b7d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a1e24447-1140-4732-a562-9fa67ebe5eed
+      - 4a7cf256-11e1-4d09-9781-a4ca67ec990b
       X-Runtime:
-      - '0.007708'
+      - '0.014540'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"12","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
+      string: '{"data":{"id":"34","type":"fern","attributes":{"name":"The Big Pepperoni","health":7,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
+  recorded_at: Sat, 18 Mar 2023 21:32:39 GMT
 recorded_with: VCR 6.1.0

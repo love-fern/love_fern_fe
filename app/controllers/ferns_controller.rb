@@ -1,5 +1,7 @@
 class FernsController < ApplicationController
-  def new; end
+  def new
+    @shelves = ShelfFacade.user_shelves(current_user['uid'])
+  end
 
   def create
     created_fern = FernService.create_fern(current_user['uid'], fern_params)
