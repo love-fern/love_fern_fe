@@ -23,21 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"401e1919f6873547ea065512d470a8ec"
+      - W/"eb7be8b421afb930cf0ac48ad8811ddc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9f11a67c-1d8c-478d-8d7e-07442bb9504d
+      - 2faee049-c0d8-4fa2-8528-3b4c83169117
       X-Runtime:
-      - '0.004825'
+      - '0.005444'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}},"included":[{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:29:57.944Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:57.692Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:55 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -61,21 +60,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"401e1919f6873547ea065512d470a8ec"
+      - W/"eb7be8b421afb930cf0ac48ad8811ddc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6ede22e4-f79b-457e-9746-e697b2d7ff52
+      - d3c07634-3e17-4f10-9b7a-49cecaab2f9a
       X-Runtime:
-      - '0.009970'
+      - '0.003414'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}},"included":[{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:29:57.944Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:57.692Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:55 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -101,19 +99,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"78c8107a236a6f2036a541cd2e026b16"
+      - W/"ad1bb1efa0d3a89b68bf2e1207f99ecb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - df8cbbb5-cc97-43c8-a9f4-982f6af41c3a
+      - 6a592cf2-0b2b-45eb-86f6-f068769f03dc
       X-Runtime:
-      - '0.415337'
+      - '0.194697'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"12","type":"interaction"},{"id":"10","type":"interaction"},{"id":"9","type":"interaction"}]}}}}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}}}'
+  recorded_at: Sun, 19 Mar 2023 19:01:55 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -137,21 +135,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"baa7e59d81aa791dacac009d0a13af92"
+      - W/"c6902b851853800b4e21fa1151b00dc4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 756326bf-f9d2-491a-bfe9-b64ace0608bc
+      - 8c084280-861d-4e78-bb87-7bfb0f9941d1
       X-Runtime:
-      - '0.006302'
+      - '0.005482'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"12","type":"interaction"},{"id":"10","type":"interaction"},{"id":"9","type":"interaction"}]}}},"included":[{"id":"12","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:57.203Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:29:57.944Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}},"included":[{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:55.839Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:55 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -175,21 +172,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"baa7e59d81aa791dacac009d0a13af92"
+      - W/"c6902b851853800b4e21fa1151b00dc4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d0ccd11c-a312-40a7-b813-f4b0a0d49476
+      - a05ac0df-b53a-47b6-bc3c-2f23f6fc786a
       X-Runtime:
-      - '0.004705'
+      - '0.004048'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":10,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"12","type":"interaction"},{"id":"10","type":"interaction"},{"id":"9","type":"interaction"}]}}},"included":[{"id":"12","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:57.203Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:29:57.944Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":4,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"4","type":"interaction"}]}}},"included":[{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:55.839Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:55 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -215,19 +211,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"455d207c428ff9802fda7a537df2e417"
+      - W/"28573c05820274da29bf110c63068620"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f777ade9-d2ed-4a10-8676-dcb52c652fc0
+      - 4e8f138d-d61d-40f2-b4dc-3a2be5e02fb8
       X-Runtime:
-      - '0.186402'
+      - '0.169845'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"13","type":"interaction"},{"id":"12","type":"interaction"},{"id":"10","type":"interaction"}]}}}}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}}}'
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -251,21 +247,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"34c666767b0109f7fac33975c705dd66"
+      - W/"face9d8df5c9b1573a3881f3df38a72a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 902ab0aa-ba5a-4f43-bb2a-c95f3b6b0a76
+      - e281d778-59ad-402b-b41a-a9357e6a1609
       X-Runtime:
-      - '0.005829'
+      - '0.006968'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"13","type":"interaction"},{"id":"12","type":"interaction"},{"id":"10","type":"interaction"}]}}},"included":[{"id":"13","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:31:57.486Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"12","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:57.203Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T19:01:56.081Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:55.839Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -289,21 +284,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"34c666767b0109f7fac33975c705dd66"
+      - W/"face9d8df5c9b1573a3881f3df38a72a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b161e8fd-a66a-4098-a420-1acdf0e6596a
+      - 4bb2ec8d-09e3-4fef-8e1b-d402ff08418c
       X-Runtime:
-      - '0.008246'
+      - '0.004285'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"13","type":"interaction"},{"id":"12","type":"interaction"},{"id":"10","type":"interaction"}]}}},"included":[{"id":"13","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:31:57.486Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"12","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:57.203Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T19:01:56.081Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:55.839Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -327,25 +321,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fe1eb2ef4dee562153eba5f12d56d7da"
+      - W/"83afbe67ff3c963af2a9f7a17c59ee14"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5c75aabb-aec0-4bc0-8339-87d1611a5985
+      - 4455ad20-933a-41cb-aef9-c9cd9e71d223
       X-Runtime:
-      - '0.197106'
+      - '0.194414'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Learn Javascript"}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+      string: '{"activity":"Organize your music collection"}'
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
     body:
       encoding: UTF-8
-      string: activity=Learn+Javascript
+      string: activity=Organize+your+music+collection
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -365,19 +359,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"96eccc07fb45db6de60ce9f4657736e7"
+      - W/"8568341269a7a8915670494234dc5f96"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1023fd6b-3cd6-43c0-a9c7-22b03addfa71
+      - b805b9cd-3734-4d86-9610-7e0d3dfcf505
       X-Runtime:
-      - '0.009765'
+      - '0.011812'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"13","type":"interaction"},{"id":"12","type":"interaction"}]}}}}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}}}'
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/2
@@ -401,19 +395,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a18b4dc93460ef6b664a984e3a195b46"
+      - W/"ed0e0fa59371eca1dd90a7f87c852a3c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4d3856cf-66e3-45d8-8e2e-07cf8e98ac54
+      - 36ed2e99-ba79-4273-961c-e7016606d428
       X-Runtime:
-      - '0.004750'
+      - '0.004787'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"14","type":"interaction"},{"id":"13","type":"interaction"},{"id":"12","type":"interaction"}]}}},"included":[{"id":"14","type":"interaction","attributes":{"evaluation":"Positive","description":"Learn
-        Javascript","created_at":"2023-03-19T17:31:57.812Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"13","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:31:57.486Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"12","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:57.203Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":8,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"}]}}},"included":[{"id":"6","type":"interaction","attributes":{"evaluation":"Positive","description":"Organize
+        your music collection","created_at":"2023-03-19T19:01:56.398Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"5","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T19:01:56.081Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:55.839Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 recorded_with: VCR 6.1.0

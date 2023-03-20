@@ -99,7 +99,7 @@ RSpec.describe FernService do
       expect(fern_response[:relationships][:user][:data][:id]).to be_a(String)
       expect(fern_response[:relationships][:user][:data][:id].to_i).to_not eq(0)
       expect(fern_response[:relationships][:user][:data][:type]).to eq('user')
-binding.pry
+
       expect(fern_response[:relationships][:interactions][:data][0][:id]).to be_a(String)
       expect(fern_response[:relationships][:interactions][:data][0][:id].to_i).to_not eq(0)
       expect(fern_response[:relationships][:interactions][:data][0][:type]).to eq('interaction')

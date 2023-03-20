@@ -23,21 +23,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"494980532a2ccb027dcb7881cb048d3b"
+      - W/"163cd3a164b642222c501fe643f73589"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dca2207d-4d4d-49bc-b9c3-56bfcc9b4f07
+      - 84b181f3-01c7-43cd-a9c6-c5c960991a09
       X-Runtime:
-      - '0.003901'
+      - '0.027511'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:56.589Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:26:32.901Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Learn
-        how to beatbox","created_at":"2023-03-19T17:26:32.372Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Pot
+        some plants and put them around your house","created_at":"2023-03-19T19:01:54.098Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:54 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
@@ -63,19 +63,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"13ccb71fd0bfc6ed9084fbceef009fa0"
+      - W/"777eaedd9512a1e3fde4113d4cec9283"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4f19c08d-f501-4f40-a8f2-76fffe10593d
+      - 8c9289f1-c80c-441b-adff-eeabfe080590
       X-Runtime:
-      - '0.390308'
+      - '0.205543'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"11","type":"interaction"},{"id":"7","type":"interaction"},{"id":"3","type":"interaction"}]}}}}'
-  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}}}'
+  recorded_at: Sun, 19 Mar 2023 19:01:54 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
@@ -99,18 +99,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"66263ae26a7046fb07508157b974f82e"
+      - W/"9ac220936093ac8f20b95c984e7d9396"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6683cd3-3c40-469a-b841-6e4cd81bd7a9
+      - 9772b3f0-dcee-4280-9a82-861cd56ae3ae
       X-Runtime:
-      - '0.005032'
+      - '0.005399'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"11","type":"interaction"},{"id":"7","type":"interaction"},{"id":"3","type":"interaction"}]}}},"included":[{"id":"11","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:31:55.970Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"7","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:56.589Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:26:32.901Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":10,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"},{"id":"2","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:54.439Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":"Positive","description":"Pot
+        some plants and put them around your house","created_at":"2023-03-19T19:01:54.098Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:56 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:54 GMT
 recorded_with: VCR 6.1.0

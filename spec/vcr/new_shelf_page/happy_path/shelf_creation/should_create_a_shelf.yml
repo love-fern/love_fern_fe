@@ -25,16 +25,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - f49ae1d1-5b87-4a94-823b-e7c18cd4eae1
+      - 750f3e3a-3ba8-4243-9f7b-04bfd225b794
       X-Runtime:
-      - '0.014078'
+      - '0.015569'
       Content-Length:
       - '10164'
     body:
       encoding: UTF-8
       string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
         undefined method `shelves'' for nil:NilClass\u003e","traces":{"Application
-        Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:4:in
+        Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:6:in
         `create''"}],"Framework Trace":[{"id":1,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
@@ -86,7 +86,7 @@ http_interactions:
         lib/puma/server.rb:706:in `handle_request''"},{"id":50,"trace":"puma (3.12.6)
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:4:in
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/controllers/api/v1/users/shelves_controller.rb:6:in
         `create''"},{"id":1,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":2,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":3,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
@@ -139,5 +139,5 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":51,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":52,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Sun, 19 Mar 2023 17:31:57 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:56 GMT
 recorded_with: VCR 6.1.0

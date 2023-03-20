@@ -5,6 +5,7 @@ class ShelvesController < ApplicationController
 
   def create
     created_shelf = FernService.create_shelf(current_user['uid'], shelf_params)
+    # binding.pry
     if created_shelf.body['error'] == 'error'
       flash[:error] = "Please fill out all of the shelf's information out"
       render :new

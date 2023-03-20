@@ -16,7 +16,7 @@ RSpec.describe 'new fern page', type: :feature do
       visit new_fern_path
     end
 
-    describe 'page layout' do
+    describe 'page layout', :vcr do
       it "has 'Plant New Fern' as a title" do
         expect(page).to have_content('Plant New Fern')
       end

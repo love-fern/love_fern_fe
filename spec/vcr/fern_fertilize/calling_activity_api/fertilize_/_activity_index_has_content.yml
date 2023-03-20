@@ -23,21 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"401e1919f6873547ea065512d470a8ec"
+      - W/"eb7be8b421afb930cf0ac48ad8811ddc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1e23681b-2292-48ad-99da-1b28fc4f29b4
+      - 0bb728df-e92d-4189-a722-3773f4a5923c
       X-Runtime:
-      - '0.005228'
+      - '0.005561'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Fernilicious","health":8,"preferred_contact_method":"Don''t"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"10","type":"interaction"},{"id":"9","type":"interaction"},{"id":"8","type":"interaction"}]}}},"included":[{"id":"10","type":"interaction","attributes":{"evaluation":"Positive","description":"Mow
-        your lawn","created_at":"2023-03-19T17:29:58.250Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"9","type":"interaction","attributes":{"evaluation":"Negative","description":"message","created_at":"2023-03-19T17:29:57.944Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"8","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:29:57.692Z"},"relationships":{"fern":{"data":{"id":"2","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -61,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3b8008d38501a99700fe7bca64d3fb58"
+      - W/"167663fb5cb02cfca7e6295833817b32"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 880224a4-7444-43f3-b420-ecb445a1dc9a
+      - 66fe6ab0-7ff1-4f3c-91a1-07c11eb93caf
       X-Runtime:
-      - '0.193912'
+      - '0.197081'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Color"}'
-  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
+      string: '{"activity":"Learn how to play a new sport"}'
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 recorded_with: VCR 6.1.0

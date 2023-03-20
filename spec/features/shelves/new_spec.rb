@@ -10,7 +10,7 @@ RSpec.describe 'new shelf page', type: :feature do
     }
   end
 
-  describe 'happy path' do
+  describe 'happy path', :vcr do
     before do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit new_shelf_path

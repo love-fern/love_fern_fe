@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a3fe60514c7051fc897adf4b657a7a4b"
+      - W/"37698b5617e9ed9b2113456e9e4e509f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1d872002-b8f3-462b-aaa8-715459852382
+      - 125405d2-2916-4830-81a1-df2b7ada995d
       X-Runtime:
-      - '0.044365'
+      - '0.073246'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T17:21:37.928Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":"Positive","description":"message","created_at":"2023-03-19T19:01:37.555Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -64,16 +64,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e76817a1-47de-4d3a-a0c6-ea23408bc7f2
+      - 73196dce-558c-4400-92ba-505346a45285
       X-Runtime:
-      - '0.004540'
+      - '0.004446'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -101,16 +101,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2145f5e6-1e80-44cd-9e27-6bbc97d30bed
+      - e578de8b-fd08-4df8-9d55-cd4483b9e48d
       X-Runtime:
-      - '0.003471'
+      - '0.004921'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sun, 19 Mar 2023 17:31:54 GMT
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -134,17 +134,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c575ca049f901fa760634af80c331017"
+      - W/"06b738a1943ff7bcc8f92fc92fd50aa8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c16c0419-6ff1-469d-b551-bb9a009b8b82
+      - 853165e8-e3c9-41d7-b55a-73b378451cba
       X-Runtime:
-      - '0.254833'
+      - '0.257975'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Create a cookbook with your favorite recipes"}'
-  recorded_at: Sun, 19 Mar 2023 17:31:55 GMT
+      string: '{"activity":"Go on a long drive with no music"}'
+  recorded_at: Sun, 19 Mar 2023 19:01:53 GMT
 recorded_with: VCR 6.1.0
