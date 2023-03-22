@@ -10,7 +10,7 @@ class Interaction
 
   
   def emoji
-    return "emojis/activity.png" unless @evaluation
+    return "emojis/activity.png" if @evaluation > 1
     "emojis/#{message_level}.png"
   end
   
