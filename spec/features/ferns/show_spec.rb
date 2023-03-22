@@ -34,6 +34,7 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
       expect(page).to have_button('Fertilize Fern')
+      expect(page).to have_button('Fern Stats')
     end
 
     it 'displays the last 3 interactions' do
