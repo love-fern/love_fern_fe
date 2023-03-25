@@ -1,6 +1,14 @@
 <div class='container text-center'>
   <h2>Fertilize Your Fern!</h2>
-  <h3>Yikes! Your relationship with <%= @fern.name %> isn't looking too healthy.</h3>
+  <% if @fern.health < 3 %>
+    <h3>Oh no! Your relationship with <%= @fern.name %> is nearly a husk. It needs some real CPR!</h3>
+  <% elsif @fern.health < 5 %>
+    <h3>Yikes! Your relationship with <%= @fern.name %> isn't looking too healthy.</h3>
+  <% elsif @fern.health < 7 %>
+    <h3>Your relationship with <%= @fern.name %> isn't too bad, but it could use a little work!</h3>
+  <% else %>
+    <h3>Your relationship with <%= @fern.name %> is looking great, but it is always important to fertilize!</h3>
+  <% end %>
 
   <%= link_to image_tag(@fern.image, class: 'fern-show-image', alt: 'fern health image', id: "fern-#{@fern.id}"), fern_path(@fern.id) %><br>
 
