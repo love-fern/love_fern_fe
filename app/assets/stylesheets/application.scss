@@ -95,6 +95,12 @@ h6 {
   font-size: 1.25em
 }
 
+.btn-compost {
+  background-color: #ec080890;
+  border-bottom: 3px solid #705b44;
+  font-size: 1.25em
+}
+
 .fern-buttons {
   margin: 3rem 0rem;
 }
@@ -177,4 +183,29 @@ h6 {
   width: 3rem;
   padding-bottom: 1rem;
   padding-top: 0.5rem;
+}
+
+.ferns-axis {
+  width: 5.4rem;
+  display: block;
+  margin-left: auto;
+}
+
+.emojis-axis {
+  padding-top: 1.1rem;
+  width: 2.8rem;
+  display: block;
+  margin-left: auto;
+}
+
+.stat-title {
+  background-image: url('shelf-sign.png');
+  background-size: cover;
+  border: 5px solid #4d3b29;
+  border-radius: 0.5em;
+  box-shadow: 1pt 1pt 3pt #292d3580;
+  width: 25%;
+  // display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
