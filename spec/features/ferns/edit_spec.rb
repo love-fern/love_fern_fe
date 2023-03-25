@@ -39,10 +39,28 @@ RSpec.describe 'Fern Edit', type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit water_fern_path(1)
+      fill_in :interaction, with: 'I love you.' # evaluation = 0.9
+      click_button 'Water Fern'
+
+      expect(page).to have_content("Wow! Your fern is speechless! That's just about the nicest thing anyone's ever said to it.")
+
+      visit water_fern_path(1)
       fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.' # evaluation = 0.6
       click_button 'Water Fern'
 
       expect(page).to have_content("Your fern is beaming! That was awfully kind of you to say.")
+
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'Let them eat muffins please friend' # evaluation = 0.3
+      click_button 'Water Fern'
+
+      expect(page).to have_content("Your fern liked that. It's feeling a bit better now.")
+
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'We need to talk.' # evaluation = -0.1
+      click_button 'Water Fern'
+
+      expect(page).to have_content("Hmm... Your fern doesn't know what to think about that.")
 
       visit water_fern_path(1)
       fill_in :interaction, with: 'You are a strong muffin man.' # evaluation = -0.3
@@ -51,10 +69,18 @@ RSpec.describe 'Fern Edit', type: :feature do
       expect(page).to have_content("Oof. Your fern didn't much care for that.")
 
       visit water_fern_path(1)
-      fill_in :interaction, with: 'We need to talk.' # evaluation = -0.1
+      fill_in :interaction, with: "Please don't do that so quickly" # evaluation = -0.6
       click_button 'Water Fern'
 
-      expect(page).to have_content("Hmm... Your fern doesn't know what to think about that.")
+      expect(page).to have_content("Yikes! Your fern just died a little inside.")
+
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'I hate you' # evaluation = -0.9
+      click_button 'Water Fern'
+
+      expect(page).to have_content("The cruelty of man knows no bounds. Your fern is deeply hurt by these words.")
+
+
     end
 
     describe 'sad path' do
