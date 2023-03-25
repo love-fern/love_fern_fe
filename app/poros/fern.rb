@@ -1,5 +1,5 @@
 class Fern
-  attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id, :interactions
+  attr_reader :id, :name, :shelf, :preferred_contact_method, :health, :image, :user_id, :interactions, :stats
 
   def initialize(fern_info, included = false)
     @id = fern_info[:id]
@@ -10,6 +10,26 @@ class Fern
     @image = set_image(@health)
     @user_id = find_user_id(included) if included
     @interactions = create_interactions(included) if included
+  end
+  
+  def health_history # hardcoding neutral threshold and ratio from backend for now
+    health = 7.0
+    hash = { 0 => health }
+    @interactions.reverse.each.with_index(1) do |interaction, i|
+      health += interaction.evaluation*3 unless interaction.evaluation.between?(-0.25,0.25)
+      health = 10 if health > 10
+      health = 0 if health < 0
+      hash[i] = health
+    end
+    hash
+  end
+
+  def interaction_history
+    hash = Hash.new
+    @interactions.reverse.each.with_index do |interaction, i|
+      hash[i] = interaction.evaluation
+    end
+    hash
   end
 
   private

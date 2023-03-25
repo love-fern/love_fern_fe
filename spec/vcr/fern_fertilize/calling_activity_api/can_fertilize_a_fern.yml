@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4844bd0f-ccde-42c7-ae69-4d146ab30f91
+      - ebda0ccc-3ec9-4942-b8e2-2dc488087875
       X-Runtime:
-      - '0.003872'
+      - '0.004360'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -64,16 +64,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8318414e-af50-4ba1-96db-39b9f9fd8cba
+      - 48dca673-01dc-4698-bc60-3fb625e0c632
       X-Runtime:
-      - '0.003097'
+      - '0.004832'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -97,25 +97,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"04eb53eb30f30f67779c64573686e912"
+      - W/"d42096bf53a3c0c176806a4f94f7f773"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd9fe910-a5f1-4842-9587-93fc4bf852af
+      - 69ab27f1-0ec2-4688-be7d-4e19dfc6fa43
       X-Runtime:
-      - '0.121538'
+      - '0.119528'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Make a couch fort"}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+      string: '{"activity":"Have a football scrimmage with some friends"}'
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
     body:
       encoding: UTF-8
-      string: activity=Make+a+couch+fort
+      string: activity=Have+a+football+scrimmage+with+some+friends
     headers:
       Fern-Key:
       - "<FERN_KEY>"
@@ -135,19 +135,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"252413286905a686e88bc136640a591a"
+      - W/"973443a300de302a8914bca90960d3d7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 482d3fe5-d206-4a55-9e04-a88d2609a42d
+      - b8ad73b3-f8d6-40dc-a26c-14b9bed9d8a8
       X-Runtime:
-      - '0.023069'
+      - '0.023100'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}}}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"}]}}}}'
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/4
@@ -171,19 +171,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d9a697c779205031469acc8cf570f981"
+      - W/"500813121643b21e97115ed29d79ab24"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f1fe3ecc-6a72-4b0c-8872-1ccbe0315288
+      - 8ebd0b35-4e9d-4161-a560-370a3fb1d4c8
       X-Runtime:
-      - '0.004275'
+      - '0.004172'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"2","type":"interaction"}]}}},"included":[{"id":"2","type":"interaction","attributes":{"evaluation":null,"description":"Make
-        a couch fort","created_at":"2023-03-18T22:00:15.440Z"},"relationships":{"fern":{"data":{"id":"4","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"4","type":"fern","attributes":{"name":"Kieffer","health":5.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"8","type":"interaction"}]}}},"included":[{"id":"8","type":"interaction","attributes":{"evaluation":1.3333333333333333,"description":"Have
+        a football scrimmage with some friends","created_at":"2023-03-25T20:56:38.803Z"},"relationships":{"fern":{"data":{"id":"4","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 recorded_with: VCR 6.1.0

@@ -34,6 +34,7 @@ RSpec.describe 'Fern Show', type: :feature do
       expect(page).to have_button('Water Fern')
       expect(page).to have_button('Compost Fern')
       expect(page).to have_button('Fertilize Fern')
+      expect(page).to have_button('Fern Stats')
     end
 
     it 'displays the last 3 interactions' do
@@ -101,6 +102,16 @@ RSpec.describe 'Fern Show', type: :feature do
       end
     end
 
+    it 'returns the correct image for 0 health ferns' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit fern_path(8)
+
+      within('#fern-show-header') do
+        expect(page).to have_content('Drew')
+        expect(page.find('img')[:src]).to eq('/assets/love-fern-1_720-2bb2636c5a7f6e6f5ed558e65f6a2d633eece82068e9813c479f104005f45b45.png')
+      end
+    end
+
     it 'Will not navigate if the user is not logged in' do
       visit fern_path(1)
 
@@ -135,6 +146,5 @@ RSpec.describe 'Fern Show', type: :feature do
         expect(page).to_not have_content('Deletable')
       end
     end
-
   end
 end

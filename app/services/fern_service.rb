@@ -36,6 +36,10 @@ class FernService
     conn.delete("users/#{google_id}/ferns/#{fern_id}")
   end
 
+  def self.get_fern_stats(google_id, fern_id)
+    conn.get("users/#{google_id}/ferns/#{fern_id}/stats")
+  end
+
   # shelves
   def self.get_all_shelves(google_id)
     conn.get("users/#{google_id}/shelves")

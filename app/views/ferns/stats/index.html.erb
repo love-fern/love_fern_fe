@@ -1,0 +1,69 @@
+<h2 id='fern-show-header' class='text-center'>
+  <%= link_to image_tag(@fern.image, class: 'fern-show-image'), fern_path(@fern.id) %>
+  <%= "#{@fern.name}'s" %>
+  <%= "Stats" %>
+</h2>
+
+<h3 class='text-center stat-title'>Fern Health</h3>
+<br>
+<div class='container'>
+  <div class='col-sm-2'>
+  </div>
+  <div class='col-sm-1'>
+    <%= image_tag("ferns-axis.png", class: 'ferns-axis') %>
+  </div>
+  <div class='col-sm-7'>
+    <%= line_chart @fern.health_history, curve: false, library: { 
+      events: [], 
+      scales: {
+        x: {
+          ticks: {
+            display: false
+          }
+        },
+        y: {
+          min: 0,
+          max: 10,
+          ticks: {
+            display: false
+          }
+        }
+      } } %>
+    
+  </div>
+  <div class='col-sm-2'>
+  </div>
+</div>
+
+<br>
+
+<h3 class='text-center stat-title'>Interactions</h3>
+<br>
+<div class='container'>
+  <div class='col-sm-2'>
+  </div>
+  <div class='col-sm-1'>
+    <%= image_tag("emojis/axis.png", class: 'emojis-axis') %>
+  </div>
+  <div class='col-sm-7'>
+    <%= line_chart @fern.interaction_history, curve: false, library: { 
+      events: [], 
+      scales: {
+        x: {
+          ticks: {
+            display: false
+          }
+        },
+        y: {
+          min: -1,
+          max: 1.4,
+          ticks: {
+            display: false
+          }
+        }
+      } } %>
+    
+  </div>
+  <div class='col-sm-2'>
+  </div>
+</div>

@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e41fbbac-49ef-4b09-9a87-578b7db29ddb
+      - 31d76231-c55d-4f0a-a206-f383bfa2a83d
       X-Runtime:
-      - '0.032107'
+      - '0.004554'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -60,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0b45d4e105f0a3958abfee98572bf745"
+      - W/"a69dd6b8d7f6a8c855b6d0887708188e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 71232f91-5480-4f57-8953-175a565b1df3
+      - 95e6782f-88be-4195-97e6-8b18779bfee4
       X-Runtime:
-      - '0.177516'
+      - '0.150929'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Explore the nightlife of your city"}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+      string: '{"activity":"Clean out your garage"}'
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 recorded_with: VCR 6.1.0

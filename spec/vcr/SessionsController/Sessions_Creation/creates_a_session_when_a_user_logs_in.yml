@@ -29,13 +29,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4638fc52-4684-446d-a3ce-ad59bf40b1a8
+      - d9913025-1d96-4959-b485-b5d5a41dc9ec
       X-Runtime:
-      - '0.048840'
+      - '0.056206'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"name":"Samuel Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}}'
-  recorded_at: Sat, 18 Mar 2023 22:00:14 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 recorded_with: VCR 6.1.0

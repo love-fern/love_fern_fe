@@ -27,13 +27,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 83014eed-97ae-4b90-bf78-05cdfdbf65b4
+      - 32fcc139-5e23-4c51-ab7c-8e47fd4ac29c
       X-Runtime:
-      - '0.005613'
+      - '0.016557'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"5","type":"shelf","attributes":{"name":"Friends"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"6","type":"shelf","attributes":{"name":"Family"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"7","type":"shelf","attributes":{"name":"Romantic"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}},{"id":"8","type":"shelf","attributes":{"name":"Business"},"relationships":{"user":{"data":{"id":"2","type":"user"}},"ferns":{"data":[]}}}],"included":[]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:42 GMT
 recorded_with: VCR 6.1.0
