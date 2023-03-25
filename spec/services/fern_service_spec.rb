@@ -106,25 +106,29 @@ RSpec.describe FernService do
 
       included_response = JSON.parse(response.body, symbolize_names: true)[:included]
 
-      expect(included_response[0][:id]).to be_a(String)
-      expect(included_response[0][:id].to_i).to_not eq(0)
-      expect(included_response[0][:type]).to eq('interaction')
+      included_response.each.with_index do |included, i|
+        expect(included[:id]).to be_a(String)
+        expect(included[:id].to_i).to_not eq(i)
+        expect(included[:type]).to eq('interaction')
+  
+        expect(included[:attributes][:evaluation]).to be_a(Float)
+        expect(included[:attributes][:created_at]).to be_a(String)
+  
+        expect(included[:relationships][:fern][:data][:id]).to be_a(String)
+        expect(included[:relationships][:fern][:data][:id].to_i).to_not eq(0)
+        expect(included[:relationships][:fern][:data][:type]).to eq('fern')
 
-      expect(included_response[0][:attributes][:evaluation]).to be_a(Float)
-      expect(included_response[0][:attributes][:created_at]).to be_a(String)
+        break if i==2
+      end
 
-      expect(included_response[0][:relationships][:fern][:data][:id]).to be_a(String)
-      expect(included_response[0][:relationships][:fern][:data][:id].to_i).to_not eq(0)
-      expect(included_response[0][:relationships][:fern][:data][:type]).to eq('fern')
+      expect(included_response[3][:id]).to be_a(String)
+      expect(included_response[3][:id].to_i).to_not eq(0)
+      expect(included_response[3][:type]).to eq('user')
 
-      expect(included_response[1][:id]).to be_a(String)
-      expect(included_response[1][:id].to_i).to_not eq(0)
-      expect(included_response[1][:type]).to eq('user')
-
-      expect(included_response[1][:attributes][:name]).to be_a(String)
-      expect(included_response[1][:attributes][:email]).to be_a(String)
-      expect(included_response[1][:attributes][:google_id]).to be_a(String)
-      expect(included_response[1][:attributes][:google_id].to_i).to_not eq(0)
+      expect(included_response[3][:attributes][:name]).to be_a(String)
+      expect(included_response[3][:attributes][:email]).to be_a(String)
+      expect(included_response[3][:attributes][:google_id]).to be_a(String)
+      expect(included_response[3][:attributes][:google_id].to_i).to_not eq(0)
     end
   end
 
@@ -202,10 +206,15 @@ RSpec.describe FernService do
       expect(parsed_response[:data][:type]).to eq('fern')
 
       expect(parsed_response[:data][:attributes][:name]).to be_a(String)
-      expect(parsed_response[:data][:attributes][:stats]).to be_an(Array)
+      expect(parsed_response[:included]).to be_an(Array)
 
-      parsed_response[:data][:attributes][:stats].each do |stat|
-        expect(stat).to be_a(Float)
+      interactions = parsed_response[:included].select { |x| x[:type] == 'interaction' }
+
+      interactions.each do |interaction|
+        expect(interaction[:id]).to be_a(String)
+        expect(interaction[:type]).to eq('interaction')
+        expect(interaction[:attributes][:evaluation]).to be_a(Float)
+        expect(interaction[:attributes][:description]).to be_a(String)
       end
     end
   end
