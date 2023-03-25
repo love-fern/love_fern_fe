@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d0984b60-ab38-400d-881a-22f026a6ac9d
+      - 6cd4f6a1-dd29-456c-919b-1aaad4b0e72f
       X-Runtime:
-      - '0.002992'
+      - '0.007455'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":1.0,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:38 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
@@ -62,19 +62,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8280552515a777797d28a2ee29a3af3a"
+      - W/"c562dc3d2a9e3287f6db5467c22ba1c0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5a1c5b26-640c-4ad0-bd4a-049e20a6e34d
+      - 538f1e2b-4985-4492-a388-927c812ca5a1
       X-Runtime:
-      - '0.178114'
+      - '0.203356'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":2.8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:15.683Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":2.8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"9","type":"interaction"}]}}},"included":[{"id":"9","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-25T20:56:39.092Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}}]}'
+  recorded_at: Sat, 25 Mar 2023 20:56:39 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/110920554030325122207/ferns/1
@@ -98,18 +98,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ae172b6c7b68b34f1d9c9a60905abec7"
+      - W/"6120b16fcbec0447e712b5c5ec26b2be"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - da9a9123-a50e-45a7-bf82-fc3fa8ac81b8
+      - 84af07a6-2235-4ed3-a004-191550f44d87
       X-Runtime:
-      - '0.008825'
+      - '0.004861'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":2.8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"3","type":"interaction"}]}}},"included":[{"id":"3","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-18T22:00:15.683Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"1","type":"fern","attributes":{"name":"Erin","health":2.8,"preferred_contact_method":"text"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"9","type":"interaction"}]}}},"included":[{"id":"9","type":"interaction","attributes":{"evaluation":0.6,"description":"message","created_at":"2023-03-25T20:56:39.092Z"},"relationships":{"fern":{"data":{"id":"1","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:39 GMT
 recorded_with: VCR 6.1.0

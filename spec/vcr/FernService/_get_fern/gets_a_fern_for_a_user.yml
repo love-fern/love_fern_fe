@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f747dc18f2a4faa549db65bd59cdfbd1"
+      - W/"2c5d0160fd922105dd7cc08517f942aa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 72270b1c-2f36-41cc-848a-fcd6d0ac6a4b
+      - d040da03-9a27-4f92-b0f6-6842b2be5e51
       X-Runtime:
-      - '0.003506'
+      - '0.005085'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9.0,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"1","type":"interaction"}]}}},"included":[{"id":"1","type":"interaction","attributes":{"evaluation":0.5,"description":"message","created_at":"2023-03-18T22:00:08.142Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9.0,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"},{"id":"6","type":"interaction"},{"id":"5","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":-0.8,"description":"message","created_at":"2023-03-25T20:55:12.343Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"6","type":"interaction","attributes":{"evaluation":0.4,"description":"message","created_at":"2023-03-25T20:55:12.342Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"5","type":"interaction","attributes":{"evaluation":0.3,"description":"message","created_at":"2023-03-25T20:55:12.342Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:42 GMT
 recorded_with: VCR 6.1.0

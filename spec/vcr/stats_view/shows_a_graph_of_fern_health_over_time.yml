@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c1c283abe86755c50ab7bd5b62b4c570"
+      - W/"d60e2b9400f172f2428bbb073f41e665"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10b5f12a-c920-4dcd-ade0-77adb3735849
+      - e28e6c05-aac4-48e2-9d78-0e001a40704e
       X-Runtime:
-      - '0.077599'
+      - '0.003898'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9.0,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"},{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"},{"id":"1","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":-0.8,"description":"message","created_at":"2023-03-25T18:18:39.170Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"6","type":"interaction","attributes":{"evaluation":0.4,"description":"message","created_at":"2023-03-25T18:18:39.170Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"5","type":"interaction","attributes":{"evaluation":0.3,"description":"message","created_at":"2023-03-25T18:18:39.169Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":-0.8,"description":"message","created_at":"2023-03-25T18:18:39.169Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":-0.3,"description":"message","created_at":"2023-03-25T18:18:39.168Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":-0.5,"description":"message","created_at":"2023-03-25T18:18:39.168Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"interaction","attributes":{"evaluation":0.5,"description":"message","created_at":"2023-03-25T18:18:39.167Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"9","type":"fern","attributes":{"name":"Brady","health":9.0,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"4","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[{"id":"7","type":"interaction"},{"id":"6","type":"interaction"},{"id":"5","type":"interaction"},{"id":"4","type":"interaction"},{"id":"3","type":"interaction"},{"id":"2","type":"interaction"},{"id":"1","type":"interaction"}]}}},"included":[{"id":"7","type":"interaction","attributes":{"evaluation":-0.8,"description":"message","created_at":"2023-03-25T20:55:12.343Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"6","type":"interaction","attributes":{"evaluation":0.4,"description":"message","created_at":"2023-03-25T20:55:12.342Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"5","type":"interaction","attributes":{"evaluation":0.3,"description":"message","created_at":"2023-03-25T20:55:12.342Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"4","type":"interaction","attributes":{"evaluation":-0.8,"description":"message","created_at":"2023-03-25T20:55:12.341Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"3","type":"interaction","attributes":{"evaluation":-0.3,"description":"message","created_at":"2023-03-25T20:55:12.341Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"2","type":"interaction","attributes":{"evaluation":-0.5,"description":"message","created_at":"2023-03-25T20:55:12.340Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"interaction","attributes":{"evaluation":0.5,"description":"message","created_at":"2023-03-25T20:55:12.339Z"},"relationships":{"fern":{"data":{"id":"9","type":"fern"}}}},{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Sat, 25 Mar 2023 18:21:30 GMT
+  recorded_at: Sat, 25 Mar 2023 20:56:41 GMT
 recorded_with: VCR 6.1.0
