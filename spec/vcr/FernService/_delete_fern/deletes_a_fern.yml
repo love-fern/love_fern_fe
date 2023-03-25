@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"af824b8077547ef35b57e89ebf41eac7"
+      - W/"9df9e98af9cc16e4fa9f1074880ae88d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bc6a4b16-1cfe-4ff4-b1f6-5d2d070358d8
+      - 1d46f640-8440-48b0-a424-829374f736ef
       X-Runtime:
-      - '0.007978'
+      - '0.005720'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"fern","attributes":{"name":"Austin","health":3,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
-  recorded_at: Thu, 02 Mar 2023 18:16:13 GMT
+      string: '{"data":{"id":"3","type":"fern","attributes":{"name":"Austin","health":3.0,"preferred_contact_method":"email"},"relationships":{"shelf":{"data":{"id":"1","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}}}'
+  recorded_at: Sat, 18 Mar 2023 22:00:17 GMT
 recorded_with: VCR 6.1.0

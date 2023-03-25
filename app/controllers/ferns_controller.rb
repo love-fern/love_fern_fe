@@ -18,11 +18,6 @@ class FernsController < ApplicationController
 
     flash[:error] = 'Focus on your own Ferns for now!'
     redirect_to greenhouse_path
-
-    #   return if @fern.user_id == current_user['uid']
-
-    #   flash[:error] = 'Focus on your own Ferns for now!'
-    #   redirect_to greenhouse_path
   end
 
   def destroy
@@ -64,8 +59,8 @@ class FernsController < ApplicationController
   end
 
   def update_for_water
-    FernService.update_fern(current_user['uid'], params[:id], fern_params)
-    flash[:success] = 'Fern watered!'
+    response = FernService.update_fern(current_user['uid'], params[:id], fern_params)
+    flash[:success] = water_success_message(response)
     redirect_to fern_path(params[:id])
   end
 
@@ -73,5 +68,11 @@ class FernsController < ApplicationController
     FernService.update_fern(current_user['uid'], params[:id], fertilize_params)
     flash[:success] = 'Fertilized!'
     redirect_to fern_path(params[:id])
+  end
+
+  def water_success_message(response)
+    parsed_response = JSON.parse(response.body, symbolize_names: true)
+    interaction = Interaction.new(parsed_response[:included][0])
+    interaction.water_message
   end
 end

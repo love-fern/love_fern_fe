@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Add Interaction To Fern', type: :feature do
-  describe 'Edit Fern', :vcr do
+RSpec.describe 'Fern Edit', type: :feature do
+  describe 'Add Interaction To Fern', :vcr do
     let(:user) do
       {
         'uid' => '110920554030325122207',
@@ -32,28 +32,53 @@ RSpec.describe 'Add Interaction To Fern', type: :feature do
       click_button 'Water Fern'
 
       expect(current_path).to eq(fern_path(1))
+      expect(page).to have_content("You exchanged positive words")
     end
 
-    it 'sp: will not allow an empty interaction' do
+    it 'has dynamic flash messages' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit water_fern_path(1)
 
-      fill_in :interaction, with: ''
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'I watered this fern today. I love pizza. I love you.' # evaluation = 0.6
       click_button 'Water Fern'
 
-      expect(page).to have_content("Interaction can't be blank")
-      expect(current_path).to eq(water_fern_path(1))
+      expect(page).to have_content("Your fern is beaming! That was awfully kind of you to say.")
+
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'You are a strong muffin man.' # evaluation = -0.3
+      click_button 'Water Fern'
+
+      expect(page).to have_content("Oof. Your fern didn't much care for that.")
+
+      visit water_fern_path(1)
+      fill_in :interaction, with: 'We need to talk.' # evaluation = -0.1
+      click_button 'Water Fern'
+
+      expect(page).to have_content("Hmm... Your fern doesn't know what to think about that.")
     end
 
-    it 'sp: will not allow a single space interaction' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit water_fern_path(1)
+    describe 'sad path' do
+      it 'will not allow an empty interaction' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        visit water_fern_path(1)
+  
+        fill_in :interaction, with: ''
+        click_button 'Water Fern'
+  
+        expect(page).to have_content("Interaction can't be blank")
+        expect(current_path).to eq(water_fern_path(1))
+      end
 
-      fill_in :interaction, with: ' '
-      click_button 'Water Fern'
-
-      expect(page).to have_content("Interaction can't be blank")
-      expect(current_path).to eq(water_fern_path(1))
+      it 'will not allow a single space interaction' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+        visit water_fern_path(1)
+  
+        fill_in :interaction, with: ' '
+        click_button 'Water Fern'
+  
+        expect(page).to have_content("Interaction can't be blank")
+        expect(current_path).to eq(water_fern_path(1))
+      end
     end
   end
 end

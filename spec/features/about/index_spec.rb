@@ -5,7 +5,7 @@ RSpec.describe 'About Index', type: :feature do
     it 'shows all about information' do
       visit about_path
 
-      expect(page).to have_content("Love Fern is an application that allows users to cultivate the relationships with important people in their lives by taking care of a fern.")
+      expect(page).to have_content("Love Fern is an application that allows users to cultivate relationships with important people in their lives by taking care of a fern.")
     end
 
     it 'has instructions' do

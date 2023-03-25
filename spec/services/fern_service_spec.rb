@@ -59,7 +59,7 @@ RSpec.describe FernService do
         expect(fern[:type]).to eq('fern')
 
         expect(fern[:attributes][:name]).to be_a(String)
-        expect(fern[:attributes][:health]).to be_an(Integer)
+        expect(fern[:attributes][:health]).to be_a(Float)
         expect(fern[:attributes][:preferred_contact_method]).to be_a(String)
   
         expect(fern[:relationships][:shelf][:data][:id]).to be_a(String)
@@ -89,7 +89,7 @@ RSpec.describe FernService do
       expect(fern_response[:type]).to eq('fern')
 
       expect(fern_response[:attributes][:name]).to be_a(String)
-      expect(fern_response[:attributes][:health]).to be_an(Integer)
+      expect(fern_response[:attributes][:health]).to be_a(Float)
       expect(fern_response[:attributes][:preferred_contact_method]).to be_a(String)
 
       expect(fern_response[:relationships][:shelf][:data][:id]).to be_a(String)
@@ -110,7 +110,7 @@ RSpec.describe FernService do
       expect(included_response[0][:id].to_i).to_not eq(0)
       expect(included_response[0][:type]).to eq('interaction')
 
-      expect(included_response[0][:attributes][:evaluation]).to be_in(['Positive', 'Negative', 'Neutral'])
+      expect(included_response[0][:attributes][:evaluation]).to be_a(Float)
       expect(included_response[0][:attributes][:created_at]).to be_a(String)
 
       expect(included_response[0][:relationships][:fern][:data][:id]).to be_a(String)
@@ -148,7 +148,7 @@ RSpec.describe FernService do
       expect(fern_response[:type]).to eq('fern')
 
       expect(fern_response[:attributes][:name]).to eq(fern_update_params[:name])
-      expect(fern_response[:attributes][:health]).to be_an(Integer)
+      expect(fern_response[:attributes][:health]).to be_a(Float)
       expect(fern_response[:attributes][:preferred_contact_method]).to eq(fern_update_params[:preferred_contact_method])
 
       expect(fern_response[:relationships][:shelf][:data][:id]).to eq("4")
@@ -174,7 +174,7 @@ RSpec.describe FernService do
       expect(fern_response[:type]).to eq('fern')
 
       expect(fern_response[:attributes][:name]).to be_a(String)
-      expect(fern_response[:attributes][:health]).to be_an(Integer)
+      expect(fern_response[:attributes][:health]).to be_a(Float)
       expect(fern_response[:attributes][:preferred_contact_method]).to be_a(String)
 
       expect(fern_response[:relationships][:shelf][:data][:id]).to be_a(String)

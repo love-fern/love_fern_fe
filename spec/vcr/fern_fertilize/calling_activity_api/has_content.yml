@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"eb7be8b421afb930cf0ac48ad8811ddc"
+      - W/"f363fbfdd7b2971253b0c53ba6fb6fc9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b1f9e4a5-e42d-46a1-a87a-e1912ee79fce
+      - e41fbbac-49ef-4b09-9a87-578b7db29ddb
       X-Runtime:
-      - '0.004095'
+      - '0.032107'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
+      string: '{"data":{"id":"2","type":"fern","attributes":{"name":"Brian","health":2.0,"preferred_contact_method":"phone"},"relationships":{"shelf":{"data":{"id":"2","type":"shelf"}},"user":{"data":{"id":"1","type":"user"}},"interactions":{"data":[]}}},"included":[{"id":"1","type":"user","attributes":{"name":"Samuel
         Cox","email":"samc1253@gmail.com","google_id":"110920554030325122207"}}]}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/activities
@@ -60,17 +60,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"415b04fa06465fd0134f869fe00d12ca"
+      - W/"0b45d4e105f0a3958abfee98572bf745"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dca70bfd-f34c-48ec-8e3b-1888286c48a3
+      - 71232f91-5480-4f57-8953-175a565b1df3
       X-Runtime:
-      - '0.127514'
+      - '0.177516'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"activity":"Catch up with a friend over a lunch date"}'
-  recorded_at: Thu, 02 Mar 2023 18:16:11 GMT
+      string: '{"activity":"Explore the nightlife of your city"}'
+  recorded_at: Sat, 18 Mar 2023 22:00:15 GMT
 recorded_with: VCR 6.1.0
