@@ -15,7 +15,7 @@ RSpec.describe 'stats view', :vcr do
     visit fern_stats_path(9)
   }
 
-  it 'has a title', :vcr do
+  it 'has a title' do
     expect(page).to have_content("Brady's Stats")
   end
 
