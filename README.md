@@ -61,7 +61,7 @@ To set up environment variables run `bundle exec figaro install`, then open `app
 ```yml
 GOOGLE_CLIENT_ID: < Your Google Client ID Here >
 GOOGLE_CLIENT_SECRET: < Your Google Cloud API Secret Here >
-FERN_KEY: < love_fern_be secret here (contact admin for access) >
+FERN_KEY: < love_fern_be key here >
 HOST_URL: http://localhost:5000
 ```
 _Note: If you intend to run `love_fern_be` locally, you may enter any text as the `FERN_KEY`, so long as it matches the backend key._
